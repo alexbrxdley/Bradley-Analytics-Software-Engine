@@ -477,7 +477,7 @@ Future versions of the Bradley Analytics Software Engine will expand functionali
 - Bradley Versatility Defense Index (measuring defense against each position)
 - Bradley Defense Radar (steals, blocks, deflections, charges, rim protection, isolation defense, switchability)
 - Bradley Archetype Identifier (weighing shooting, defense, rebounding, and other skills into a player type)
-- Archetype Quadrant (a visual map of shooters, defenders, and 3&D players)
+- Bradley Archetype Quadrant (a visual map of shooters, defenders, and 3&D players)
 - Bradley Team Fit Calculator (input a player and team/coach, output spacing fit, defensive fit, rebounding fit, transition fit, and an overall fit score)
 - Bradley Impact per Dollar (player rating plotted against salary)
 
