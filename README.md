@@ -533,10 +533,10 @@ Confirm you're looking in the `visualizations/` folder, and that the data retrie
 
 Back Bay, Boston, Massachusetts
 
-Master of Science in Business Data Analytics (Candidate 2026)
+Master of Science in Business Data Analytics (Candidate 2026)  
 University of Massachusetts Amherst
 
-Bachelor of Science in Sport Management (2025)
+Bachelor of Science in Sport Management (2025)  
 University of Massachusetts Amherst
 
 Bradley Analytics combines my passion for basketball, data analytics, and visual storytelling by creating visualization tools that transform NBA data into meaningful insights.
