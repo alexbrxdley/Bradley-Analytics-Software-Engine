@@ -81,6 +81,15 @@ NOISE_SVG_ULTRA_FINE = (
     "%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"
 )
 
+# A fourth, coarse pattern -- larger blotchy clumps rather than fine
+# speckle, closer to real film grain which isn't uniform in size.
+NOISE_SVG_COARSE = (
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E"
+    "%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' "
+    "baseFrequency='0.25' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E"
+    "%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"
+)
+
 CUSTOM_CSS = f"""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500&display=swap');
@@ -104,26 +113,36 @@ html, body, [class^="st-"], .stMarkdown, h2, h3, h4, p, span, label, button {{
 
 .stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"] {{
     background:
-        radial-gradient(circle at 25% 15%, rgba(20, 20, 20, 0.6) 0%, rgba(0, 0, 0, 0) 55%),
-        linear-gradient(135deg, #000000 0%, #050505 25%, #000000 50%, #080808 75%, #000000 100%)
+        radial-gradient(circle at 22% 12%, rgba(30, 26, 40, 0.75) 0%, rgba(0, 0, 0, 0) 42%),
+        radial-gradient(circle at 82% 22%, rgba(18, 22, 34, 0.55) 0%, rgba(0, 0, 0, 0) 48%),
+        radial-gradient(circle at 12% 78%, rgba(24, 18, 30, 0.5) 0%, rgba(0, 0, 0, 0) 46%),
+        radial-gradient(circle at 75% 85%, rgba(16, 20, 28, 0.45) 0%, rgba(0, 0, 0, 0) 50%),
+        radial-gradient(circle at 50% 50%, rgba(22, 22, 26, 0.35) 0%, rgba(0, 0, 0, 0) 65%),
+        linear-gradient(135deg, #000000 0%, #060507 22%, #000000 48%, #08070a 74%, #000000 100%)
         !important;
+    background-attachment: fixed !important;
 }}
 
-/* Static aesthetic grain -- two fixed noise layers at different
-   scales for texture depth. No animation/movement.
-   Important: opacity here must stay LOW (well under 0.15). Noise from
-   feTurbulence averages out to roughly mid-gray, so at higher opacity
-   with mix-blend-mode: screen, the noise's average brightness washes
-   the entire background toward flat grey instead of staying black
-   with visible light speckles on top. Low opacity keeps only the
-   brightest noise pixels visible as grain. */
+/* Layered static grain -- four noise scales (coarse clumps down to ultra
+   fine speckle) spread across two pseudo-elements for real texture depth.
+   Still no animation/movement.
+   Important: opacity must stay moderate rather than high. Noise from
+   feTurbulence averages out to roughly mid-gray, so at high opacity with
+   mix-blend-mode: screen, the noise's average brightness washes the whole
+   background toward flat grey instead of staying black with visible
+   speckles/clumps on top. These values are pushed up from the original
+   pass for noticeably heavier grain while staying just under that
+   wash-out point. */
 .stApp::before {{
     content: "";
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-image: url("{NOISE_SVG}"), url("{NOISE_SVG_ULTRA_FINE}");
-    background-size: 200px 200px, 45px 45px;
-    opacity: 0.09;
+    background-image:
+        url("{NOISE_SVG_COARSE}"),
+        url("{NOISE_SVG}"),
+        url("{NOISE_SVG_ULTRA_FINE}");
+    background-size: 380px 380px, 200px 200px, 45px 45px;
+    opacity: 0.13;
     pointer-events: none;
     z-index: 9999;
     mix-blend-mode: screen;
@@ -135,7 +154,7 @@ html, body, [class^="st-"], .stMarkdown, h2, h3, h4, p, span, label, button {{
     top: 0; left: 0; right: 0; bottom: 0;
     background-image: url("{NOISE_SVG}"), url("{NOISE_SVG_FINE}");
     background-size: 80px 80px, 30px 30px;
-    opacity: 0.06;
+    opacity: 0.09;
     pointer-events: none;
     z-index: 9998;
     mix-blend-mode: screen;
