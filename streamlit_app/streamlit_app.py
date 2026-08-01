@@ -13,12 +13,33 @@ colors mirror the R/ggplot2 versions used by the desktop tool, so the
 look stays consistent between bradley.bat and this dashboard.
 """
 
+import time
+
 import numpy as np
 import plotly.graph_objects as go
 import streamlit as st
 from nba_api.stats.endpoints import commonplayerinfo, ShotChartDetail
 from nba_api.stats.static import players
 from scipy.stats import gaussian_kde
+
+
+def fetch_with_retry(endpoint_cls, max_attempts=3, timeout=60, **kwargs):
+    """
+    Calls an nba_api endpoint with a longer timeout and a few retries.
+    stats.nba.com is known to be slow/flaky from cloud-hosted environments
+    (Streamlit Community Cloud included) -- this doesn't fix a hard block,
+    but it smooths over ordinary slowness and transient failures instead of
+    crashing the app on the first hiccup.
+    """
+    last_exc = None
+    for attempt in range(max_attempts):
+        try:
+            return endpoint_cls(timeout=timeout, **kwargs)
+        except Exception as e:
+            last_exc = e
+            if attempt < max_attempts - 1:
+                time.sleep(2)
+    raise last_exc
 
 
 st.set_page_config(
@@ -389,7 +410,7 @@ def get_active_players():
 
 @st.cache_data(show_spinner=False)
 def get_player_seasons(player_id: int):
-    info = commonplayerinfo.CommonPlayerInfo(player_id=player_id)
+    info = fetch_with_retry(commonplayerinfo.CommonPlayerInfo, player_id=player_id)
     career = info.get_data_frames()[0]
 
     first_year = int(career["FROM_YEAR"][0])
@@ -403,7 +424,8 @@ def get_player_seasons(player_id: int):
 
 @st.cache_data(show_spinner=False)
 def get_shot_data(player_id: int, season: str, season_type: str):
-    response = ShotChartDetail(
+    response = fetch_with_retry(
+        ShotChartDetail,
         team_id=0,
         player_id=player_id,
         season_nullable=season,
@@ -436,8 +458,16 @@ player_team = None
 if selected_name:
     selected_player = next(p for p in active_players if p["full_name"] == selected_name)
 
-    with st.spinner("Loading seasons..."):
-        seasons, player_team = get_player_seasons(selected_player["id"])
+    try:
+        with st.spinner("Loading seasons..."):
+            seasons, player_team = get_player_seasons(selected_player["id"])
+    except Exception:
+        st.error(
+            "Couldn't reach stats.nba.com to load seasons for this player. "
+            "This API is occasionally slow or unreliable when hosted in the cloud -- "
+            "try again in a moment."
+        )
+        st.stop()
 
     col1, col2 = st.columns(2)
 
@@ -490,8 +520,16 @@ else:
     generate = False
 
 if generate:
-    with st.spinner(f"Pulling shot data for {selected_name} ({selected_season}, {selected_season_type})..."):
-        shots = get_shot_data(selected_player["id"], selected_season, selected_season_type)
+    try:
+        with st.spinner(f"Pulling shot data for {selected_name} ({selected_season}, {selected_season_type})..."):
+            shots = get_shot_data(selected_player["id"], selected_season, selected_season_type)
+    except Exception:
+        st.error(
+            "Couldn't reach stats.nba.com to pull shot data. This API is "
+            "occasionally slow or unreliable when hosted in the cloud -- "
+            "try again in a moment."
+        )
+        st.stop()
 
     if shots.empty:
         st.error(
