@@ -1,0 +1,133 @@
+{
+  "_comment": "Every AI-callable function in Bradley Analytics, in the format Groq's tool-use API expects (OpenAI-compatible). Mirrors Bradley Quant's tools_schema.json structure exactly. 'maps_to' is documentation only -- dispatch_tool_call() in streamlit/app.py is what actually executes each one.",
+  "tools": [
+    {
+      "name": "generate_court_visualization",
+      "description": "Generates a shot chart, heat map, hex shot chart, or animated shot chart for a specific player or team in a specific season. Use this whenever the person wants to SEE where shots were taken from, not just a stat number.",
+      "maps_to": "streamlit.app.dispatch_tool_call -> nba_data + visuals",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "subject_type": {"type": "string", "enum": ["player", "team"], "description": "Whether this is for a specific player or a whole team"},
+          "subject_name": {"type": "string", "description": "The player's full name (e.g. 'Jayson Tatum') or team name (e.g. 'Boston Celtics')"},
+          "season": {"type": "string", "description": "Season in YYYY-YY format, e.g. '2025-26'"},
+          "chart_type": {"type": "string", "enum": ["shot_chart", "heat_map", "hex_shot_chart", "animated_shot_chart"], "description": "shot_chart: made/missed dots. heat_map: density-based. hex_shot_chart: hexagonal zones with FG% vs league. animated_shot_chart: chronological GIF, only use if the person explicitly wants animation/GIF/chronological order"},
+          "color": {"type": "string", "description": "Optional. A team name (uses that team's color) or a hex color code. Defaults to the subject's own team color if omitted."}
+        },
+        "required": ["subject_type", "subject_name", "season", "chart_type"]
+      }
+    },
+    {
+      "name": "generate_leaderboard",
+      "description": "Generates a bar chart ranking the top N players or teams by any single stat for a season. Use for requests like 'who leads the league in points' or 'top 10 rebounders'.",
+      "maps_to": "streamlit.app.dispatch_tool_call -> nba_data + visuals.build_bar_chart",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "subject_type": {"type": "string", "enum": ["player", "team"]},
+          "stat": {"type": "string", "description": "The exact stat field name, e.g. PTS, REB, AST, FG3_PCT, STL, BLK, TS_PCT, OFF_RATING. Ask if genuinely ambiguous rather than guessing."},
+          "season": {"type": "string", "description": "Season in YYYY-YY format"},
+          "per_mode": {"type": "string", "enum": ["PerGame", "Per36", "Totals"], "description": "Defaults to PerGame if not specified by the person"},
+          "top_n": {"type": "integer", "description": "How many to show, default 10"},
+          "ascending": {"type": "boolean", "description": "true for lowest-first (e.g. 'fewest turnovers'), false (default) for highest-first"}
+        },
+        "required": ["subject_type", "stat", "season"]
+      }
+    },
+    {
+      "name": "generate_scatter_plot",
+      "description": "Generates a two-stat comparison scatter plot (one stat on each axis) across the league for a season. Use when the person wants to compare two different stats against each other, e.g. 'plot usage rate against true shooting for all players'.",
+      "maps_to": "streamlit.app.dispatch_tool_call -> nba_data + visuals.build_scatter_plot",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "subject_type": {"type": "string", "enum": ["player", "team"]},
+          "x_stat": {"type": "string", "description": "Stat field name for the x-axis"},
+          "y_stat": {"type": "string", "description": "Stat field name for the y-axis"},
+          "season": {"type": "string"},
+          "per_mode": {"type": "string", "enum": ["PerGame", "Per36", "Totals"]},
+          "highlight_names": {"type": "array", "items": {"type": "string"}, "description": "Optional. Player or team names to show larger/highlighted on the plot, if the person names specific ones."}
+        },
+        "required": ["subject_type", "x_stat", "y_stat", "season"]
+      }
+    },
+    {
+      "name": "search_by_criteria",
+      "description": "Filters the entire league by position, height, age, and/or any combination of stat ranges, returning the list of matching players. Use this for requests like 'give me the 10 best 3P% and steals forwards in the league' -- this is the tool for that, not generate_leaderboard (which only sorts by ONE stat with no filtering).",
+      "maps_to": "streamlit.app.dispatch_tool_call -> nba_data + filter logic shared with Search by Criteria page",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "season": {"type": "string"},
+          "per_mode": {"type": "string", "enum": ["PerGame", "Per36", "Totals"]},
+          "position": {"type": "string", "description": "Optional exact position filter, e.g. 'F', 'G', 'C'"},
+          "min_age": {"type": "number"},
+          "max_age": {"type": "number"},
+          "min_height_inches": {"type": "number"},
+          "max_height_inches": {"type": "number"},
+          "stat_filters": {
+            "type": "array",
+            "description": "Any number of stat range filters, all applied together (AND). For 'best 3P% and steals forwards', include both 3P% and STL here with reasonable minimums, not just position alone.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stat": {"type": "string", "description": "Stat field name, e.g. FG3_PCT, STL"},
+                "min": {"type": "number"},
+                "max": {"type": "number"}
+              },
+              "required": ["stat"]
+            }
+          },
+          "sort_by": {"type": "string", "description": "Which stat to rank the final results by, when the person wants a ranked top-N from within the filtered group (e.g. 'best 3P%' implies sort_by FG3_PCT)"},
+          "top_n": {"type": "integer", "description": "How many results to return, default 10, capped at 30"}
+        },
+        "required": ["season"]
+      }
+    },
+    {
+      "name": "trade_machine",
+      "description": "Compares two teams trading specific players, showing real per-game stat lines for everyone moving. Use when the person describes a hypothetical trade.",
+      "maps_to": "streamlit.app.dispatch_tool_call -> nba_data + visuals.build_trade_breakdown_image",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "team_1": {"type": "string", "description": "Full team name"},
+          "team_2": {"type": "string", "description": "Full team name"},
+          "team_1_sends": {"type": "array", "items": {"type": "string"}, "description": "Player names team_1 is trading away"},
+          "team_2_sends": {"type": "array", "items": {"type": "string"}, "description": "Player names team_2 is trading away"},
+          "season": {"type": "string"}
+        },
+        "required": ["team_1", "team_2", "team_1_sends", "team_2_sends", "season"]
+      }
+    },
+    {
+      "name": "on_off_stats",
+      "description": "Shows how a team performs (Off/Def Rating, PTS/REB/AST) with two specific teammates on the floor together, versus each player without the other. Use for questions like 'how does the team do with Tatum and Brown both on vs Tatum without Brown'.",
+      "maps_to": "streamlit.app.dispatch_tool_call -> nba_data.get_team_lineup_combos + visuals.build_onoff_column_image",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "team": {"type": "string", "description": "Full team name"},
+          "player_1": {"type": "string"},
+          "player_2": {"type": "string"},
+          "season": {"type": "string"}
+        },
+        "required": ["team", "player_1", "player_2", "season"]
+      }
+    },
+    {
+      "name": "advanced_stats",
+      "description": "Returns the full advanced stat table (TS%, usage rate, offensive/defensive rating, PIE, etc.) for one player or team in a season. Use for 'what's [player]'s true shooting percentage' or similar single-subject advanced-stat questions.",
+      "maps_to": "streamlit.app.dispatch_tool_call -> nba_data.get_player_stats / get_team_stats",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "subject_type": {"type": "string", "enum": ["player", "team"]},
+          "subject_name": {"type": "string"},
+          "season": {"type": "string"}
+        },
+        "required": ["subject_type", "subject_name", "season"]
+      }
+    }
+  ]
+}

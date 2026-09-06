@@ -1,0 +1,254 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bradley Analytics Software Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  .hero-section {
+    padding: 40px 24px;
+  }
+  .hero-section h1 {
+    font-size: 38px;
+    margin: 0 0 12px 0;
+  }
+  .hero-section p {
+    font-size: 20px;
+    color: #c9c9c9;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .chart-section {
+    padding: 20px 24px 60px 24px;
+  }
+  .chart-section h2 {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+  .chart-frame {
+    max-width: 1100px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    background: transparent;
+  }
+  /* Forces specific line breaks on mobile only -- invisible/inert on
+     desktop, where the same text should just read as one normal,
+     naturally-wrapping line. */
+  .bq-mobile-break {
+    display: none;
+  }
+  @media (max-width: 640px) {
+    .bq-mobile-break {
+      display: block;
+    }
+  }
+  .section-heading {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: 38px;
+    color: #ffffff;
+    margin: 16px 0 0 0;
+  }
+  .live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0 0 18px 0;
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    background: rgba(212, 175, 55, 0.07);
+    color: #F5D370;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  }
+  .live-badge:hover {
+    background: rgba(212, 175, 55, 0.16);
+    border-color: rgba(212, 175, 55, 0.8);
+    transform: translateY(-1px);
+  }
+  .live-badge .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #F5D370;
+    box-shadow: 0 0 8px #F5D370;
+    animation: bq-pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes bq-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.25; }
+  }
+  .cta-button {
+    display: inline-block;
+    margin-top: 36px;
+    padding: 14px 32px;
+    background: transparent;
+    border: 1.5px solid #B8860B;
+    color: #B8860B;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .cta-button:hover {
+    background: #B8860B;
+    color: #000000;
+  }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 24px auto 0 auto;
+    padding: 0 24px;
+  }
+  @media (max-width: 800px) {
+    .feature-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .feature-card {
+    border: 1.5px solid transparent;
+    border-radius: 8px;
+    padding: 20px;
+    background:
+      linear-gradient(135deg, #1A1A1A 0%, #070707 73%) padding-box,
+      linear-gradient(90deg, #8a6410 0%, #D4AF37 18%, #FFF0B8 34%, #F5D370 50%, #D4AF37 66%, #B8860B 82%, #8a6410 100%) border-box;
+    background-size: 100% 100%, 320px 100%;
+    background-repeat: no-repeat, repeat-x;
+    animation: bq-feature-border-shimmer 7s linear infinite;
+    will-change: background-position;
+  }
+  @keyframes bq-feature-border-shimmer {
+    from { background-position: 0 0, 0px 0; }
+    to   { background-position: 0 0, -320px 0; }
+  }
+  .feature-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+    background: linear-gradient(90deg, #8a6410 0%, #D4AF37 18%, #FFF0B8 34%, #F5D370 50%, #D4AF37 66%, #B8860B 82%, #8a6410 100%);
+    background-size: 320px 100%;
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: bq-brand-shimmer 7s linear infinite;
+    will-change: background-position;
+  }
+  .feature-card p {
+    color: #c9c9c9;
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+</style>
+</head>
+<body class="page-home">
+
+  <canvas id="bq-backdrop"></canvas>
+
+  {% include nav.html %}
+
+  <div class="banner-wrap">
+    <img src="assets/banner.png" alt="Bradley Analytics Software Engine">
+  </div>
+
+  <div class="hero-section">
+    <button class="live-badge bq-scroll-fade" type="button" onclick="document.getElementById('dashboard').scrollIntoView({behavior:'smooth'});"><span class="dot"></span>Live Dashboard Below</button>
+    <h1 class="bq-scroll-fade">Bradley Analytics <span class="bq-gold-anim">Software Engine</span></h1>
+    <p class="bq-scroll-fade">An NBA analytics engine built in Python and R, transforming raw shooting data into publication-ready basketball visualizations.</p>
+  </div>
+
+  <!-- Simplified from the previous full Instagram embed widget -- just
+       the logo (same animated gold shimmer as the footer icons) and a
+       link, sized to roughly match .section-heading's font (Playfair
+       Display, weight 500) rather than a full profile card. -->
+  <div style="max-width: 1100px; margin: 2px auto 0 auto; padding: 0 24px; text-align: center;">
+    <a href="https://www.instagram.com/bradleyanalytics/" target="_blank" rel="noopener"
+       class="bq-hero-instagram-link"
+       style="display: inline-flex; align-items: center; gap: 14px; text-decoration: none;">
+      <span class="footer-social-icon instagram bq-hero-instagram-icon" style="width: 28px; height: 28px; margin-right: 0; position: relative; top: 3px;"></span>
+      <span class="bq-gold-anim" style="font-family: 'Playfair Display', serif; font-weight: 500; font-size: 24px;">@bradleyanalytics | Instagram Portfolio</span>
+    </a>
+  </div>
+
+  <div class="chart-section" id="dashboard">
+    <div class="chart-frame">
+      <iframe
+        id="ba-dashboard-iframe"
+        src="https://bradleyanalytics.streamlit.app/?embed=true"
+        width="100%"
+        height="1000"
+        style="border: none !important; outline: none !important; border-radius: 8px; display: block;">
+      </iframe>
+    </div>
+  </div>
+  <script>
+    // Resizes the dashboard iframe to fit whichever section is currently
+    // selected, instead of one fixed height for every section -- the
+    // Streamlit app reports its own content height via postMessage
+    // whenever it changes (section switch, content expanding/collapsing).
+    window.addEventListener('message', function(event) {
+      if (event.data && event.data.type === 'ba-resize' && typeof event.data.height === 'number') {
+        const iframe = document.getElementById('ba-dashboard-iframe');
+        if (iframe) {
+          const h = Math.max(400, Math.min(5000, event.data.height));
+          iframe.style.height = h + 'px';
+        }
+      }
+    });
+  </script>
+
+  <h2 class="section-heading bq-scroll-fade">Six engines,<br class="bq-mobile-break"> <span class="bq-gold-anim">one dashboard</span></h2>
+
+  <div class="feature-grid">
+    <div class="feature-card bq-feature-card">
+      <h3>Search by Player</h3>
+      <p>Real shot charts, heat maps, hex shot charts, and animated shot charts for any player and season.</p>
+    </div>
+    <div class="feature-card bq-feature-card">
+      <h3>Search by Team</h3>
+      <p>The same court visualizations, built from every shot a team took in a given season.</p>
+    </div>
+    <div class="feature-card bq-feature-card">
+      <h3>Search by Criteria</h3>
+      <p>Filter the whole league by position, height, and any combination of stats, then scatter-plot the result.</p>
+    </div>
+    <div class="feature-card bq-feature-card">
+      <h3>Trade Machine</h3>
+      <p>Swap players between two real rosters and see the before/after, with optional salary and draft-pick data.</p>
+    </div>
+    <div class="feature-card bq-feature-card">
+      <h3>On/Off Stats</h3>
+      <p>How a team's numbers shift with two or three specific teammates sharing the floor, versus their season average.</p>
+    </div>
+    <div class="feature-card bq-feature-card">
+      <h3>Advanced Stats</h3>
+      <p>True shooting %, usage rate, offensive/defensive rating, and more, for any player or team.</p>
+    </div>
+  </div>
+
+  {% include footer.html %}
+
+  <script src="assets/market-backdrop.js"></script>
+  <script src="assets/scroll-animations.js"></script>
+
+</body>
+</html>

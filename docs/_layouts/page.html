@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} -- Bradley Analytics Software Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+  <canvas id="bq-backdrop"></canvas>
+
+  {% include nav.html %}
+
+  {% if page.sidebar == "overview" %}
+    <div class="with-sidebar">
+      {% include sidebar-overview.html %}
+      <div class="page-content">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+      </div>
+    </div>
+  {% elsif page.sidebar == "installation" %}
+    <div class="with-sidebar">
+      {% include sidebar-installation.html %}
+      <div class="page-content">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+      </div>
+    </div>
+  {% elsif page.sidebar == "visualizations" %}
+    <div class="with-sidebar">
+      {% include sidebar-visualizations.html %}
+      <div class="page-content">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+      </div>
+    </div>
+  {% else %}
+    <div class="page-content">
+      <h1>{{ page.title }}</h1>
+      {{ content }}
+    </div>
+  {% endif %}
+
+  {% include footer.html %}
+
+  <script src="assets/market-backdrop.js"></script>
+  <script src="assets/scroll-animations.js"></script>
+
+</body>
+</html>
