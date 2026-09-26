@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} -- Bradley Analytics Software Engine</title>
+<style>
+  /* First-paint safety net for elements the markup already tags with the
+     scroll-fade classes. The main pre-hide rules (which also cover code
+     blocks, list items and everything the script tags later) live in
+     site.css under "Pre-JS hidden state" -- keep both in sync with the
+     .bq-scroll-* base rules there. */
+  .bq-scroll-fade, .bq-scroll-border, .bq-feature-card {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  .bq-feature-card p { opacity: 0; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=5">
+<script>
+  document.documentElement.classList.add('bq-js-ready');
+  // If scroll-animations.js never runs (blocked or failed request), un-hide
+  // the pre-hidden content after a few seconds rather than leave it invisible.
+  setTimeout(function () {
+    if (!window.__bqAnimReady) document.documentElement.classList.remove('bq-js-ready');
+  }, 6000);
+</script>
+</head>
+<body>
+
+  <canvas id="bq-backdrop"></canvas>
+
+  {% include nav.html %}
+
+  {% if page.sidebar == "overview" %}
+    <div class="with-sidebar">
+      {% include sidebar-overview.html %}
+      <div class="page-content">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+      </div>
+    </div>
+  {% elsif page.sidebar == "installation" %}
+    <div class="with-sidebar">
+      {% include sidebar-installation.html %}
+      <div class="page-content">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+      </div>
+    </div>
+  {% elsif page.sidebar == "visualizations" %}
+    <div class="with-sidebar">
+      {% include sidebar-visualizations.html %}
+      <div class="page-content">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+      </div>
+    </div>
+  {% else %}
+    <div class="page-content">
+      <h1>{{ page.title }}</h1>
+      {{ content }}
+    </div>
+  {% endif %}
+
+  {% include footer.html %}
+
+  <script src="assets/market-backdrop.js"></script>
+  <script src="assets/scroll-animations.js"></script>
+
+</body>
+</html>
