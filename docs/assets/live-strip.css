@@ -1,0 +1,410 @@
+/* ============================================================
+   Live strip: the auto-scrolling row of animated game cards right
+   above the dashboard (docs/index.html). Data: ESPN's public NBA feed
+   (fallback docs/data/live/, scripts/build_live_strip.py). Script: live-strip.js.
+   ============================================================ */
+
+/* Fonts: Arial for the words, Roboto Condensed for every number, Playfair Display for the player's name.
+   "Roboto Condensed Numbers" holds only Roboto Condensed's digits and number signs (% + - . : and the minus sign),
+   so with it first in every font list below, each number is drawn in Roboto Condensed and everything else in Arial. */
+@font-face { font-family: "Roboto Condensed Numbers"; src: url("fonts/roboto-condensed-numbers.woff2") format("woff2");
+  font-weight: 100 900; font-style: normal; font-display: swap;
+  unicode-range: U+0025, U+002B, U+002D-002E, U+0030-003A, U+2212; }
+
+.ls { max-width: 1180px; margin: 34px auto 22px; padding: 0 24px; box-sizing: border-box; text-align: left; font-family: "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; }
+.ls[hidden] { display: none !important; }
+.ls-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; margin: 0 2px 10px; }
+.ls-badge { display: inline-flex; align-items: center; gap: 8px; font: 700 12px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif;
+  letter-spacing: .14em; text-transform: uppercase; color: #F5D370; }
+.ls-badge i { width: 8px; height: 8px; border-radius: 50%; background: #D4AF37; flex: 0 0 auto;
+  animation: lsBreatheGold 1.6s ease-in-out infinite; }                 /* the header's dot always breathes: gold... */
+.ls-badge.live { color: #ff8b7d; }
+.ls-badge.live i { background: #ff4b3a; animation: lsBreathe 1.6s ease-in-out infinite; }   /* ...red while games are live */
+.ls-badge.date { text-transform: none; letter-spacing: .05em; }        /* "Wednesday, November 21, 2026" */
+@keyframes lsBreatheGold { 0%, 100% { transform: scale(.75); opacity: .55; box-shadow: 0 0 3px 0 rgba(212,175,55,.5); }
+  50% { transform: scale(1.15); opacity: 1; box-shadow: 0 0 10px 3px rgba(212,175,55,.9); } }
+.ls-sub { color: #a9a39a; font-size: 13px; }
+.ls-hint { color: #6f6a62; font-size: 12px; margin-left: auto; }
+
+/* ticker: every game, clickable -- "(logo) BOS 73 – 37 NYK (logo) (dot) 3rd 7:37" */
+.ls-ticker { overflow: hidden; border-top: 1px solid #2a2721; border-bottom: 1px solid #2a2721; background: rgba(10,10,9,.7);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); margin-bottom: 12px; }
+.ls-ticker-track { display: flex; align-items: center; width: max-content; animation: lsTick 70s linear infinite; }
+/* it stops only while a mouse is over it (a touch screen's "hover" would stick after a tap, so there the script holds
+   it still for 3 seconds after a touch instead) */
+@media (hover: hover) and (pointer: fine) { .ls-ticker:hover .ls-ticker-track { animation-play-state: paused; } }
+.ls-ticker.hold .ls-ticker-track { animation-play-state: paused; }
+.ls-tk { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; margin: 4px 2px; padding: 5px 10px;
+  border: 1px solid transparent; border-radius: 999px; background: none; cursor: pointer;
+  font: 700 12.5px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; letter-spacing: .02em; color: #d8d2c4; }
+.ls-tk:hover { border-color: rgba(212,175,55,.45); background: rgba(212,175,55,.06); }
+.ls-tk:focus-visible { outline: 2px solid #D4AF37; outline-offset: 1px; }
+.ls-tk.on { border-color: #D4AF37; background: rgba(212,175,55,.10); box-shadow: 0 0 10px rgba(212,175,55,.25); }
+.ls-tk .lbl { font: 700 10px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #a9a39a; margin-right: 2px; }
+.ls-tk .t { font-weight: 700; }
+.ls-tk .s { font-size: 13.5px; font-variant-numeric: tabular-nums; }
+.ls-tk .d { color: #6f6a62; }
+.ls-tk .st { font: 700 11.5px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; letter-spacing: .03em; color: #a9a39a; }
+.ls-tk.live .st { color: #ff8b7d; }
+.ls-dot { width: 7px; height: 7px; border-radius: 50%; background: #ff4b3a; flex: 0 0 auto; margin-left: 3px;
+  box-shadow: 0 0 6px 1px rgba(255,75,58,.8); animation: lsBreathe 1.6s ease-in-out infinite; }
+@keyframes lsBreathe { 0%, 100% { transform: scale(.75); opacity: .55; box-shadow: 0 0 3px 0 rgba(255,75,58,.5); }
+  50% { transform: scale(1.15); opacity: 1; box-shadow: 0 0 10px 3px rgba(255,75,58,.9); } }
+.ls-ticker .sep { color: #6f6a62; padding: 0 6px; font: 400 16px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; }
+@keyframes lsTick { to { transform: translateX(-50%); } }
+
+/* team logos (always before the team's abbreviation) */
+.ls-logo { display: inline-block; vertical-align: -3px; object-fit: contain; margin-right: 4px; flex: 0 0 auto; }
+.ls-tk .ls-logo { margin: 0; vertical-align: middle; }
+.ls-team .ls-logo { margin-right: 0; vertical-align: middle; }
+
+/* the scrolling row of cards */
+.ls-viewport { overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; scrollbar-color: #3a362e transparent;
+  -webkit-overflow-scrolling: touch; padding-bottom: 8px; }
+.ls-viewport::-webkit-scrollbar { height: 6px; }
+.ls-viewport::-webkit-scrollbar-thumb { background: #3a362e; border-radius: 3px; }
+.ls-track { display: flex; align-items: flex-start; gap: 14px; width: max-content; }
+.ls-card { width: 300px; flex: 0 0 300px; box-sizing: border-box; padding: 13px 14px 12px; border-radius: 14px;
+  background: linear-gradient(160deg, #1b1916 0%, #0c0b0a 80%); border: 1px solid #2c2923; display: flex;
+  flex-direction: column; gap: 9px; position: relative; color: #f0f0f0; font-family: "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; }
+.ls-card.wide { width: 360px; flex-basis: 360px; }
+.ls-card:hover { border-color: rgba(212,175,55,.55); }
+.ls-card-top { display: flex; flex-direction: column; align-items: stretch; gap: 7px; }
+.ls-title { font: 700 10.5px/1.2 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: #a9a39a;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ls-pickers { display: grid; grid-template-columns: minmax(0, 1fr); gap: 5px; }     /* one dropdown per line: room for the logos */
+.ls-pickers .ls-select { flex: 1 1 0; min-width: 0; max-width: none; }
+/* the cards' small dropdowns (they can show logos, which a plain <select> can't) */
+.ls-pick { position: relative; flex: 1 1 0; min-width: 0; }
+.ls-pick-btn { width: 100%; display: flex; align-items: center; background: #151412 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='5'><path d='M0 0l4 5 4-5z' fill='%23D4AF37'/></svg>") no-repeat right 6px center;
+  border: 1px solid #3a372f; border-radius: 6px; color: #e8e2d4; font: 11px "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; padding: 3px 18px 3px 7px;
+  cursor: pointer; text-align: left; min-height: 22px; }
+.ls-pick-btn .v { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ls-pick-btn:hover, .ls-pick-btn:focus-visible, .ls-pick.open .ls-pick-btn { border-color: #D4AF37; outline: none; }
+.ls-pick-list { display: none; position: absolute; z-index: 5; left: 0; top: calc(100% + 3px); min-width: 100%; max-height: 210px;
+  overflow-y: auto; background: #151412; border: 1px solid #D4AF37; border-radius: 6px; padding: 3px; box-sizing: border-box;
+  box-shadow: 0 8px 22px rgba(0,0,0,.6); scrollbar-width: thin; scrollbar-color: #3a362e transparent; }
+.ls-pick.open .ls-pick-list { display: block; }
+.ls-pick-opt { display: block; width: 100%; text-align: left; white-space: nowrap; background: none; border: 0; border-radius: 4px;
+  color: #e8e2d4; font: 11px "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; padding: 5px 7px; cursor: pointer; }
+.ls-pick-opt:hover, .ls-pick-opt:focus-visible { background: rgba(212,175,55,.12); outline: none; }
+.ls-pick-opt.on { color: #F5D370; font-weight: 700; }
+.ls-live-word { color: #ff8b7d; font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase; }
+.ls-select { appearance: none; -webkit-appearance: none; background: #151412 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='5'><path d='M0 0l4 5 4-5z' fill='%23D4AF37'/></svg>") no-repeat right 6px center;
+  border: 1px solid #3a372f; border-radius: 6px; color: #e8e2d4; font: 11px "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; padding: 3px 18px 3px 7px;
+  max-width: 132px; cursor: pointer; }
+.ls-select:hover, .ls-select:focus { border-color: #D4AF37; outline: none; }
+.ls-select option { background: #151412; color: #e8e2d4; }
+.ls-foot { color: #8c867b; font-size: 11.5px; line-height: 1.35; }
+
+/* scoreboard */
+.ls-team { display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 15px; color: #cfc8ba; }
+.ls-team .tri { display: inline-flex; align-items: center; gap: 8px; }
+.ls-team .tri i { width: 10px; height: 10px; border-radius: 3px; }
+.ls-team .sc { font: 700 30px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; color: #cfc8ba; font-variant-numeric: tabular-nums; }
+.ls-team.win, .ls-team.win .sc { color: #fff; }
+.ls-qtable { width: 100%; border-collapse: collapse; font: 11px/1.4 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; color: #bdb6a8; }
+.ls-qtable th { color: #7d776c; font-weight: 400; text-align: center; padding: 1px 2px; }
+.ls-qtable td { text-align: center; padding: 1px 2px; }
+.ls-qtable td:first-child, .ls-qtable th:first-child { text-align: left; }
+.ls-qtable td.t { color: #fff; font-weight: 700; }
+
+/* svg charts */
+.ls-svg { display: block; width: 100%; height: auto; }
+.ls-svg text { font-family: "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; }
+.ls-draw { stroke-dasharray: var(--len); stroke-dashoffset: var(--len); animation: lsDraw 2.4s ease-out forwards; }
+@keyframes lsDraw { to { stroke-dashoffset: 0; } }
+
+/* stats rows */
+.ls-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.ls-stats div { display: grid; gap: 2px; }
+.ls-stats span { font: 700 9px/1.2 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #8c867b; }
+.ls-stats b { font: 700 17px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; color: var(--ls-num, #fff); font-variant-numeric: tabular-nums; }
+/* whole-game numbers: gradient gold */
+.ls-stats.gold b, .ls-tile.gold b { background: linear-gradient(135deg, #B8860B, #F5D370 45%, #FFF0B8 55%, #B8860B);
+  -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* player card */
+.ls-player { display: flex; align-items: center; gap: 10px; }
+.ls-player > img { width: 64px; height: 47px; object-fit: cover; object-position: top; border-radius: 9px; background: #151412;
+  border: 1px solid #2c2923; }
+.ls-player .nm { font-family: "Playfair Display", serif; font-weight: 500; font-size: 19px; line-height: 1.1; color: #fff; }
+.ls-player .tm { color: #8c867b; font-size: 12px; display: flex; align-items: center; }
+.ls-player .tm .ls-logo { border: 0; border-radius: 0; background: none; margin-right: 4px; }
+
+/* race / comparison bars */
+.ls-race { position: relative; }
+.ls-body > .ls-race { flex: 1 1 auto; min-height: 0; margin-bottom: 8px; }   /* the rows share the window's height */
+.ls-rrow { position: absolute; left: 0; right: 0; top: 0; height: 22px; display: grid; grid-template-columns: 72px 1fr 28px;
+  gap: 7px; align-items: center; transition: transform .45s ease; font-size: 11.5px; }
+/* each row: the team's logo and the player's picture (no name), then his bar */
+.ls-rrow .n { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.ls-rrow .n .ls-logo { flex: 0 0 auto; margin: 0; }
+/* the picture sits straight on the window -- no rounded box or fill behind it */
+.ls-rrow .n .hs { flex: 0 0 auto; width: 44px; height: 32px; object-fit: cover; object-position: top; border: 0; border-radius: 0;
+  background: none; }
+.ls-rrow .b { height: 14px; background: #211f1b; border-radius: 3px; overflow: hidden; }
+.ls-rrow .b i { display: block; height: 100%; width: 0; transition: width .25s linear; border-radius: 3px; }
+.ls-rrow .v { font: 700 12px "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; text-align: right; color: #fff; }
+.ls-cmp { display: grid; gap: 6px; }
+.ls-cmp-row { display: grid; grid-template-columns: 44px 1fr 64px 1fr 44px; gap: 6px; align-items: center; font-size: 11px; }
+.ls-cmp-head .l, .ls-cmp-head .r { white-space: nowrap; }
+.ls-cmp-row .l, .ls-cmp-row .r { font: 700 11.5px "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; color: #fff; }
+.ls-cmp-row .r { text-align: right; }
+.ls-cmp-row .lbl { text-align: center; color: #8c867b; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+.ls-cmp-row .bar { height: 7px; background: #211f1b; border-radius: 4px; overflow: hidden; display: flex; }
+.ls-cmp-row .bar.left { justify-content: flex-end; }
+.ls-cmp-row .bar i { display: block; height: 100%; width: 0; transition: width 1.1s cubic-bezier(.2,.8,.2,1); border-radius: 4px; }
+
+/* count-up tiles */
+.ls-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.ls-tile { background: rgba(255,255,255,.025); border: 1px solid #25221d; border-radius: 10px; padding: 9px 10px; }
+.ls-tile b { display: block; font: 700 26px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; color: #fff; font-variant-numeric: tabular-nums; }
+.ls-tile span { display: block; margin-top: 4px; font: 700 9.5px/1.25 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; letter-spacing: .1em;
+  text-transform: uppercase; color: #D4AF37; }
+.ls-tile span .ls-logo { vertical-align: -2px; margin: 0 3px 0 1px; }
+
+@media (max-width: 640px) {
+  .ls-w-row .tri { display: none; }
+  .ls-w-row .pr .bar { width: 48px; }
+  .ls { padding: 0 14px; margin-top: 26px; }
+  .ls-card, .ls-card.wide { width: 82vw; flex-basis: 82vw; max-width: 340px; }
+  .ls-hint { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ls-ticker-track, .ls-badge i, .ls-draw, .ls-dot { animation: none !important; }
+  .ls-draw { stroke-dashoffset: 0; }
+  .ls-ticker { overflow-x: auto; }
+  .ls-rrow, .ls-rrow .b i, .ls-cmp-row .bar i { transition: none !important; }
+}
+
+/* first window's title: a breathing dot before "LIVE GAME" */
+.ls-title .ls-dot-title { display: inline-block; width: 7px; height: 7px; margin: 0 7px 1px 1px; vertical-align: middle; }
+.ls-title { overflow: visible; }
+
+/* the lead stats inside the first window: three across */
+.ls-tiles3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 2px; }
+.ls-tiles3 .ls-tile { padding: 5px 8px 6px; border-radius: 8px; }
+.ls-tiles3 .ls-tile b { font-size: 18px; }
+.ls-tiles3 .ls-tile span { font-size: 8.5px; letter-spacing: .08em; }
+
+/* lineup network */
+.ls-lu-list { display: grid; gap: 4px; }
+.ls-lu-row { display: grid; grid-template-columns: 70px minmax(0, 1fr) auto 38px; gap: 6px; align-items: baseline; font-size: 11px; }
+.ls-lu-row .k { font: 700 9px/1.2 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; letter-spacing: .06em; text-transform: uppercase; color: #8c867b; white-space: nowrap; }
+.ls-lu-row .w { color: #d8d2c4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ls-lu-row b { font: 700 13px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; text-align: right; font-variant-numeric: tabular-nums; }
+.ls-lu-row .m { color: #6f6a62; font-size: 10px; text-align: right; white-space: nowrap; }
+
+/* win probability */
+.ls-wp-top { display: grid; grid-template-columns: auto 1fr auto; gap: 8px; align-items: center; }
+.ls-wp-top .t { display: inline-flex; align-items: center; gap: 4px; font: 700 12px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; white-space: nowrap; }
+.ls-wp-top .t b { font: 700 19px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; }
+.ls-wp-top .bar { display: flex; height: 8px; border-radius: 4px; overflow: hidden; background: #211f1b; }
+.ls-wp-top .bar i { display: block; height: 100%; }
+.ls-wp-chips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.ls-wp-chips div { background: rgba(255,255,255,.025); border: 1px solid #25221d; border-radius: 8px; padding: 6px 7px; min-width: 0; }
+.ls-wp-chips span { display: flex; align-items: center; font: 700 8.5px/1.2 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; letter-spacing: .07em; text-transform: uppercase;
+  color: #8c867b; white-space: nowrap; overflow: hidden; }
+.ls-wp-chips b { display: flex; align-items: center; gap: 2px; margin-top: 3px; font: 700 13px/1.1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; color: #fff; white-space: nowrap; }
+.ls-wp-chips b .ls-logo { margin: 0 1px; }
+.ls-wp-chips .ls-logo { vertical-align: -2px; margin-right: 3px; }
+.ls-wp-table { display: grid; gap: 3px; }
+.ls-wp-table > div { display: grid; grid-template-columns: 1fr 96px 1fr; gap: 6px; align-items: center; font-size: 11px; }
+.ls-wp-table > div > span { text-align: center; color: #8c867b; font-size: 9.5px; letter-spacing: .06em; text-transform: uppercase; }
+.ls-wp-table > div > b { font: 700 12px "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; }
+.ls-wp-table > div > b:last-child, .ls-wp-table .h > span:last-child { text-align: right; }
+.ls-wp-table .h { font: 700 11px "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; }
+.ls-wp-table .h > span:first-child { text-align: left; }
+
+/* live games: timeouts left and the bonus, right after the team's abbreviation */
+.ls-team .ls-to { font: 700 12px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; color: #ffffff; margin-left: 2px; white-space: nowrap; }
+.ls-team .ls-bonus { font: 700 12px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; white-space: nowrap; letter-spacing: .04em;
+  background: linear-gradient(90deg, #B8860B, #F5D370, #FFF0B8, #F5D370, #B8860B); background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent; animation: lsGoldText 3s linear infinite; }
+@keyframes lsGoldText { to { background-position: -200% 0; } }
+
+/* lineup network: the group that's lit up glows in the team colour, the rest fade back; its line of text grows */
+.ls-lu-svg .ls-lu-edge { transition: opacity .45s ease, stroke-width .45s ease, filter .45s ease; }
+.ls-lu-svg .ls-lu-node { transition: fill .45s ease, filter .45s ease; }
+.ls-lu-svg.anim .ls-lu-edge { opacity: .2; }
+.ls-lu-svg.anim .ls-lu-edge.on { opacity: 1; stroke: var(--team) !important; stroke-opacity: 1; stroke-dasharray: none;
+  stroke-width: 3.4px; filter: drop-shadow(0 0 3px var(--team)) drop-shadow(0 0 7px var(--team)); }
+.ls-lu-svg.anim .ls-lu-node.on { fill: var(--team); filter: drop-shadow(0 0 5px var(--team)); }
+.ls-lu-row { transition: font-size .45s ease, opacity .45s ease; transform-origin: left center; }
+.ls-lu-row b, .ls-lu-row .k, .ls-lu-row .m { transition: font-size .45s ease, color .45s ease; }
+.ls-lu-list.anim .ls-lu-row { opacity: .55; }
+.ls-lu-list.anim .ls-lu-row.on { opacity: 1; font-size: 12.5px; }
+.ls-lu-list.anim .ls-lu-row.on .k { font-size: 10px; color: var(--team); }
+.ls-lu-list.anim .ls-lu-row.on b { font-size: 16px; }
+.ls-lu-list.anim .ls-lu-row.on .m { font-size: 11px; color: #a9a39a; }
+@media (prefers-reduced-motion: reduce) { .ls-lu-svg .ls-lu-edge, .ls-lu-row { transition: none; } }
+
+/* clutch watch: every game of the chosen day, closest to the finish first */
+/* One set of columns for the whole list (each row is a subgrid of it): the game, then the time left -- centred in all
+   the space between the home team's logo and the win probability -- then the win probability. */
+.ls-watch-list { display: grid; grid-template-columns: max-content minmax(0, 1fr) 76px; column-gap: 8px; row-gap: 5px; }
+.ls-watch-list > .ls-foot { grid-column: 1 / -1; }
+.ls-w-head, .ls-w-row { display: grid; grid-column: 1 / -1; grid-template-columns: subgrid; align-items: center; }
+.ls-w-head span { font: 700 8.5px/1.2 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #8c867b; }
+.ls-w-row { padding: 6px 7px; border-radius: 8px; background: rgba(255,255,255,.025); border: 1px solid #25221d; }
+.ls-w-row.live { border-color: rgba(255,75,58,.35); }
+.ls-w-row .gm { display: flex; align-items: center; gap: 4px; min-width: 0; white-space: nowrap; font: 700 12px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; }
+.ls-w-row .gm .ls-logo { margin: 0; }
+.ls-w-row .gm .d { color: #6f6a62; }
+.ls-w-row .tm { display: flex; align-items: center; gap: 4px; font: 700 10.5px/1.2 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; color: #bdb6a8; white-space: nowrap; }
+/* a live game's time is grey like any other -- red only in the game's last 6 minutes; the breathing dot is always red */
+.ls-w-row .tm .crunch { color: #ff4b3a; }
+.ls-w-row .tm .ls-dot { margin: 0; width: 6px; height: 6px; }
+.ls-w-row .pr { display: grid; gap: 3px; min-width: 0; justify-items: center; }
+.ls-w-row .pr .bar { display: flex; width: 56px; height: 6px; border-radius: 3px; overflow: hidden; background: #211f1b; }
+.ls-w-row .pr .bar i { display: block; height: 100%; }
+.ls-w-row .pr b { display: flex; align-items: center; font: 700 10.5px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; white-space: nowrap; }
+.ls-w-row .pr b .ls-logo { margin-right: 3px; }
+.ls-w-row .pr .na { color: #6f6a62; font-size: 11px; }
+
+/* ALL GAMES: "Final" (and the time left) sits right under "Time left"; the win probability under its heading */
+.ls-w-head { padding: 0 8px; }                  /* the rows' padding + border: the columns line up */
+.ls-w-head .c { text-align: center; }
+.ls-w-row .tm { justify-content: center; text-align: center; }
+.ls-w-row .pr b { justify-content: center; }
+.ls-w-row .pr .na { text-align: center; }
+
+/* a game that hasn't tipped off yet */
+.ls-pre { display: grid; justify-items: center; gap: 9px; padding: 22px 6px 14px; text-align: center; }
+.ls-pre .m { display: flex; align-items: center; gap: 16px; }
+.ls-pre .m .ls-logo { margin: 0; }
+.ls-pre .at { color: #6f6a62; font-size: 15px; font-weight: 700; }
+.ls-pre .t { font-size: 13px; font-weight: 700; color: #f0f0f0; line-height: 1.35; }
+.ls-pre .w { font-size: 12px; font-weight: 700; color: #D4AF37; }
+
+/* lineup network: the players' pictures sit centered between the group's name and its net rating, and grow with
+   their line; a little room above "All five" */
+.ls-lu-list { margin-top: 10px; gap: 4px; }
+.ls-lu-row { grid-template-columns: 62px minmax(0, 1fr) 44px 40px; align-items: center; height: 31px; }
+/* the same space between every two pictures, on every line (All five included) */
+.ls-lu-row .w { display: flex; justify-content: center; align-items: center; gap: 4px; overflow: visible; }
+.ls-face { display: block; width: 24px; height: 24px; flex: 0 0 auto; box-sizing: border-box; border-radius: 50%;
+  border: 1.5px solid var(--team, #3a372f); background-color: #211f1b; background-repeat: no-repeat;
+  background-size: 190% auto; background-position: 50% 0; transition: width .45s ease, height .45s ease, box-shadow .45s ease; }
+.ls-lu-list.anim .ls-lu-row.on .ls-face { width: 30px; height: 30px; box-shadow: 0 0 8px var(--team); }
+@media (prefers-reduced-motion: reduce) { .ls-face { transition: none; } }
+
+/* shot chart: room under the court and between the stats */
+.ls-court { margin-bottom: 14px; }
+.ls-stats-roomy { row-gap: 14px; column-gap: 10px; }
+.ls-stats-roomy div { gap: 5px; }
+
+/* player card: room between the name and the team, under the picture, and above the chart */
+.ls-player .nm { margin-bottom: 4px; font-size: 18px; }
+.ls-player { margin-bottom: 12px; gap: 12px; }
+.ls-player > img { width: 84px; height: 62px; flex: 0 0 auto; }
+.ls-player .mn { margin-top: 2px; color: #8c867b; font-size: 12px; }
+.ls-player + .ls-stats-roomy { row-gap: 10px; }
+.ls-ptg { margin-top: 12px; }
+
+/* win probability: room between the parts and between the table's lines */
+.ls-wp-top { margin-bottom: 10px; }
+.ls-wp-chips { margin: 10px 0 12px; }
+.ls-wp-table { gap: 7px; }
+.ls-wp-table .h { margin-bottom: 2px; }
+
+/* phones: the minutes go under the net rating, so all five pictures fit with the same spacing as everywhere else */
+@media (max-width: 640px) {
+  .ls-lu-row { grid-template-columns: 62px minmax(0, 1fr) 46px; grid-template-rows: 1fr 1fr; column-gap: 4px; row-gap: 0; }
+  .ls-lu-row .k { grid-column: 1; grid-row: 1 / span 2; }
+  .ls-lu-row .w { grid-column: 2; grid-row: 1 / span 2; }
+  .ls-lu-row b { grid-column: 3; grid-row: 1; align-self: end; }
+  .ls-lu-row .m { grid-column: 3; grid-row: 2; align-self: start; font-size: 9px; }
+}
+@media (max-width: 380px) {
+  .ls-lu-row .w { gap: 3px; }
+  .ls-face { width: 22px; height: 22px; }
+  .ls-lu-list.anim .ls-lu-row.on .ls-face { width: 26px; height: 26px; }
+}
+@media (max-width: 340px) {
+  .ls-face { width: 18px; height: 18px; }
+  .ls-lu-list.anim .ls-lu-row.on .ls-face { width: 21px; height: 21px; }
+}
+
+/* ============================================================ one height for every window (live-strip.js fitHeights:
+   the shot chart window's height, ending just under its last line of stats) */
+.ls-card { height: var(--ls-card-h, auto); }
+.ls-body { flex: 1 1 auto; min-height: 0; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; }
+.ls-body > * { flex: 0 0 auto; }
+.ls-watch .ls-body { overflow-y: auto; scrollbar-width: thin; scrollbar-color: #3a362e transparent; }   /* a busy night scrolls */
+.ls-court + .ls-stats-roomy { margin-bottom: 0; }
+
+/* FINAL SCORE: room above and below the lead graph */
+.ls-flow { margin: 9px 0 11px; }
+
+/* TEAM COMPARISON: each team's logo alone, centered above its numbers, with room around it */
+.ls-cmp-head { margin: 4px 0 8px; }
+.ls-body > .ls-cmp { flex: 1 1 auto; align-content: space-between; }        /* the rows share the window's height */
+.ls-cmp-head .lg { display: flex; justify-content: center; }
+.ls-cmp-head .ls-logo { margin: 0 !important; }
+.ls-cmp-row .l, .ls-cmp-row .r { text-align: center; }
+
+/* ASSIST WEB: the web takes all the room above its note */
+.ls-aweb { margin-bottom: 8px; }
+.ls-body > .ls-aweb { flex: 1 1 0; min-height: 0; }
+.ls-aweb .ls-svg { width: 100%; height: 100%; }
+
+/* LINEUP NETWORK: the web takes the room between the menus and the lines below it */
+.ls-body > .ls-lu-web { flex: 1 1 0; min-height: 0; }
+.ls-lu-web .ls-svg { width: 100%; height: 100%; }
+
+/* FINAL SCORE: a team's box -- its logo, as tall as the two lines of words next to it */
+.ls-tile span.tl { display: flex; align-items: center; gap: 6px; }
+.ls-tile span.tl .tw { display: block; margin: 0; }
+.ls-tile span.tl .ls-logo { margin: 0; flex: 0 0 auto; }
+
+/* (the shot chart window sets the height: nothing of it is ever clipped) */
+.ls-card-shot .ls-body { overflow: visible; }
+
+/* ============================================================ HOT HAND / MOMENTUM RUN (the same layout as the player
+   card: picture, name in Playfair Display, the numbers, then every shot -- or each of the last 10 games -- in order,
+   the streak lit up once they've all appeared) */
+.ls-hot-logo { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; }
+.ls-hot-logo .ls-logo { margin: 0 !important; }
+.ls-hot-seq .ls-title { margin-bottom: 9px; }
+.ls-hot-row { display: flex; flex-wrap: wrap; gap: 7px 6px; padding: 3px 3px 2px; }
+.ls-hot-dot { display: inline-block; width: 13px; height: 13px; border-radius: 50%; box-sizing: border-box; flex: 0 0 auto;
+  transition: opacity .25s ease, transform .25s ease, box-shadow .45s ease; }
+.ls-hot-dot.m { background: var(--team); }
+.ls-hot-dot.x { border: 1.5px solid #6f6a62; }
+.ls-hot-dot.m.three { box-shadow: inset 0 0 0 2.5px rgba(255, 255, 255, .6); }
+.ls-hot-dot.hide, .ls-hot-chip.hide { opacity: 0; transform: scale(.4); }
+.ls-hot-lit .ls-hot-dot.run { box-shadow: 0 0 0 2px #fff, 0 0 9px 2px var(--team); }
+.ls-hot-lit .ls-hot-dot.run.three { box-shadow: inset 0 0 0 2.5px rgba(255, 255, 255, .6), 0 0 0 2px #fff, 0 0 9px 2px var(--team); }
+.ls-hot-key { display: flex; gap: 14px; margin-top: 10px; font-size: 10.5px; color: #8c867b; }
+.ls-hot-key span { display: inline-flex; align-items: center; gap: 5px; }
+.ls-hot-key .ls-hot-dot { width: 10px; height: 10px; }
+.ls-hot-key .ls-hot-dot.m.three { box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .6); }
+.ls-hot-row.chips { gap: 6px; }
+.ls-hot-chip { flex: 0 0 calc((100% - 24px) / 5); height: 40px; box-sizing: border-box; border-radius: 8px; display: flex;
+  flex-direction: column; align-items: center; justify-content: center; gap: 2px; border: 1px solid #3a372f;
+  background: rgba(255, 255, 255, .025); transition: opacity .25s ease, transform .25s ease, box-shadow .45s ease; }
+.ls-hot-chip b { font: 700 13px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; color: #8c867b; }
+.ls-hot-chip i { font: 400 9.5px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; font-style: normal; color: #8c867b; }
+.ls-hot-chip.w { border-color: var(--team); }
+.ls-hot-chip.w b { color: var(--team); }
+.ls-hot-chip.w i { color: #d8d2c4; }
+.ls-hot-lit .ls-hot-chip.run { box-shadow: 0 0 10px var(--team); background: rgba(255, 255, 255, .06); }
+.ls-hot-none { color: #d8d2c4; font-size: 13px; line-height: 1.45; padding-top: 6px; }
+.ls-hot-none span { color: #8c867b; font-size: 11.5px; }
+@media (prefers-reduced-motion: reduce) { .ls-hot-dot, .ls-hot-chip { transition: none; } }
+.ls-hot-q { display: grid; gap: 6px; }
+.ls-hot-q div { background: rgba(255, 255, 255, .025); border: 1px solid #25221d; border-radius: 8px; padding: 6px 7px 7px; min-width: 0; }
+.ls-hot-q span { display: block; font: 700 8.5px/1.2 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; letter-spacing: .08em; color: #8c867b; }
+.ls-hot-q b { display: block; margin: 3px 0 5px; font: 700 14px/1 "Roboto Condensed Numbers", Arial, Helvetica, sans-serif; color: #fff; }
+.ls-hot-q em { display: block; height: 4px; border-radius: 2px; background: #211f1b; overflow: hidden; }
+.ls-hot-q em i { display: block; height: 100%; background: var(--team); border-radius: 2px; }
+.ls-hot-seq.big .ls-hot-row { gap: 8px; }
+.ls-hot-seq.big .ls-hot-row .ls-hot-dot { width: 18px; height: 18px; }
+
+/* phones: the ALL GAMES list's columns (after its desktop rules, so these win) */
+@media (max-width: 640px) {
+  .ls-watch-list { grid-template-columns: max-content minmax(0, 1fr) 62px; column-gap: 6px; }
+}
