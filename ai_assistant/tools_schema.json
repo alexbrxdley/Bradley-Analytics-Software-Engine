@@ -1,0 +1,850 @@
+{
+  "_comment": "Generated from TOOLS in streamlit/ai_search.py, which is what the app actually sends to the model -- documentation only.",
+  "tools": [
+    {
+      "name": "ask_clarifying_questions",
+      "description": "Ask the user for missing details BEFORE answering (e.g. which season). Put every question in ONE call, each with 2-5 short clickable options.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "questions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "question": {
+                  "type": "string"
+                },
+                "options": {
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "question"
+              ]
+            }
+          }
+        },
+        "required": [
+          "questions"
+        ]
+      }
+    },
+    {
+      "name": "season_stats",
+      "description": "Season stats (and league ranks) for specific players or teams.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "subject_type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "player",
+              "team",
+              null
+            ]
+          },
+          "names": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "season": {
+            "type": "string",
+            "description": "YYYY-YY, e.g. 2024-25"
+          },
+          "per_mode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "PerGame",
+              "Totals",
+              "Per36",
+              null
+            ]
+          },
+          "stats": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "stat field names, e.g. PTS, FG3_PCT, TS_PCT"
+          }
+        },
+        "required": [
+          "names",
+          "season"
+        ]
+      }
+    },
+    {
+      "name": "career_stats",
+      "description": "A player's season-by-season and career stats (regular season, or playoffs).",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "player": {
+            "type": "string"
+          },
+          "per_mode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "PerGame",
+              "Totals",
+              "Per36",
+              null
+            ]
+          },
+          "stats": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "stat field names, e.g. PTS, FG3_PCT, TS_PCT"
+          },
+          "playoffs": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "player"
+        ]
+      }
+    },
+    {
+      "name": "game_log",
+      "description": "Game-by-game results/stats for a player or team in a season, plus averages and record. Set quarter (1-4, or OT) for the stats from that quarter only in every game.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "subject_type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "player",
+              "team",
+              null
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "season": {
+            "type": "string",
+            "description": "YYYY-YY, e.g. 2024-25"
+          },
+          "last_n": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "stats": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "stat field names, e.g. PTS, FG3_PCT, TS_PCT"
+          },
+          "quarter": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "1, 2, 3, 4 or OT -- only that quarter's stats; leave out for whole games"
+          }
+        },
+        "required": [
+          "name",
+          "season"
+        ]
+      }
+    },
+    {
+      "name": "quarter_stats",
+      "description": "A player's or team's per-game stats inside each quarter (1st-4th) of a season, and which quarter is best by points, FG% and plus-minus. Use for 'best quarter', 'fourth-quarter scoring' etc.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "subject_type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "player",
+              "team",
+              null
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "season": {
+            "type": "string",
+            "description": "YYYY-YY, e.g. 2024-25"
+          }
+        },
+        "required": [
+          "name",
+          "season"
+        ]
+      }
+    },
+    {
+      "name": "league_leaders",
+      "description": "Rank all players or teams by one stat, with optional filters (position, age, height, stat ranges, team). Sensible minimums apply automatically.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "subject_type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "player",
+              "team",
+              null
+            ]
+          },
+          "stat": {
+            "type": "string"
+          },
+          "season": {
+            "type": "string",
+            "description": "YYYY-YY, e.g. 2024-25"
+          },
+          "per_mode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "PerGame",
+              "Totals",
+              "Per36",
+              null
+            ]
+          },
+          "top_n": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "ascending": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "true = lowest first"
+          },
+          "filters": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "optional player filters",
+            "properties": {
+              "position": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "G, F or C"
+              },
+              "team": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "min_age": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "max_age": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "min_height_inches": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "max_height_inches": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "min_games": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "stat_filters": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "stat": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "min": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "max": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "show_stats": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "stat field names, e.g. PTS, FG3_PCT, TS_PCT"
+          }
+        },
+        "required": [
+          "stat",
+          "season"
+        ]
+      }
+    },
+    {
+      "name": "shot_zones",
+      "description": "Where a player/team shoots from: attempts, share and FG% by court zone vs league average.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "subject_type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "player",
+              "team",
+              null
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "season": {
+            "type": "string",
+            "description": "YYYY-YY, e.g. 2024-25"
+          }
+        },
+        "required": [
+          "name",
+          "season"
+        ]
+      }
+    },
+    {
+      "name": "special_stats",
+      "description": "League tables: clutch (last 5 min, within 5 pts), hustle (deflections, charges, screen assists), defense (opponent FG% when guarded), playtype (isolation, pick and roll, spot up, post up, transition, cut...). Filter by names or sort.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "clutch",
+              "hustle",
+              "defense",
+              "playtype"
+            ]
+          },
+          "season": {
+            "type": "string",
+            "description": "YYYY-YY, e.g. 2024-25"
+          },
+          "names": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "sort_by": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "top_n": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "play_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "stats": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "stat field names, e.g. PTS, FG3_PCT, TS_PCT"
+          }
+        },
+        "required": [
+          "kind",
+          "season"
+        ]
+      }
+    },
+    {
+      "name": "passing",
+      "description": "Who a player passes to most, and the shots those teammates take right after.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "player": {
+            "type": "string"
+          },
+          "season": {
+            "type": "string",
+            "description": "YYYY-YY, e.g. 2024-25"
+          },
+          "top_n": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "player",
+          "season"
+        ]
+      }
+    },
+    {
+      "name": "lineups",
+      "description": "A team's best/worst 2- to 5-man lineups (net/off/def rating, minutes).",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "team": {
+            "type": "string"
+          },
+          "season": {
+            "type": "string",
+            "description": "YYYY-YY, e.g. 2024-25"
+          },
+          "size": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "sort_by": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "min_minutes": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "top_n": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "team",
+          "season"
+        ]
+      }
+    },
+    {
+      "name": "on_off",
+      "description": "How a team does with two specific teammates on the floor together (ratings, minutes).",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "team": {
+            "type": "string"
+          },
+          "player_1": {
+            "type": "string"
+          },
+          "player_2": {
+            "type": "string"
+          },
+          "season": {
+            "type": "string",
+            "description": "YYYY-YY, e.g. 2024-25"
+          }
+        },
+        "required": [
+          "team",
+          "player_1",
+          "player_2",
+          "season"
+        ]
+      }
+    },
+    {
+      "name": "head_to_head",
+      "description": "A player's stats with a specific opposing player on vs off the court.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "player": {
+            "type": "string"
+          },
+          "opponent": {
+            "type": "string"
+          },
+          "season": {
+            "type": "string",
+            "description": "YYYY-YY, e.g. 2024-25"
+          }
+        },
+        "required": [
+          "player",
+          "opponent",
+          "season"
+        ]
+      }
+    },
+    {
+      "name": "web_search",
+      "description": "Search the web: news, injuries, trades, contracts, awards, history, rules, anything recent or not in the stats tools.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    },
+    {
+      "name": "create_visualization",
+      "description": "Draw the chart that answers the question; it is shown under your answer with controls for colour, style, season and more. Types: leaderboard (rank one stat; stat, top_n, filters), scatter (x_stat vs y_stat; names = highlight), shot_chart / heat_map / hex_shot_chart / zone_map (where one player/team shoots), comparison (2-6 names across several stats), career_trend (one stat across a player's seasons, up to 6 players), game_trend (one stat game by game in a season; set quarter for one quarter's numbers, e.g. 4th-quarter points), radar (all-round profile, 1-2 names), distribution (one stat across the league, names marked), clutch_clock (a player/team by quarter), animated_shot_chart (every shot of a season appearing in order), trade. If no type answers the question exactly, draw the closest one and say so in note.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "chart_type": {
+            "type": "string",
+            "enum": [
+              "leaderboard",
+              "scatter",
+              "shot_chart",
+              "heat_map",
+              "hex_shot_chart",
+              "zone_map",
+              "animated_shot_chart",
+              "comparison",
+              "career_trend",
+              "game_trend",
+              "radar",
+              "distribution",
+              "clutch_clock",
+              "trade"
+            ]
+          },
+          "subject_type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "player",
+              "team",
+              null
+            ]
+          },
+          "names": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "season": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "YYYY-YY, e.g. 2024-25"
+          },
+          "stat": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "stats": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "stat field names, e.g. PTS, FG3_PCT, TS_PCT"
+          },
+          "x_stat": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "y_stat": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "rank_by": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "scatter: stat that picks the top_n plotted (default y_stat), e.g. PTS for 'top 30 scorers'"
+          },
+          "per_mode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "PerGame",
+              "Totals",
+              "Per36",
+              null
+            ]
+          },
+          "top_n": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "ascending": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "filters": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "optional player filters",
+            "properties": {
+              "position": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "G, F or C"
+              },
+              "team": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "min_age": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "max_age": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "min_height_inches": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "max_height_inches": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "min_games": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "stat_filters": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "stat": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "min": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "max": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "team_1": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "team_2": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "team_1_sends": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "team_2_sends": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "quarter": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "1, 2, 3, 4 or OT -- only that quarter's stats; leave out for whole games"
+          },
+          "title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "one short sentence shown above the chart -- REQUIRED when this is only the closest chart to what was asked, saying what it shows instead"
+          }
+        },
+        "required": [
+          "chart_type"
+        ]
+      }
+    }
+  ]
+}
