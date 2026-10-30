@@ -1,0 +1,23 @@
+# The Bradley Analytics notification server (a Cloudflare Worker). Setup: see README.md.
+name = "bradley-analytics-alerts"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# once a minute: check the night's games and send any alerts
+[triggers]
+crons = ["* * * * *"]
+
+[vars]
+# the website: the alerts read its small news.json (injuries, transactions) and highlights-recent.json files
+SITE_URL = "https://bradley-analytics.com"
+# the site that may subscribe (its pages call this server from the browser)
+ALLOWED_ORIGINS = "https://bradley-analytics.com,https://www.bradley-analytics.com,https://alexbrxdley.github.io"
+# who the push services contact about this sender
+VAPID_SUBJECT = "mailto:alexbrxdley@gmail.com"
+# VAPID_PUBLIC_KEY: paste the public key that `node make-keys.mjs` prints (it's public: the site uses it too)
+VAPID_PUBLIC_KEY = ""
+# VAPID_PRIVATE_JWK is a secret: `npx wrangler secret put VAPID_PRIVATE_JWK` (never put it in this file)
+
+[[kv_namespaces]]
+binding = "ALERTS"
+id = "PASTE_THE_KV_NAMESPACE_ID_HERE"
