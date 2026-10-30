@@ -1,0 +1,29 @@
+# Keeps the Bradley Analytics Book on the Portfolio page in step with the Google Slides deck: the list of pages
+# (docs/data/book.json) and a picture of every page (docs/data/book/). Runs once a day, and can be run by hand
+# (Actions > Book pages > Run workflow) right after editing the deck.
+name: Book pages
+
+on:
+  schedule:
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pymupdf pillow
+      - run: python3 scripts/fetch_book.py docs/data/book.json
+      - run: |
+          git add -A docs/data/book.json docs/data/book
+          if git diff --cached --quiet; then echo "No change."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Book pages: updated"
+          git pull --rebase --autostash || true
+          git push
