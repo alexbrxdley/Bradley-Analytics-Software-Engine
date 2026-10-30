@@ -1,0 +1,162 @@
+---
+layout: page
+title: Portfolio
+sidebar: portfolio
+---
+
+<p class="pg-lede bq-scroll-fade">Reports and work with NBA players, pitches, every team report in the Bradley Analytics Book, and the Instagram portfolio where it all started.</p>
+
+<section class="pf-section" id="oladipo">
+  <h2 class="bq-scroll-fade">Victor Oladipo Report - A Letter to NBA GM's</h2>
+  <div class="pf-soon bq-scroll-fade"><span class="pf-badge">Coming soon</span><p>This report will be posted here.</p></div>
+</section>
+
+<section class="pf-section" id="gardner">
+  <h2 class="bq-scroll-fade">Myron Gardner Report</h2>
+  <div class="pf-soon bq-scroll-fade"><span class="pf-badge">Coming soon</span><p>This report will be posted here.</p></div>
+</section>
+
+<section class="pf-section" id="launchpad">
+  <h2 class="bq-scroll-fade">NBA Launchpad Pitch - Future of Youth Basketball</h2>
+  <div class="pf-soon bq-scroll-fade"><span class="pf-badge">Coming soon</span><p>This pitch will be posted here.</p></div>
+</section>
+
+<section class="pf-section" id="book">
+  <h2 class="bq-scroll-fade">Bradley Analytics Book</h2>
+  <p class="bq-scroll-fade">Every Bradley Analytics team report in one book, starting with the Boston Celtics. Tap a page below to jump to it, or use the arrows.</p>
+  <!-- The live Google Slides deck (always the current version), sized to its 4:5 pages so there's no black space. Under it,
+       like the Photos app: a strip of every page, the one shown in the middle and bigger; tap or swipe through it to jump.
+       The pages' list (data/book.json) is kept in step with the deck by .github/workflows/book.yml. -->
+  <div class="pf-book bq-scroll-fade" data-deck="10oVZkR50QBvXiob5jMWr9oYAMjl61txyJMO19qY-wac">
+    <div class="pf-book-stage">
+      <img class="pf-shot a" alt="" decoding="async"><img class="pf-shot b" alt="" decoding="async">
+      <iframe title="The Bradley Analytics Book" loading="lazy" allowfullscreen data-src="https://docs.google.com/presentation/d/10oVZkR50QBvXiob5jMWr9oYAMjl61txyJMO19qY-wac/embed?start=false&amp;loop=false&amp;rm=minimal"></iframe>
+    </div>
+    <div class="pf-book-bar">
+      <button type="button" class="pf-bk" data-step="-1" aria-label="Previous page">&lsaquo;</button>
+      <div class="pf-strip" role="listbox" aria-label="Pages"></div>
+      <button type="button" class="pf-bk" data-step="1" aria-label="Next page">&rsaquo;</button>
+    </div>
+    <div class="pf-book-meta">
+      <span class="pf-count">Page <b class="pf-cur">1</b> of <span class="pf-total">149</span></span>
+      <a class="pf-book-link" href="https://docs.google.com/presentation/d/10oVZkR50QBvXiob5jMWr9oYAMjl61txyJMO19qY-wac/edit?usp=sharing" target="_blank" rel="noopener">Open in Google Slides <span aria-hidden="true">&#8599;</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="pf-section" id="instagram">
+  <h2 class="bq-scroll-fade">Instagram</h2>
+  <div class="ba-insta" data-feed="{{ site.behold_feed_id }}" data-count="9"></div>
+</section>
+
+<script src="assets/instagram.js?v=3" defer></script>
+<script>
+  // The book, like the Photos app: the page strip under it; drag it (or the arrows, or a tap) and the page in the
+  // middle shows at once. Each page is a sharp picture of the real deck (1080 x 1350), saved on the site by
+  // .github/workflows/book.yml every day, so nothing waits on Google. Until the first run, the pages come from Google:
+  // the strip a few at a time, and the main view as Google's vector (SVG) copy of the page, so it's never blurry.
+  (function () {
+    var book = document.querySelector('.pf-book'); if (!book) return;
+    var deck = book.getAttribute('data-deck'), frame = book.querySelector('iframe'), strip = book.querySelector('.pf-strip');
+    var shots = [book.querySelector('.pf-shot.a'), book.querySelector('.pf-shot.b')], front = 0;
+    var cur = book.querySelector('.pf-cur'), total = book.querySelector('.pf-total'), pages = [], page = -1, local = '', ext = '.jpg';
+    var base = 'https://docs.google.com/presentation/d/' + deck;
+    function small(i) { return local ? local + 's/' + pages[i] + ext : base + '/export/png?pageid=' + encodeURIComponent(pages[i]); }
+    function large(i) { return local ? local + 'l/' + pages[i] + ext : base + '/export/svg?pageid=' + encodeURIComponent(pages[i]); }
+    // the strip's pictures: all at once from the site; from Google two at a time, nearest first, retried up to 3 times
+    var queue = [], busy = 0, cache = {}, tries = {};
+    function want(i, first) { if (i < 0 || i >= pages.length || cache[i]) return; cache[i] = 'q'; first ? queue.unshift(i) : queue.push(i); pump(); }
+    function pump() {
+      while (busy < (local ? 12 : 2) && queue.length) (function (i) {
+        busy++;
+        var im = new Image(), t = strip.children[i] && strip.children[i].querySelector('img');
+        im.decoding = 'async';
+        im.onload = function () { busy--; cache[i] = im.src; if (t && !t.src) t.src = im.src; pump(); };
+        im.onerror = function () { busy--; tries[i] = (tries[i] || 0) + 1; if (tries[i] <= 3) setTimeout(function () { cache[i] = 0; want(i); }, 1500 * tries[i]); pump(); };
+        im.src = small(i);
+      })(queue.shift());
+    }
+    // the big pictures: decoded ahead of time, so turning to a page is instant. From the site's own copies every page
+    // is loaded in the background, nearest first; from Google only the neighbours (it limits how much one visitor loads).
+    var big = {}, ready = {}, bq = [], bbusy = 0;
+    function bigImg(i) {
+      if (!big[i]) {
+        var im = new Image(); im.decoding = 'async'; im.src = large(i);
+        big[i] = (im.decode ? im.decode() : new Promise(function (r, j) { im.onload = r; im.onerror = j; })).then(function () { ready[i] = im.src; return im.src; });
+        big[i].catch(function () { delete big[i]; });
+      }
+      return big[i];
+    }
+    function preloadAll() {
+      if (!local) return;
+      var order = []; for (var d = 0; d < pages.length; d++) { if (page + d < pages.length) order.push(page + d); if (d && page - d >= 0) order.push(page - d); }
+      bq = order.filter(function (i) { return !big[i]; });
+      (function pumpBig() {
+        while (bbusy < 4 && bq.length) { var i = bq.shift(); if (big[i]) continue; bbusy++; bigImg(i).then(done, done); }
+        function done() { bbusy--; setTimeout(pumpBig, 0); }
+      })();
+    }
+    var showing = -1;
+    function put(src, fade) {                                // the page on screen: a cross-fade, or (while scrubbing) straight away
+      if (!fade) { shots[front].src = src; shots[front].classList.add('on'); shots[1 - front].classList.remove('on'); return; }
+      var back = 1 - front;
+      shots[back].src = src; shots[back].classList.add('on'); shots[front].classList.remove('on');
+      front = back;
+    }
+    function show(i, fade) {
+      showing = i;
+      if (ready[i]) { put(ready[i], fade); book.classList.remove('pf-soft'); return; }
+      var th = cache[i] && cache[i] !== 'q' ? cache[i] : (local ? small(i) : '');
+      if (th) { put(th, false); book.classList.add('pf-soft'); }   // the strip's picture until the sharp one is ready
+      bigImg(i).then(function (src) { if (i !== page) return; put(src, false); book.classList.remove('pf-soft'); }).catch(function () {});
+    }
+    function setPage(i, from) {
+      i = Math.max(0, Math.min(pages.length - 1, i));
+      if (i === page) return;
+      page = i;
+      var old = strip.querySelector('.pf-th.on'); if (old) { old.classList.remove('on'); old.setAttribute('aria-selected', 'false'); }
+      var el = strip.children[page]; if (el) { el.classList.add('on'); el.setAttribute('aria-selected', 'true'); }
+      cur.textContent = page + 1;
+      show(page, from !== 'scroll' && from !== 'init');
+      [1, -1, 2, -2, 3].forEach(function (d) { want(page + d, true); if (page + d >= 0 && page + d < pages.length && Math.abs(d) <= 2) bigImg(page + d); });
+      if (from !== 'scroll') center(page, from === 'init' ? 'auto' : 'smooth');
+    }
+    function center(i, how) {
+      var el = strip.children[i]; if (!el) return;
+      lock = true; clearTimeout(lockT); lockT = setTimeout(function () { lock = false; }, how === 'auto' ? 60 : 500);
+      strip.scrollTo({ left: el.offsetLeft - strip.offsetLeft - (strip.clientWidth - el.offsetWidth) / 2, behavior: how });
+    }
+    // dragging the strip: whichever page is in the middle is the page (each thumb is the same width, so it's arithmetic)
+    var lock = false, lockT = 0, raf = 0, step = 0, pad = 0;
+    function measure() { var a = strip.children[0], b = strip.children[1]; if (a && b) { step = b.offsetLeft - a.offsetLeft; pad = a.offsetLeft - strip.offsetLeft + a.offsetWidth / 2; } }
+    strip.addEventListener('scroll', function () {
+      if (lock || raf) return;                               // (one update a frame: the page follows the strip as it moves)
+      raf = requestAnimationFrame(function () { raf = 0; if (!step) measure(); if (step) setPage(Math.round((strip.scrollLeft + strip.clientWidth / 2 - pad) / step), 'scroll'); });
+    }, { passive: true });
+    window.addEventListener('resize', measure);
+    // a mouse can drag the strip too, with a little glide when it's let go
+    var dragX = null, dragL = 0, moved = false, vx = 0, lastX = 0, lastT = 0;
+    strip.addEventListener('pointerdown', function (e) { if (e.pointerType !== 'mouse') return; dragX = lastX = e.clientX; lastT = performance.now(); dragL = strip.scrollLeft; moved = false; vx = 0; strip.classList.add('drag'); });
+    window.addEventListener('pointermove', function (e) { if (dragX === null) return; var d = e.clientX - dragX; if (Math.abs(d) > 4) moved = true; var now = performance.now(); vx = (e.clientX - lastX) / Math.max(1, now - lastT); lastX = e.clientX; lastT = now; strip.scrollLeft = dragL - d; });
+    window.addEventListener('pointerup', function () {
+      if (dragX === null) return; dragX = null; strip.classList.remove('drag');
+      if (!moved) return;
+      var target = Math.round((strip.scrollLeft - vx * 260 + strip.clientWidth / 2 - pad) / (step || 1));
+      setTimeout(function () { setPage(target, 'glide'); }, 0);
+    });
+    fetch('data/book.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) {
+      pages = d.pages || []; local = d.pictures || ''; ext = d.ext || '.jpg'; total.textContent = pages.length;
+      strip.innerHTML = pages.map(function (id, i) {
+        return '<button type="button" class="pf-th" role="option" aria-label="Page ' + (i + 1) + '" data-i="' + i + '"><img alt="" draggable="false" decoding="async"' + (local ? ' src="' + small(i) + '"' : '') + '></button>';
+      }).join('');
+      if (!local) { frame.src = frame.getAttribute('data-src'); for (var i = 0; i < pages.length; i++) want(i); }
+      measure(); setPage(0, 'init');
+      if (local) for (var k = 0; k < pages.length; k++) want(k);
+      var idle = window.requestIdleCallback || function (f) { setTimeout(f, 300); };
+      idle(preloadAll);
+    }).catch(function () { book.querySelector('.pf-book-bar').style.display = 'none'; frame.src = frame.getAttribute('data-src'); });
+    strip.addEventListener('click', function (e) { if (moved) { moved = false; return; } var b = e.target.closest('.pf-th'); if (b) setPage(+b.getAttribute('data-i'), 'tap'); });
+    book.querySelectorAll('.pf-bk').forEach(function (b) { b.addEventListener('click', function () { setPage(page + (+b.getAttribute('data-step')), 'arrow'); }); });
+    book.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') setPage(page + 1, 'arrow'); if (e.key === 'ArrowLeft') setPage(page - 1, 'arrow'); });
+  })();
+</script>

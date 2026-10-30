@@ -1,0 +1,13 @@
+title: Bradley Analytics Software Engine
+description: NBA analytics engine in Python and R
+markdown: kramdown
+
+# The Instagram block (Portfolio page and under the home page's video) shows the @bradleyanalytics profile and latest
+# posts from a Behold JSON feed: connect the account at behold.so, create a JSON feed, and paste its feed ID here.
+# Left empty, a link to the profile is shown instead.
+behold_feed_id: "Rq8QG61lpJBRky8tKrdd"
+
+# Live game notifications (assets/notify.js). Alerts already work while the site is open in a tab; to send them when
+# it's closed too, deploy the notification server in worker/ (see worker/README.md) and paste its URL and public key here.
+push_worker_url: ""
+push_public_key: ""

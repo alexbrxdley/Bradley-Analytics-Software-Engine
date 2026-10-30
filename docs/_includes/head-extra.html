@@ -1,0 +1,15 @@
+<!-- shared by every page: the app manifest (Add to Home Screen), the new pages' styles, and live game notifications -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Bradley Analytics">
+<link rel="preconnect" href="https://site.api.espn.com" crossorigin>
+<link rel="stylesheet" href="assets/live-strip.css?v=21">
+<link rel="stylesheet" href="assets/pages.css?v=4">
+<script>window.BA_PUSH = { worker: "{{ site.push_worker_url }}", key: "{{ site.push_public_key }}" };</script>
+<script src="assets/top-tape.js?v=1" defer></script>
+<script src="assets/alert-rules.js?v=1" defer></script>
+<script src="assets/notify.js?v=4" defer></script>
+<script src="assets/mini-player.js?v=1" defer></script>
+<script src="assets/book-preload.js?v=1" defer></script>

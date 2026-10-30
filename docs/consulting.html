@@ -1,0 +1,79 @@
+---
+layout: page
+title: Consulting
+wide: true
+---
+
+<p class="pg-lede bq-scroll-fade">Personalized Bradley Analytics reports for players, trainers, agents, coaches and teams: the same analysis behind the dashboard, built around your questions and delivered as a finished report.</p>
+
+<section class="pg-section">
+  <h2 class="pg-section-title bq-scroll-fade">Reports</h2>
+  <div class="cs-grid">
+    <div class="cs-card bq-scroll-fade"><h3>Player Report</h3><p>A deep look at one player: shot profile, tendencies, lineups, how he compares across the league, and where he can grow.</p></div>
+    <div class="cs-card bq-scroll-fade"><h3>Team Report</h3><p>A team's offense and defense, its best lineups, its rotation and its cap sheet, like the reports in the Bradley Analytics Book.</p></div>
+    <div class="cs-card bq-scroll-fade"><h3>Custom Report</h3><p>Scouting, contract cases, trade ideas, youth and college teams with your own stats: tell me what you need.</p></div>
+  </div>
+</section>
+
+<section class="pg-section">
+  <h2 class="pg-section-title bq-scroll-fade">Packages and pricing</h2>
+  <div class="cs-grid">
+    <div class="cs-card soon bq-scroll-fade"><span class="pf-badge">Coming soon</span><h3>Package</h3><p>Details and pricing will be listed here.</p></div>
+    <div class="cs-card soon bq-scroll-fade"><span class="pf-badge">Coming soon</span><h3>Package</h3><p>Details and pricing will be listed here.</p></div>
+    <div class="cs-card soon bq-scroll-fade"><span class="pf-badge">Coming soon</span><h3>Package</h3><p>Details and pricing will be listed here.</p></div>
+  </div>
+</section>
+
+<section class="pg-section">
+  <h2 class="pg-section-title bq-scroll-fade">How it works</h2>
+  <ol class="cs-steps bq-scroll-fade">
+    <li><b>Request</b><span>Tell me who the report is about and what you want to know.</span></li>
+    <li><b>Plan</b><span>I reply by email with what the report will cover and when it will be ready.</span></li>
+    <li><b>Report</b><span>You get a finished, visual report built on real data.</span></li>
+  </ol>
+</section>
+
+<section class="pg-section" id="request">
+  <h2 class="pg-section-title bq-scroll-fade">Request a report</h2>
+  <form class="cs-form bq-scroll-fade" id="cs-form" novalidate>
+    <div class="cs-row">
+      <label>Your name<input name="name" autocomplete="name" required></label>
+      <label>Your email<input name="email" type="email" autocomplete="email" required></label>
+    </div>
+    <div class="cs-row">
+      <label>You are a
+        <select name="role">
+          <option>Player</option><option>Trainer</option><option>Agent</option><option>Coach</option>
+          <option>Team / front office</option><option>Media</option><option>Fan</option><option>Other</option>
+        </select>
+      </label>
+      <label>Report
+        <select name="kind"><option>Player Report</option><option>Team Report</option><option>Custom Report</option></select>
+      </label>
+    </div>
+    <div class="cs-row">
+      <label>Player or team<input name="subject" placeholder="e.g. Jayson Tatum, Boston Celtics"></label>
+      <label>Needed by (optional)<input name="when" type="date"></label>
+    </div>
+    <label>What do you want to know?<textarea name="details" rows="5" placeholder="Your questions, the season(s), anything else that helps." required></textarea></label>
+    <button type="submit" class="cs-send">Send request</button>
+    <p class="cs-note" id="cs-note">This opens an email to <a href="mailto:alexbrxdley@gmail.com">alexbrxdley@gmail.com</a> with your request filled in, ready to send.</p>
+  </form>
+</section>
+
+<script>
+  (function () {
+    var f = document.getElementById('cs-form'), note = document.getElementById('cs-note');
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var v = function (n) { return (f.elements[n].value || '').trim(); };
+      if (!v('name') || !v('email') || !v('details')) { note.textContent = 'Please add your name, your email and what you want to know.'; note.classList.add('err'); return; }
+      var subject = 'Report request: ' + v('kind') + (v('subject') ? ' - ' + v('subject') : '');
+      var body = 'Name: ' + v('name') + '\nEmail: ' + v('email') + '\nI am a: ' + v('role') + '\nReport: ' + v('kind') +
+        '\nPlayer or team: ' + (v('subject') || '-') + '\nNeeded by: ' + (v('when') || '-') + '\n\n' + v('details') + '\n';
+      location.href = 'mailto:alexbrxdley@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      note.classList.remove('err');
+      note.innerHTML = 'Your email app should open with the request filled in. If it doesn\'t, email <a href="mailto:alexbrxdley@gmail.com">alexbrxdley@gmail.com</a>.';
+    });
+  })();
+</script>

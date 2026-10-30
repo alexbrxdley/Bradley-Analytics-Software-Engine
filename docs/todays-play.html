@@ -1,0 +1,25 @@
+---
+layout: page
+title: Today's Play
+section: games
+wide: true
+---
+
+<p class="gm-back"><a href="games.html" aria-label="All games"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>All games</span></a></p>
+<p class="pg-lede bq-scroll-fade">Pick any of today&rsquo;s games and draw four plays: an offense and a defense for each team. Every play is scored as a success rate, and your score is the average of all four.</p>
+
+<section class="gm-app" id="tp-app" aria-label="Today's Play"></section>
+
+<section class="pg-section gm-board-sec" aria-labelledby="tp-board-game-h">
+  <h2 class="pg-section-title small" id="tp-board-game-h">This game</h2>
+  <div class="gm-board-box" id="tp-board-game"></div>
+</section>
+
+<section class="pg-section gm-board-sec" aria-labelledby="tp-app-lb">
+  <h2 class="pg-section-title small" id="tp-app-lb">Leaderboard: every game</h2>
+  <div class="gm-board-box" id="tp-board"></div>
+</section>
+
+<link rel="stylesheet" href="assets/games.css?v=5">
+<script src="assets/games.js?v=3"></script>
+<script src="assets/todays-play.js?v=4"></script>
