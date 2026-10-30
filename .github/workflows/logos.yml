@@ -1,0 +1,29 @@
+# Keeps a backup copy of 2kratings.com's Celtics logo in the repo (streamlit/assets/logos, docs/assets/logos) so the
+# dashboard never falls back to a placeholder when 2kratings.com can't be reached. Weekly, and by hand
+# (Actions > Logos > Run workflow).
+name: Logos
+
+on:
+  schedule:
+    - cron: "11 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  logos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install cairosvg
+      - run: python3 scripts/fetch_logos.py
+      - run: |
+          git add -A streamlit/assets/logos docs/assets/logos
+          if git diff --cached --quiet; then echo "No change."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Logos: updated"
+          git pull --rebase --autostash || true
+          git push
