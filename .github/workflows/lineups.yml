@@ -1,0 +1,26 @@
+# Saves this season's five-man lineups (docs/data/lineups.json) for Guess the Analytics. Once a day.
+name: Lineups
+
+on:
+  schedule:
+    - cron: "41 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lineups:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/fetch_lineups.py docs/data/lineups.json
+      - run: |
+          if git diff --quiet -- docs/data/lineups.json; then echo "No change."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/lineups.json
+          git commit -m "Lineups: updated"
+          git pull --rebase --autostash || true
+          git push
