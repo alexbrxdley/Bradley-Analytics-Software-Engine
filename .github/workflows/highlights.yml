@@ -1,0 +1,40 @@
+# Every 10 minutes: finds each finished NBA game's highlight video on the NBA's YouTube channel (docs/data/highlights.json,
+# for the live game windows, and highlights-recent.json, for the "highlights are up" alerts), and saves a small copy of
+# the injury report and transactions for the alerts (docs/data/news.json). Commits only when something changed.
+name: Game highlights
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: highlights
+  cancel-in-progress: false
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Find new highlight videos
+        env:
+          # optional: a free YouTube Data API key (repo Settings > Secrets and variables > Actions > YOUTUBE_API_KEY).
+          # With it, every game of the season gets its video; without it, only games from now on (the public feed).
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python3 scripts/fetch_highlights.py docs/data/highlights.json
+      - name: Injury report and transactions
+        run: python3 scripts/fetch_news.py docs/data/news.json
+      - name: Save them
+        run: |
+          git add -A docs/data
+          if git diff --cached --quiet; then echo "No change."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Highlights and news: updated"
+          git pull --rebase --autostash || true
+          git push
