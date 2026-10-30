@@ -1,1 +1,747 @@
-{"updated": null, "games": {}}
+{
+ "checked": {},
+ "days": [
+  "20260930",
+  "20261001",
+  "20261002",
+  "20261003",
+  "20261004",
+  "20261005",
+  "20261006",
+  "20261007",
+  "20261008",
+  "20261009",
+  "20261010",
+  "20261011",
+  "20261012",
+  "20261013",
+  "20261014",
+  "20261015",
+  "20261016",
+  "20261017",
+  "20261018",
+  "20261019",
+  "20261020",
+  "20261021",
+  "20261022",
+  "20261023",
+  "20261024",
+  "20261025",
+  "20261026",
+  "20261027",
+  "20261028"
+ ],
+ "games": {
+  "401909088": {
+   "day": "20261020",
+   "id": "NZmml7nxVaI",
+   "published": "2026-10-20T21:50:15+00:00",
+   "teams": [
+    "BOS",
+    "DET"
+   ],
+   "title": "CELTICS at PISTONS | FULL GAME HIGHLIGHTS | October 20, 2026"
+  },
+  "401909089": {
+   "day": "20261020",
+   "id": "mF7pmQEkS_A",
+   "published": "2026-10-21T02:13:07+00:00",
+   "teams": [
+    "PHI",
+    "NY"
+   ],
+   "title": "76ERS at KNICKS | FULL GAME HIGHLIGHTS | October 20, 2026"
+  },
+  "401909090": {
+   "day": "20261020",
+   "id": "PuRFyx_FSbs",
+   "published": "2026-10-21T04:41:19+00:00",
+   "teams": [
+    "OKC",
+    "SA"
+   ],
+   "title": "THUNDER at SPURS | FULL GAME HIGHLIGHTS | October 20, 2026"
+  },
+  "401909091": {
+   "day": "20261021",
+   "id": "pLXx9k6RYMY",
+   "published": "2026-10-22T02:37:27+00:00",
+   "teams": [
+    "MIN",
+    "MIA"
+   ],
+   "title": "TIMBERWOLVES at HEAT | FULL GAME HIGHLIGHTS | October 21, 2026"
+  },
+  "401909092": {
+   "day": "20261021",
+   "id": "GU4e--bCuwQ",
+   "published": "2026-10-22T05:07:54+00:00",
+   "teams": [
+    "GS",
+    "LAL"
+   ],
+   "title": "WARRIORS at LAKERS | FULL GAME HIGHLIGHTS | October 21, 2026"
+  },
+  "401909093": {
+   "day": "20261022",
+   "id": "2SHdd_RRsRw",
+   "published": "2026-10-23T02:23:28+00:00",
+   "teams": [
+    "CLE",
+    "PHI"
+   ],
+   "title": "CAVALIERS at 76ERS | FULL GAME HIGHLIGHTS | October 22, 2026"
+  },
+  "401909094": {
+   "day": "20261022",
+   "id": "aEAJfS_6J0g",
+   "published": "2026-10-23T04:37:06+00:00",
+   "teams": [
+    "DEN",
+    "OKC"
+   ],
+   "title": "NUGGETS at THUNDER | FULL GAME HIGHLIGHTS | October 22, 2026"
+  },
+  "401909095": {
+   "day": "20261023",
+   "id": "9n0WtH6pzGc",
+   "published": "2026-10-24T02:13:38+00:00",
+   "teams": [
+    "NY",
+    "BOS"
+   ],
+   "title": "KNICKS at CELTICS | FULL GAME HIGHLIGHTS | October 23, 2026"
+  },
+  "401909096": {
+   "day": "20261023",
+   "id": "ZUslpiyp7G4",
+   "published": "2026-10-24T04:51:36+00:00",
+   "teams": [
+    "HOU",
+    "SA"
+   ],
+   "title": "ROCKETS at SPURS | FULL GAME HIGHLIGHTS | October 23, 2026"
+  },
+  "401909834": {
+   "day": "20261021",
+   "id": "Dwea5DcKfK4",
+   "published": "2026-10-22T02:08:26+00:00",
+   "teams": [
+    "ATL",
+    "ORL"
+   ],
+   "title": "HAWKS at MAGIC | FULL GAME HIGHLIGHTS | October 21, 2026"
+  },
+  "401909835": {
+   "day": "20261021",
+   "id": "q1QqueBYMQo",
+   "published": "2026-10-22T02:02:12+00:00",
+   "teams": [
+    "MIL",
+    "WSH"
+   ],
+   "title": "BUCKS at WIZARDS | FULL GAME HIGHLIGHTS | October 21, 2026"
+  },
+  "401909836": {
+   "day": "20261021",
+   "id": "3Ttdjq57W9E",
+   "published": "2026-10-22T02:38:17+00:00",
+   "teams": [
+    "CHA",
+    "BKN"
+   ],
+   "title": "HORNETS at NETS | FULL GAME HIGHLIGHTS | October 21, 2026"
+  },
+  "401909837": {
+   "day": "20261021",
+   "id": "y1pbO1uDxUY",
+   "published": "2026-10-22T03:03:44+00:00",
+   "teams": [
+    "CHI",
+    "TOR"
+   ],
+   "title": "BULLS at RAPTORS | FULL GAME HIGHLIGHTS | October 21, 2026"
+  },
+  "401909838": {
+   "day": "20261021",
+   "id": "6IVDF14w-Cc",
+   "published": "2026-10-22T03:16:03+00:00",
+   "teams": [
+    "UTAH",
+    "MEM"
+   ],
+   "title": "JAZZ at GRIZZLIES | FULL GAME HIGHLIGHTS | October 21, 2026"
+  },
+  "401909839": {
+   "day": "20261021",
+   "id": "dqVSIkG1s0Q",
+   "published": "2026-10-22T03:16:52+00:00",
+   "teams": [
+    "IND",
+    "NO"
+   ],
+   "title": "PACERS at PELICANS | FULL GAME HIGHLIGHTS | October 21, 2026"
+  },
+  "401909840": {
+   "day": "20261021",
+   "id": "4hNRkmyNe90",
+   "published": "2026-10-22T03:39:39+00:00",
+   "teams": [
+    "DAL",
+    "HOU"
+   ],
+   "title": "MAVERICKS at ROCKETS | FULL GAME HIGHLIGHTS | October 21, 2026"
+  },
+  "401909841": {
+   "day": "20261021",
+   "id": "EC_WSF7sPuI",
+   "published": "2026-10-22T04:45:17+00:00",
+   "teams": [
+    "PHX",
+    "POR"
+   ],
+   "title": "SUNS at TRAIL BLAZERS | FULL GAME HIGHLIGHTS | October 21, 2026"
+  },
+  "401909842": {
+   "day": "20261021",
+   "id": "qEepDtX5qLM",
+   "published": "2026-10-22T05:23:22+00:00",
+   "teams": [
+    "SAC",
+    "LAC"
+   ],
+   "title": "KINGS at CLIPPERS | FULL GAME HIGHLIGHTS | October 21, 2026"
+  },
+  "401909843": {
+   "day": "20261023",
+   "id": "w4g6vpvVyos",
+   "published": "2026-10-24T01:47:21+00:00",
+   "teams": [
+    "ATL",
+    "CHA"
+   ],
+   "title": "HAWKS at HORNETS | FULL GAME HIGHLIGHTS | October 23, 2026"
+  },
+  "401909844": {
+   "day": "20261023",
+   "id": "If1DIVuMPkc",
+   "published": "2026-10-24T02:21:37+00:00",
+   "teams": [
+    "DAL",
+    "IND"
+   ],
+   "title": "MAVERICKS at PACERS | FULL GAME HIGHLIGHTS | October 23, 2026"
+  },
+  "401909845": {
+   "day": "20261023",
+   "id": "KoRT1d_i13o",
+   "published": "2026-10-24T01:51:28+00:00",
+   "teams": [
+    "MIN",
+    "ORL"
+   ],
+   "title": "TIMBERWOLVES at MAGIC | FULL GAME HIGHLIGHTS | October 23, 2026"
+  },
+  "401909846": {
+   "day": "20261023",
+   "id": "nL79PGsNMNc",
+   "published": "2026-10-24T02:05:15+00:00",
+   "teams": [
+    "TOR",
+    "WSH"
+   ],
+   "title": "RAPTORS at WIZARDS | FULL GAME HIGHLIGHTS | October 23, 2026"
+  },
+  "401909847": {
+   "day": "20261023",
+   "id": "Q052nRK7KNk",
+   "published": "2026-10-24T02:58:38+00:00",
+   "teams": [
+    "DET",
+    "MIA"
+   ],
+   "title": "PISTONS at HEAT | FULL GAME HIGHLIGHTS | October 23, 2026"
+  },
+  "401909848": {
+   "day": "20261023",
+   "id": "r5pqf0we5uM",
+   "published": "2026-10-23T23:16:44+00:00",
+   "teams": [
+    "CHI",
+    "MIL"
+   ],
+   "title": "BULLS at BUCKS | FULL GAME HIGHLIGHTS | October 23, 2026"
+  },
+  "401909849": {
+   "day": "20261023",
+   "id": "sXlPebl2zfk",
+   "published": "2026-10-24T04:55:01+00:00",
+   "teams": [
+    "NO",
+    "UTAH"
+   ],
+   "title": "PELICANS at JAZZ | FULL GAME HIGHLIGHTS | October 23, 2026"
+  },
+  "401909850": {
+   "day": "20261023",
+   "id": "2o4lgEQCOgk",
+   "published": "2026-10-24T05:22:13+00:00",
+   "teams": [
+    "MEM",
+    "GS"
+   ],
+   "title": "GRIZZLIES at WARRIORS | FULL GAME HIGHLIGHTS | October 23, 2026"
+  },
+  "401909851": {
+   "day": "20261023",
+   "id": "KVC5atVkCyE",
+   "published": "2026-10-24T05:16:34+00:00",
+   "teams": [
+    "LAC",
+    "LAL"
+   ],
+   "title": "CLIPPERS at LAKERS | FULL GAME HIGHLIGHTS | October 23, 2026"
+  },
+  "401909852": {
+   "day": "20261023",
+   "id": "P3U_TwDKT-Y",
+   "published": "2026-10-24T05:07:55+00:00",
+   "teams": [
+    "POR",
+    "SAC"
+   ],
+   "title": "TRAIL BLAZERS at KINGS | FULL GAME HIGHLIGHTS | October 23, 2026"
+  },
+  "401909853": {
+   "day": "20261024",
+   "id": "DPgrjyciioY",
+   "published": "2026-10-25T00:58:36+00:00",
+   "teams": [
+    "MIA",
+    "CHA"
+   ],
+   "title": "HEAT at HORNETS | FULL GAME HIGHLIGHTS | October 24, 2026"
+  },
+  "401909854": {
+   "day": "20261024",
+   "id": "jmxhqhQIUyY",
+   "published": "2026-10-25T03:00:57+00:00",
+   "teams": [
+    "BKN",
+    "CLE"
+   ],
+   "title": "NETS at CAVALIERS | FULL GAME HIGHLIGHTS | October 24, 2026"
+  },
+  "401909855": {
+   "day": "20261024",
+   "id": "UIiV46AZIh4",
+   "published": "2026-10-25T02:29:14+00:00",
+   "teams": [
+    "MIL",
+    "PHI"
+   ],
+   "title": "BUCKS at 76ERS | FULL GAME HIGHLIGHTS | October 24, 2026"
+  },
+  "401909856": {
+   "day": "20261024",
+   "id": "Z5yBg42u7N4",
+   "published": "2026-10-25T03:41:25+00:00",
+   "teams": [
+    "HOU",
+    "ATL"
+   ],
+   "title": "ROCKETS at HAWKS | FULL GAME HIGHLIGHTS | October 24, 2026"
+  },
+  "401909857": {
+   "day": "20261024",
+   "id": "Lw6ZDR4KRIY",
+   "published": "2026-10-25T03:11:12+00:00",
+   "teams": [
+    "WSH",
+    "CHI"
+   ],
+   "title": "WIZARDS at BULLS | FULL GAME HIGHLIGHTS | October 24, 2026"
+  },
+  "401909858": {
+   "day": "20261024",
+   "id": "vTUV7qXzPSA",
+   "published": "2026-10-25T02:53:49+00:00",
+   "teams": [
+    "SA",
+    "DAL"
+   ],
+   "title": "SPURS at MAVERICKS | FULL GAME HIGHLIGHTS | October 24, 2026"
+  },
+  "401909859": {
+   "day": "20261024",
+   "id": "xN2DI4cxvXc",
+   "published": "2026-10-25T04:20:20+00:00",
+   "teams": [
+    "NO",
+    "DEN"
+   ],
+   "title": "PELICANS at NUGGETS | FULL GAME HIGHLIGHTS | October 24, 2026"
+  },
+  "401909860": {
+   "day": "20261024",
+   "id": "7wKdoaRzQB0",
+   "published": "2026-10-25T04:48:51+00:00",
+   "teams": [
+    "GS",
+    "PHX"
+   ],
+   "title": "WARRIORS at SUNS | FULL GAME HIGHLIGHTS | October 24, 2026"
+  },
+  "401909861": {
+   "day": "20261025",
+   "id": "k9zo4pfctTg",
+   "published": "2026-10-26T00:01:13+00:00",
+   "teams": [
+    "LAL",
+    "UTAH"
+   ],
+   "title": "LAKERS at JAZZ | FULL GAME HIGHLIGHTS | October 25, 2026"
+  },
+  "401909862": {
+   "day": "20261025",
+   "id": "_4MO3BVOKkU",
+   "published": "2026-10-26T00:56:50+00:00",
+   "teams": [
+    "IND",
+    "BKN"
+   ],
+   "title": "PACERS at NETS | FULL GAME HIGHLIGHTS | October 25, 2026"
+  },
+  "401909863": {
+   "day": "20261025",
+   "id": "FwN_PBKYgMQ",
+   "published": "2026-10-26T01:54:35+00:00",
+   "teams": [
+    "ORL",
+    "NY"
+   ],
+   "title": "MAGIC at KNICKS | FULL GAME HIGHLIGHTS | October 25, 2026"
+  },
+  "401909864": {
+   "day": "20261025",
+   "id": "mcXdA_8LaUs",
+   "published": "2026-10-26T02:03:37+00:00",
+   "teams": [
+    "TOR",
+    "MIN"
+   ],
+   "title": "RAPTORS at TIMBERWOLVES | FULL GAME HIGHLIGHTS | October 25, 2026"
+  },
+  "401909865": {
+   "day": "20261025",
+   "id": "7BGoRcTXud8",
+   "published": "2026-10-26T02:04:45+00:00",
+   "teams": [
+    "LAC",
+    "OKC"
+   ],
+   "title": "CLIPPERS at THUNDER | FULL GAME HIGHLIGHTS | October 25, 2026"
+  },
+  "401909866": {
+   "day": "20261025",
+   "id": "GZzCjdjsTAo",
+   "published": "2026-10-26T02:42:15+00:00",
+   "teams": [
+    "DET",
+    "PHI"
+   ],
+   "title": "PISTONS at 76ERS | FULL GAME HIGHLIGHTS | October 25, 2026"
+  },
+  "401909867": {
+   "day": "20261025",
+   "id": "K7AjpmStxyU",
+   "published": "2026-10-26T03:49:08+00:00",
+   "teams": [
+    "MEM",
+    "SAC"
+   ],
+   "title": "GRIZZLIES at KINGS | FULL GAME HIGHLIGHTS | October 25, 2026"
+  },
+  "401909868": {
+   "day": "20261026",
+   "id": "kLAQRSIIDkQ",
+   "published": "2026-10-27T02:00:55+00:00",
+   "teams": [
+    "WSH",
+    "CHA"
+   ],
+   "title": "WIZARDS at HORNETS | FULL GAME HIGHLIGHTS | October 26, 2026"
+  },
+  "401909869": {
+   "day": "20261026",
+   "id": "8q9lu3T5twU",
+   "published": "2026-10-27T02:24:55+00:00",
+   "teams": [
+    "MIN",
+    "CLE"
+   ],
+   "title": "TIMBERWOLVES at CAVALIERS | FULL GAME HIGHLIGHTS | October 26, 2026"
+  },
+  "401909870": {
+   "day": "20261026",
+   "id": "DTNqMLNVBC8",
+   "published": "2026-10-27T02:44:21+00:00",
+   "teams": [
+    "CHI",
+    "BOS"
+   ],
+   "title": "BULLS at CELTICS | FULL GAME HIGHLIGHTS | October 26, 2026"
+  },
+  "401909871": {
+   "day": "20261026",
+   "id": "vDxNf1bBs6o",
+   "published": "2026-10-27T02:39:11+00:00",
+   "teams": [
+    "DAL",
+    "MIA"
+   ],
+   "title": "MAVERICKS at HEAT | FULL GAME HIGHLIGHTS | October 26, 2026"
+  },
+  "401909872": {
+   "day": "20261026",
+   "id": "SSJORIN8D1M",
+   "published": "2026-10-27T02:50:28+00:00",
+   "teams": [
+    "IND",
+    "MIL"
+   ],
+   "title": "PACERS at BUCKS | FULL GAME HIGHLIGHTS | October 26, 2026"
+  },
+  "401909873": {
+   "day": "20261026",
+   "id": "ZuTuycl-wYc",
+   "published": "2026-10-27T03:12:17+00:00",
+   "teams": [
+    "PHX",
+    "OKC"
+   ],
+   "title": "SUNS at THUNDER | FULL GAME HIGHLIGHTS | October 26, 2026"
+  },
+  "401909874": {
+   "day": "20261026",
+   "id": "6TlvMGNxCBw",
+   "published": "2026-10-27T03:27:25+00:00",
+   "teams": [
+    "ATL",
+    "HOU"
+   ],
+   "title": "HAWKS at ROCKETS | FULL GAME HIGHLIGHTS | October 26, 2026"
+  },
+  "401909875": {
+   "day": "20261026",
+   "id": "uyUAxlfj77s",
+   "published": "2026-10-27T04:11:37+00:00",
+   "teams": [
+    "MEM",
+    "UTAH"
+   ],
+   "title": "GRIZZLIES at JAZZ | FULL GAME HIGHLIGHTS | October 26, 2026"
+  },
+  "401909876": {
+   "day": "20261026",
+   "id": "AHOFXEAw58k",
+   "published": "2026-10-27T05:02:13+00:00",
+   "teams": [
+    "GS",
+    "DEN"
+   ],
+   "title": "WARRIORS at NUGGETS | FULL GAME HIGHLIGHTS | October 26, 2026"
+  },
+  "401909877": {
+   "day": "20261027",
+   "id": "Roz4iFs4Rto",
+   "published": "2026-10-28T03:20:34+00:00",
+   "teams": [
+    "BKN",
+    "BOS"
+   ],
+   "title": "NETS at CELTICS | FULL GAME HIGHLIGHTS | October 27, 2026"
+  },
+  "401909878": {
+   "day": "20261027",
+   "id": "CRso2RiQ_-M",
+   "published": "2026-10-28T03:17:30+00:00",
+   "teams": [
+    "DET",
+    "NY"
+   ],
+   "title": "PISTONS at KNICKS | FULL GAME HIGHLIGHTS | October 27, 2026"
+  },
+  "401909879": {
+   "day": "20261027",
+   "id": "5-hZ9qdOcYw",
+   "published": "2026-10-28T02:45:28+00:00",
+   "teams": [
+    "SAC",
+    "SA"
+   ],
+   "title": "KINGS at SPURS | FULL GAME HIGHLIGHTS | October 27, 2026"
+  },
+  "401909880": {
+   "day": "20261027",
+   "id": "X5EXmi9Ihkc",
+   "published": "2026-10-28T06:20:19+00:00",
+   "teams": [
+    "POR",
+    "LAL"
+   ],
+   "title": "TRAIL BLAZERS at LAKERS | FULL GAME HIGHLIGHTS | October 27, 2026"
+  },
+  "401909881": {
+   "day": "20261028",
+   "id": "d-T6kaZyzf0",
+   "published": "2026-10-29T01:44:33+00:00",
+   "teams": [
+    "MIA",
+    "ATL"
+   ],
+   "title": "HEAT at HAWKS | FULL GAME HIGHLIGHTS | October 28, 2026"
+  },
+  "401909882": {
+   "day": "20261028",
+   "id": "xWJfcKNc3AE",
+   "published": "2026-10-29T01:59:58+00:00",
+   "teams": [
+    "WSH",
+    "CLE"
+   ],
+   "title": "WIZARDS at CAVALIERS | FULL GAME HIGHLIGHTS | October 28, 2026"
+  },
+  "401909883": {
+   "day": "20261028",
+   "id": "RbotdNLEPvI",
+   "published": "2026-10-29T02:08:21+00:00",
+   "teams": [
+    "CHA",
+    "DET"
+   ],
+   "title": "HORNETS at PISTONS | FULL GAME HIGHLIGHTS | October 28, 2026"
+  },
+  "401909884": {
+   "day": "20261028",
+   "id": "67g10QAeRCM",
+   "published": "2026-10-29T02:13:56+00:00",
+   "teams": [
+    "PHI",
+    "IND"
+   ],
+   "title": "76ERS at PACERS | FULL GAME HIGHLIGHTS | October 28, 2026"
+  },
+  "401909885": {
+   "day": "20261028",
+   "id": "wkvPTR2m7Is",
+   "published": "2026-10-29T02:17:13+00:00",
+   "teams": [
+    "ORL",
+    "TOR"
+   ],
+   "title": "MAGIC at RAPTORS | FULL GAME HIGHLIGHTS | October 28, 2026"
+  },
+  "401909886": {
+   "day": "20261028",
+   "id": "xk8otir_vlg",
+   "published": "2026-10-29T02:58:48+00:00",
+   "teams": [
+    "NY",
+    "CHI"
+   ],
+   "title": "KNICKS at BULLS | FULL GAME HIGHLIGHTS | October 28, 2026"
+  },
+  "401909887": {
+   "day": "20261028",
+   "id": "oFwrlXtEmXg",
+   "published": "2026-10-29T02:55:18+00:00",
+   "teams": [
+    "HOU",
+    "MIL"
+   ],
+   "title": "ROCKETS at BUCKS | FULL GAME HIGHLIGHTS | October 28, 2026"
+  },
+  "401909888": {
+   "day": "20261028",
+   "id": "CnDNAnTuKz0",
+   "published": "2026-10-29T03:19:10+00:00",
+   "teams": [
+    "GS",
+    "MIN"
+   ],
+   "title": "WARRIORS at TIMBERWOLVES | FULL GAME HIGHLIGHTS | October 28, 2026"
+  },
+  "401909889": {
+   "day": "20261028",
+   "id": "ww14VK1ISh4",
+   "published": "2026-10-29T03:03:26+00:00",
+   "teams": [
+    "DEN",
+    "NO"
+   ],
+   "title": "NUGGETS at PELICANS | FULL GAME HIGHLIGHTS | October 28, 2026"
+  },
+  "401909890": {
+   "day": "20261028",
+   "id": "8j-l0KIwZYc",
+   "published": "2026-10-29T04:02:27+00:00",
+   "teams": [
+    "SA",
+    "UTAH"
+   ],
+   "title": "SPURS at JAZZ | FULL GAME HIGHLIGHTS | October 28, 2026"
+  },
+  "401909891": {
+   "day": "20261028",
+   "id": "ytN2ZWDNCt4",
+   "published": "2026-10-29T04:26:36+00:00",
+   "teams": [
+    "OKC",
+    "DAL"
+   ],
+   "title": "THUNDER at MAVERICKS | FULL GAME HIGHLIGHTS | October 28, 2026"
+  },
+  "401909892": {
+   "day": "20261028",
+   "id": "6TqEIclfr7k",
+   "published": "2026-10-29T05:17:53+00:00",
+   "teams": [
+    "LAL",
+    "LAC"
+   ],
+   "title": "LAKERS at CLIPPERS | FULL GAME HIGHLIGHTS | October 28, 2026"
+  },
+  "401909893": {
+   "day": "20261029",
+   "id": "PJO8_pxOr08",
+   "published": "2026-10-30T03:01:27+00:00",
+   "teams": [
+    "CLE",
+    "ATL"
+   ],
+   "title": "CAVALIERS at HAWKS | FULL GAME HIGHLIGHTS | October 29, 2026"
+  },
+  "401909894": {
+   "day": "20261029",
+   "id": "-xdS0PuljsU",
+   "published": "2026-10-30T02:49:15+00:00",
+   "teams": [
+    "SAC",
+    "NO"
+   ],
+   "title": "KINGS at PELICANS | FULL GAME HIGHLIGHTS | October 29, 2026"
+  },
+  "401909895": {
+   "day": "20261029",
+   "id": "AsAPLWibSy4",
+   "published": "2026-10-30T04:37:24+00:00",
+   "teams": [
+    "MEM",
+    "POR"
+   ],
+   "title": "GRIZZLIES at TRAIL BLAZERS | FULL GAME HIGHLIGHTS | October 29, 2026"
+  }
+ },
+ "updated": "2026-10-30T05:58:29+00:00"
+}
