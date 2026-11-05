@@ -1,0 +1,3 @@
+tinos-digits.woff2 is the digits (0-9) of Tinos by Steve Matteson (Google), a font metric-compatible with Times New Roman,
+used as the fallback for numbers in Playfair Display text on devices without Times New Roman.
+Licensed under the Apache License, Version 2.0: https://www.apache.org/licenses/LICENSE-2.0

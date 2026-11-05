@@ -1,0 +1,53 @@
+<nav class="site-nav">
+  <div class="brand-dropdown">
+    <button class="site-brand brand-trigger" onclick="document.querySelector('.brand-menu').classList.toggle('brand-open'); event.stopPropagation();"><span class="brand-text">Bradley Analytics</span><svg class="brand-caret" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="brand-menu">
+      <a class="brand-option selected" href="index.html">Bradley Analytics</a>
+      <a class="brand-option" href="https://alexbrxdley.github.io/Bradley-Quant-Finance-Software-Engine/index.html">Bradley Quant</a>
+    </div>
+  </div>
+
+  <button class="ba-bell" type="button" aria-label="Live game notifications" title="Live game notifications" hidden>
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 10a6 6 0 1 1 12 0c0 4.2 1.6 6 2.4 6.8.3.3.1.7-.3.7H3.9c-.4 0-.6-.4-.3-.7C4.4 16 6 14.2 6 10Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9.8 20.2a2.4 2.4 0 0 0 4.4 0" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><i class="ba-bell-dot"></i>
+  </button>
+
+  <button class="hamburger-btn" onclick="document.querySelector('.nav-links').classList.toggle('nav-open')" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="nav-links">
+    <a href="index.html"{% if page.url == "/" or page.url == "/index.html" %} class="active"{% endif %}>Home</a>
+    <span class="divider">|</span>
+    <a href="games.html"{% if page.title == "Games" or page.section == "games" %} class="active"{% endif %}>Games</a>
+    <span class="divider">|</span>
+    <a href="portfolio.html"{% if page.title == "Portfolio" %} class="active"{% endif %}>Portfolio</a>
+    <span class="divider">|</span>
+    <a href="consulting.html"{% if page.title == "Consulting" %} class="active"{% endif %}>Consulting</a>
+    <span class="divider">|</span>
+    <a href="overview.html"{% if page.title == "Overview" %} class="active"{% endif %}>Overview</a>
+    <span class="divider">|</span>
+    <a href="author.html"{% if page.title == "Author" %} class="active"{% endif %}>Author</a>
+  </div>
+</nav>
+
+<!-- The skinny live tape at the top of every page: today's games (live, upcoming and finished today), otherwise the next
+     game day's, otherwise the most recent games (the Finals in the offseason). A game takes you to the home page's live
+     game windows, showing that game. Filled by assets/top-tape.js; hidden until there are games. -->
+<div class="ls-tapebar" id="ba-top-tape" hidden><div class="ls-ticker"><div class="ls-ticker-track"></div></div></div>
+
+<script>
+  document.addEventListener("click", function (e) {
+    var menu = document.querySelector(".brand-menu");
+    var trigger = document.querySelector(".brand-trigger");
+    if (menu && menu.classList.contains("brand-open") && !menu.contains(e.target) && e.target !== trigger) {
+      menu.classList.remove("brand-open");
+    }
+    var navLinks = document.querySelector(".nav-links");
+    var hamburger = document.querySelector(".hamburger-btn");
+    if (navLinks && navLinks.classList.contains("nav-open") && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+      navLinks.classList.remove("nav-open");
+    }
+  });
+</script>
