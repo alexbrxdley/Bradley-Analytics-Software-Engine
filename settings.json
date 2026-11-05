@@ -1,0 +1,120 @@
+{
+  "bradley_ratings": {
+    "three_point_rating": {
+      "_description": "Bradley 3-Point Shooting Rating -- 0-100 composite of 3P% and 3PA-per-36 (derived from season totals), blended across recent seasons with smooth (not stepped) adjustments for outlier seasons and long-term consistency. Player mode only.",
+      "min_3pa": 30,
+      "shrinkage_k": 100,
+      "pct_weight": 0.7,
+      "volume_weight": 0.3,
+      "season_weights": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "outlier_full_shrink_gap": 0.2,
+      "outlier_floor_weight": 0.05,
+      "consistency_lookback_seasons": 4,
+      "consistency_baseline": 0.5,
+      "consistency_max_bonus": 3
+    }
+  },
+  "dimensions": {
+    "court_graph_width": 3,
+    "court_graph_height": 2.5,
+    "axis_graph_width": 5,
+    "axis_graph_height": 4,
+    "export_dpi": 300
+  },
+  "colors": {
+    "default_color": "#1D428A",
+    "neutral_colour": "#B5B5B5",
+    "below_avg_colour": "#373737",
+    "missed_shot_colour": "#9A9A9A"
+  },
+  "data": {
+    "per_mode": "PerGame",
+    "season_type": "Regular Season",
+    "min_games_played": 58,
+    "min_fga_per_game": 5.0,
+    "min_fg3a_per_game": 1.0,
+    "min_fta_per_game": 1.0
+  },
+  "shot_chart": {
+    "dot_size": 1.4,
+    "missed_shot_opacity": 0.75,
+    "made_shot_opacity": 1
+  },
+  "heat_map": {
+    "grid_resolution": 200
+  },
+  "hex_shot_chart": {
+    "xbins": 25,
+    "min_radius": 1.5,
+    "max_radius": 9,
+    "below_avg_alpha": 0.75,
+    "above_avg_alpha": 1,
+    "efficiency_saturation": 0.15,
+    "zone_label_size": 2.7,
+    "min_zone_fga": 0,
+    "shadow_blur": 4,
+    "shadow_distance": 0,
+    "shadow_angle": 0,
+    "shadow_opacity": 1,
+    "legend_y": -35,
+    "legend_text_size": 2.3,
+    "legend_text_gap": 4,
+    "legend_hex_radius": 4.5,
+    "color_legend_cx": -150,
+    "color_legend_spacing": 10,
+    "size_legend_cx": 150,
+    "size_legend_gap": 1.5,
+    "legend_box_xmin_left": -218,
+    "legend_box_xmax_left": -85,
+    "legend_box_xmin_right": 85,
+    "legend_box_xmax_right": 218,
+    "legend_box_half_height": 13,
+    "legend_box_corner_radius": 6
+  },
+  "bar_chart": {
+    "bar_border_colour": "white",
+    "bar_border_width": 0.4,
+    "x_label_size": 3.2,
+    "x_label_angle": 30,
+    "image_size": 0.2,
+    "value_label_size": 4,
+    "value_label_gap": 0.02,
+    "shadow_blur": 3,
+    "shadow_distance": 3,
+    "shadow_angle": 73,
+    "shadow_opacity": 0.75
+  },
+  "scatter_plot": {
+    "image_size": 0.2,
+    "highlighted_image_size_multiplier": 1,
+    "text_label_size": 3.2,
+    "axis_expand": 0.12,
+    "axis_title_margin": 12,
+    "shadow_blur": 3,
+    "shadow_distance": 3,
+    "shadow_angle": 73,
+    "shadow_opacity": 0.75
+  },
+  "animated_shot_chart": {
+    "_description": "GIF settings -- shots reveal in chronological game order. Made shots glow in team color and persist forever; missed shots draw grey, hold briefly, then fade out and disappear. Dots always reach full opacity; arcs cap at line_max_opacity.",
+    "fps": 12,
+    "max_seconds": 15,
+    "hold_seconds": 1.5,
+    "frames_per_batch": 6,
+    "arc_points_per_shot": 15,
+    "arc_bow_amount": 100,
+    "plot_xlim": [-250, 250],
+    "plot_ylim": [-60, 356.7],
+    "arc_linewidth": 1,
+    "dot_size": 1.25,
+    "line_max_opacity": 0.2,
+    "missed_dot_colour": "#373737",
+    "glow_sigma": 4,
+    "glow_expand": 1.5,
+    "background_colour": "#0D0D0D"
+  }
+}
