@@ -44,7 +44,8 @@
   "20261109",
   "20261110",
   "20261111",
-  "20261112"
+  "20261112",
+  "20261113"
  ],
  "games": {
   "401909088": {
@@ -1221,6 +1222,20 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "-Nm5F-V46iA",
+     "title": "Chicago Bulls vs Atlanta Hawks Full Game Highlights - November 13, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Khan Reaction",
+     "id": "l3jhhABwRpc",
+     "title": "hawks Vs bulls highlights Nov 13 2026 #nba #usabasketball"
+    }
+   ],
    "blocked": [],
    "day": "20261113",
    "id": "0AKvkuMffG4",
@@ -1258,6 +1273,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "27QxklWF3I8",
+     "title": "Memphis Grizzlies vs New Orleans Pelicans Full Game Highlights - November 13, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "Best Most Last",
+     "id": "qMueJPZLYD8",
+     "title": "OT classic: 142-111 | New Orleans Pelicans 111-142 Memphis Grizzlies | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "New Orleans Pelicans",
+     "id": "Ocqgexfw2BE",
+     "title": "Jordan Poole \u27a1\ufe0f Herb Jones fast break slam! #pelicans #grizzlies #highlights"
+    }
+   ],
    "blocked": [],
    "day": "20261113",
    "id": "pW8Zq151Q_U",
@@ -1294,6 +1329,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "nOrb9o1HrDQ",
+     "title": "Houston Rockets vs Utah Jazz Full Game Highlights - November 13, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "QiawA6w_3gk",
+     "title": "Utah Jazz vs Houston Rockets - FULL GAME HIGHLIGHTS | November 13, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "TRAV13SO100",
+     "id": "uLabrkcvu_s",
+     "title": "Houston Rockets vs Utah Jazz Full Game Highlights - November 13, 2026 | NBA"
+    }
    ],
    "blocked": [],
    "day": "20261113",
@@ -6853,5 +6908,5 @@
    "title": "HORNETS at SUNS | FULL GAME HIGHLIGHTS | November 12, 2026"
   }
  },
- "updated": "2026-11-14T09:43:23+00:00"
+ "updated": "2026-11-14T16:10:29+00:00"
 }
