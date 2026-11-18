@@ -1,0 +1,28 @@
+# Archives the @bradleyanalytics Instagram posts (docs/data/instagram.json and their pictures in docs/data/ig/) so the
+# website's Instagram grid can show the 9 most recent; Behold's free feed only lists 6. Runs every 6 hours, and can be
+# run by hand (Actions > Instagram posts > Run workflow).
+name: Instagram posts
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  posts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/fetch_instagram.py docs/data/instagram.json
+      - run: |
+          git add -A docs/data/instagram.json docs/data/ig
+          if git diff --cached --quiet; then echo "No change."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Instagram posts: updated"
+          git pull --rebase --autostash || true
+          git push
