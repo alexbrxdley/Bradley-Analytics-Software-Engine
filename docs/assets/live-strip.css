@@ -713,6 +713,8 @@ a.ls-tk::after { display: none !important; }
 /* until the video is actually playing, taps go to YouTube's own player (its big play button, if the phone didn't let it
    start by itself); the bar above it still moves it */
 .bam:not([data-started]) .bam-ui { pointer-events: none; }
+/* phones: YouTube's own controls only (nothing of ours over the video) */
+.bam[data-touch] .bam-ui { display: none !important; }
 .bam-pp { position: absolute; left: 50%; top: 50%; width: 54px; height: 54px; margin: -27px 0 0 -27px; border-radius: 50%; border: 0; background: rgba(0,0,0,.55); color: #fff; cursor: pointer; display: grid; place-items: center; padding: 0; }
 .bam-pp svg { width: 28px; height: 28px; }
 .bam-snd[hidden] { display: none !important; }
@@ -766,3 +768,7 @@ a.ls-tk::after { display: none !important; }
 .bam-na { position: absolute; inset: 0; z-index: 4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 14px; text-align: center; background: #0b0a09; }
 .bam-na p { margin: 0; color: #e8e3d8; font: 700 13px/1.35 Arial, sans-serif; }
 .bam-na a { padding: 8px 14px; border-radius: 999px; background: #ff0033; color: #fff; font: 700 12.5px/1 Arial, sans-serif; text-decoration: none; }
+/* the save sheet, while its picture is still being made */
+.ls-savepic { min-height: 120px; display: grid; place-items: center; }
+.ls-savespin { width: 26px; height: 26px; border-radius: 50%; border: 3px solid rgba(212,175,55,.25); border-top-color: #F5D370; animation: lsSaveSpin .8s linear infinite; }
+@keyframes lsSaveSpin { to { transform: rotate(360deg); } }

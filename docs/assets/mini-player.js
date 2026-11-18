@@ -3,8 +3,11 @@
    BAMini.open({ vid, title, anchor }) plays a YouTube video. The player is one element on the page's body, so nothing on
    the page (a transform, a stacking order, the dashboard) can hide or clip it:
    - it starts playing at once (muted for a split second where the browser insists, then with sound);
-   - its own controls (play/pause, the time bar, sound, full screen, open in the YouTube app) instead of YouTube's: on a
-     computer they show while the mouse is over the video; on a phone a tap shows them for a moment;
+   - on a computer, its own controls (play/pause, the time bar, sound, full screen, open in the YouTube app) show while
+     the mouse is over the video. On a phone or tablet it is YouTube's own player with YouTube's own controls: it starts
+     by itself (muted -- phones only let a video start by itself without sound; YouTube's sound button turns it on),
+     its controls fade by themselves, a tap pauses and plays, and its full-screen button opens the phone's own player,
+     whose picture-in-picture keeps it playing, movable and resizable, after leaving the browser or the app;
    - docked: laid exactly over its place on the page (the anchor), scrolling with it, under the menu bar;
    - floating: scroll the anchor away and it moves to a corner of the screen, still playing. Drag it (the video or its
      bar) to any corner, the top ones too, over the menu; it snaps there. Make it bigger or smaller with two fingers
@@ -24,7 +27,8 @@
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   var BAR = 30;
 
-  var TOUCH = window.matchMedia && matchMedia("(hover: none)").matches;
+  // a phone or tablet, by what the device is (touch-screen computers report "no hover" too, and they're computers)
+  var TOUCH = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
   var IOS = /iPhone|iPod/.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1 && TOUCH);
   function src(vid, start, auto, own, native) {
     return "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(vid) + "?autoplay=" + (auto ? 1 : 0) + (auto && TOUCH && !native ? "&mute=1" : "") +
@@ -37,17 +41,19 @@
     box.innerHTML = '<div class="bam-bar"><span class="bam-t">' + esc(o.title) + "</span>" +
       ("documentPictureInPicture" in window ? '<button type="button" class="bam-pop" aria-label="Pop the video out into its own window" title="Pop out"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="8" y="7" width="5" height="4" rx=".8" fill="currentColor"/></svg></button>' : "") +
       '<button type="button" class="bam-x" aria-label="Close">&times;</button></div>' +
-      '<div class="bam-v"><iframe src="' + src(o.vid, o.start || 0, o.autoplay !== false, true) + '" title="' + esc(o.title) + '" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>' +
+      '<div class="bam-v"><iframe src="' + src(o.vid, o.start || 0, o.autoplay !== false, !TOUCH) + '" title="' + esc(o.title) + '" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>' +
       '<div class="bam-ui"><button type="button" class="bam-pp" aria-label="Play or pause">' + ICON.pause + '</button><button type="button" class="bam-snd" hidden>' + ICON.mute + "Tap for sound</button>" +
       '<div class="bam-ctl"><span class="bam-time">0:00</span><input class="bam-seek" type="range" min="0" max="1000" value="0" aria-label="Seek">' +
       '<button type="button" class="bam-mu" aria-label="Sound">' + ICON.vol + '</button><button type="button" class="bam-yt" aria-label="Open in the YouTube app" title="Open in YouTube">' + ICON.yt + "</button>" +
       '<button type="button" class="bam-fs" aria-label="Full screen">' + ICON.fs + "</button></div></div></div>" +
       '<i class="bam-e l"></i><i class="bam-e r"></i><i class="bam-e t"></i><i class="bam-e b"></i>';
+    if (TOUCH) box.setAttribute("data-touch", "");             // (phones: YouTube's own controls, see the top of this file)
     document.body.appendChild(box);
     var fr = box.querySelector("iframe");
     if (o.autoplay !== false) [1400, 2600, 4200].forEach(function (ms) {
       setTimeout(function () {
         if (!box || !cur || info.playing || info.userPaused) return;
+        if (TOUCH) { cmd("playVideo"); return; }                    // (a phone: muted already; never touch the sound by script)
         cmd("mute"); cmd("playVideo"); info.muted = true; soundTries = 3; paint();
       }, ms);
     });
@@ -114,7 +120,9 @@
     if (typeof d.info.duration === "number" && d.info.duration > 0) info.dur = d.info.duration;
     if (typeof d.info.muted === "boolean") info.muted = d.info.muted;
     // it started muted (a phone's rule for starting by itself): turn the sound on as soon as it plays
-    if (info.playing && info.muted && wantSound && soundTries < 4) { soundTries++; cmd("unMute"); cmd("setVolume", [100]); }
+    // (a phone pauses a video that's unmuted without a tap -- that was the "have to press play" -- so there, YouTube's own
+    // sound button does it)
+    if (!TOUCH && info.playing && info.muted && wantSound && soundTries < 4) { soundTries++; cmd("unMute"); cmd("setVolume", [100]); }
     paint();
   });
 
@@ -303,7 +311,7 @@
     if (!cur || !cur.queue || !cur.queue.length || !box) return false;
     var nv = cur.queue.shift(), f = box.querySelector("iframe");
     cur.vid = nv; info = { t: 0, playing: false }; box.removeAttribute("data-started");
-    f.src = src(nv, 0, true, true);
+    f.src = src(nv, 0, true, !TOUCH);
     return true;
   }
   window.addEventListener("message", function (e) {

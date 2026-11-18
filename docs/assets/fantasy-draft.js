@@ -148,6 +148,15 @@
   // ------------------------------------------------------------ the screen
   // the phone's player card: the spot (gold) and his rating on the left, his picture in the middle with his name over it,
   // his own positions, team logo and season on the right. No picture: his initials in a circle.
+  // "Shai Gilgeous-Alexander" -> first name on one line, the rest on the next
+  function twoLines(n) { var i = String(n).indexOf(" "); return i < 0 ? B.esc(n) : B.esc(n.slice(0, i)) + "<br>" + B.esc(n.slice(i + 1)); }
+  // a player's team logo as it was that season: the Seattle SuperSonics, the New Jersey Nets, the Vancouver Grizzlies,
+  // the Charlotte Bobcats... (ESPN's own logos for those teams); today's logo for everyone else
+  var OLD = { SEA: "bd458c44-2d33-47eb-cebc-35d3d4ac595c", NJ: "926db769-d35e-e282-9d7e-a05001d774ab", NJN: "926db769-d35e-e282-9d7e-a05001d774ab",
+              VAN: "af5d4942-aeb5-2d07-2a8a-f70b54617e51" };
+  var OLDNAMES = { "seattle supersonics": "SEA", "new jersey nets": "NJ", "vancouver grizzlies": "VAN" };
+  function oldLogo(tri) { return OLD[tri] ? "https://a.espncdn.com/guid/" + OLD[tri] + "/logos/default.png" : ""; }
+  function teamLogo(p) { return (/\/guid\//.test(p.logo || "") ? p.logo : "") || oldLogo(p.tri) || B.logo(p.tri); }   // (ESPN keeps its old-team logos under /guid/)
   function initials(p) { return p.name.split(" ").map(function (x) { return x.charAt(0); }).join("").slice(0, 2); }
   function yy(y) { return String((y - 1) % 100).padStart(2, "0") + "-" + String(y % 100).padStart(2, "0"); }   // 2024 -> "23-24"
   // corners: the spot (gold) top-left, his own positions top-right; beside his ears: his rating (left) and his team's
@@ -156,7 +165,7 @@
     return '<div class="fd-card"><span class="fd-cpos">' + B.esc(s[4]).replace(/\//g, "/<wbr>") + '</span><span class="fd-cpp">' + B.esc(posLabel(p)).replace(/\//g, "/<wbr>") + "</span>" +
       '<div class="fd-cimg"><span class="fd-cini">' + B.esc(initials(p)) + '</span><img alt="" loading="lazy" src="' + B.esc(B.face(p.id, 260)) + '" onerror="this.remove()"></div>' +
       '<span class="fd-crt">' + line(p).toFixed(1) + "<small>RTG</small></span>" +
-      '<span class="fd-cyr"><img class="fd-clogo" alt="" src="' + B.esc(B.logo(p.tri)) + '" onerror="this.style.visibility=\'hidden\'">' + yy(p.year) + "</span>" +
+      '<span class="fd-cyr"><img class="fd-clogo" alt="" src="' + B.esc(teamLogo(p)) + '" onerror="this.style.visibility=\'hidden\'">' + yy(p.year) + "</span>" +
       '<b class="fd-cnm' + (p.name.length > 16 ? " long" : "") + '">' + B.esc(p.name) + "</b></div>";
   }
   function face(p, cls) {
@@ -186,7 +195,7 @@
         var p = state.team[i];
         return (i === 5 ? '<div class="fd-sep">Bench</div>' : "") + '<div class="fd-slot' + (p ? " full" : "") + '" data-i="' + i + '"><span class="fd-posw"><span class="fd-pos' + (i >= 5 ? " b" : "") + '">' + s[4] + "</span>" + (p ? '<span class="fd-ppos">' + B.esc(posLabel(p)) + "</span>" : "") + "</span>" +
           (p ? '<span class="fd-dimg"><b>' + B.esc(initials(p)) + '</b><img alt="" loading="lazy" src="' + B.esc(B.face(p.id, 260)) + '" onerror="this.remove()"></span>' +
-               '<span class="fd-sl"><b>' + B.esc(p.name) + '</b><i><img class="fd-slogo" alt="" src="' + B.esc(B.logo(p.tri)) + '" onerror="this.style.visibility=\'hidden\'">' + yy(p.year) + "</i></span>" +
+               '<span class="fd-sl"><b>' + twoLines(p.name) + '</b><i><img class="fd-slogo" alt="" src="' + B.esc(teamLogo(p)) + '" onerror="this.style.visibility=\'hidden\'">' + yy(p.year) + "</i></span>" +
                '<span class="fd-tot">' + line(p).toFixed(1) + "</span>" + card(p, s, i) : '<span class="fd-sl"><i>' + s[1] + "</i></span>") + "</div>";
       }).join("") + '<div class="fd-sum">Team value <b>' + (rec ? rec.total.toFixed(1) : "0.0") + "</b><span>PTS (era-adjusted) + REB + AST + STL + BLK, bench at 70%. Open spots count as average players in the projection.</span></div>" +
       chips(rec) + "</aside></div></div>";
@@ -212,7 +221,7 @@
       b.addEventListener("click", function () {
         var slot = +b.getAttribute("data-i"), name = b.getAttribute("data-n");
         var p = state.spin.team.players.filter(function (x) { return x.name === name; })[0];
-        state.team[slot] = { id: p.id, name: p.name, pos: p.pos, pts: p.pts, reb: p.reb, ast: p.ast, stl: p.stl, blk: p.blk, from: state.spin.team.name + " · " + season(state.spin.year), tri: state.spin.team.tri, year: state.spin.year };
+        state.team[slot] = { id: p.id, name: p.name, pos: p.pos, pts: p.pts, reb: p.reb, ast: p.ast, stl: p.stl, blk: p.blk, from: state.spin.team.name + " · " + season(state.spin.year), tri: state.spin.team.tri, year: state.spin.year, logo: state.spin.team.logo || "" };
         var before = record(state.team.map(function (x, k) { return k === slot ? null : x; })).wins;
         state.pick++; state.spin = null;
         var after = record(state.team).wins, dw = after - before;
@@ -229,7 +238,7 @@
     if (post) post.addEventListener("click", function () {
       post.disabled = true;
       var rec = record(state.team), detail = { team: state.team.map(function (p, i) { return SLOTS[i][0] + ": " + p.name + " (" + p.from + ")"; }),
-          rows: state.team.map(function (p, i) { return { s: SLOTS[i][0], n: p.name, t: p.tri, y: p.year }; }), fit: rec.fit.map(function (x) { return x.k + " " + (x.w > 0 ? "+" : "") + x.w; }) };
+          rows: state.team.map(function (p, i) { return { s: SLOTS[i][0], n: p.name, t: p.tri, y: p.year, l: p.logo || "" }; }), fit: rec.fit.map(function (x) { return x.k + " " + (x.w > 0 ? "+" : "") + x.w; }) };
       B.askName().then(function (n) {
         var e = { name: n, score: rec.wins, extra: { rec: rec.wins + "-" + (82 - rec.wins), tot: rec.total.toFixed(1) }, detail: detail };
         return B.submit(GAME, DAY, e).then(function (r) { return [r]; });
@@ -357,7 +366,7 @@
     return (d.team || []).map(function (line) {
       var m = /^([^:]+):\s*(.*?)\s*\((.*?)\s*·\s*(\d{4})-(\d{2})\)\s*$/.exec(line);
       if (!m) return { s: "", n: line };
-      var tn = m[3].toLowerCase(), t = byName[tn] || Object.keys(byName).filter(function (k) { return k.indexOf(tn) >= 0 || tn.indexOf(k) >= 0; }).map(function (k) { return byName[k]; })[0];
+      var tn = m[3].toLowerCase(), t = OLDNAMES[tn] || byName[tn] || Object.keys(byName).filter(function (k) { return k.indexOf(tn) >= 0 || tn.indexOf(k) >= 0; }).map(function (k) { return byName[k]; })[0];
       return { s: m[1], n: m[2], t: t || "", y: +m[4] + 1 };
     });
   }
@@ -365,7 +374,7 @@
     var shade = document.createElement("div"); shade.className = "gm-shade";
     shade.innerHTML = '<div class="gm-modal"><button type="button" class="gm-x" aria-label="Close">&times;</button><h3>' + B.esc(e.name) + "&rsquo;s team · " + Math.round(e.score) + "-" + (82 - Math.round(e.score)) + '</h3><ul class="fd-viewlist">' + viewRows(e.detail || {}).map(function (r) {
         return '<li><span class="fd-vs">' + B.esc(r.s) + '</span><span class="fd-vn">' + B.esc(r.n) + "</span>" +
-          (r.t ? '<img class="fd-vlogo" alt="" title="' + B.esc(B.names[r.t] || r.t) + '" src="' + B.esc(B.logo(r.t)) + '" onerror="this.style.visibility=\'hidden\'">' : "") +
+          (r.t ? '<img class="fd-vlogo" alt="" title="' + B.esc(B.names[r.t] || r.t) + '" src="' + B.esc(teamLogo({ logo: r.l, tri: r.t })) + '" onerror="this.style.visibility=\'hidden\'">' : "") +
           '<span class="fd-vy">' + (r.y ? yy(r.y) : "") + "</span></li>";
       }).join("") + "</ul>" +
       (((e.detail || {}).fit || []).length ? '<p class="gm-note">Fit: ' + B.esc(e.detail.fit.join(" · ")) + "</p>" : "") + "</div>";

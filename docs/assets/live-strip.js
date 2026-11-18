@@ -1133,9 +1133,9 @@
     });
   }
   var queue = Promise.resolve();
-  function prerender(card) {
+  function prerender(card, force) {
     var c = card._baPic;
-    if (c && (c.pending || Date.now() - c.t < 12000)) return c.p;
+    if (c && (c.pending || (!force && Date.now() - c.t < 12000))) return c.p;
     var job = { pending: true, t: 0, blob: c && c.blob || null, tPrev: c && c.t || 0 };
     job.p = queue = queue.catch(function () {}).then(function () { return renderCard(card); }).then(
       function (bl) { job.blob = bl; job.t = Date.now(); job.pending = false; card._baDirty = false; return bl; },
@@ -1147,29 +1147,42 @@
   // Phones: each window on screen has its picture made ahead of time, quietly -- only once the window has been on screen
   // a moment, never while the page is being scrolled or touched, one window at a time, and again only after the window
   // has changed (at most every 20 seconds). So a tap on its save button opens the share sheet at once.
-  var lastTouch = 0, phoneCards = [];
+  // Phones: every window's picture is made ahead of time, quietly, so a tap on its save button opens the share sheet at
+  // once (a phone only opens it straight from the tap). Pictures are made one at a time, only while the page is left
+  // alone (never while it's being scrolled or touched): first the windows on screen, then all the others, then again
+  // for a window on screen when you've changed what it shows (a player, a team) or its game has moved on (at most every
+  // 45 seconds -- the clock ticking alone doesn't count).
+  var lastTouch = 0, phoneCards = [], START = Date.now();
   if (PHONE) {
     var touched = function () { lastTouch = Date.now(); };
     ["touchstart", "touchmove"].forEach(function (ev) { addEventListener(ev, touched, { passive: true, capture: true }); });
     addEventListener("scroll", touched, { passive: true });     // (the page itself scrolling -- not the score ticker)
     setInterval(function () {
-      if (document.hidden || Date.now() - lastTouch < 2500) return;
-      for (var i = 0; i < phoneCards.length; i++) {
-        var cd = phoneCards[i], pc = cd._baPic;
-        if (!cd._baSeen || Date.now() - cd._baSeen < 1500 || (pc && pc.pending)) continue;
-        if (pc && pc.blob && (!cd._baDirty || Date.now() - pc.t < 20000)) continue;
-        (window.requestIdleCallback || function (f) { setTimeout(f, 50); })(function () { prerender(cd); }, { timeout: 2000 });
-        return;                                                   // (one at a time)
-      }
-    }, 1500);
+      if (document.hidden || Date.now() - lastTouch < 1200 || Date.now() - START < 2500) return;
+      if (phoneCards.some(function (c) { return c._baPic && c._baPic.pending; })) return;    // (one at a time)
+      var now = Date.now(), pick = null, rank = 9;
+      phoneCards.forEach(function (c) {
+        if (!c.isConnected) return;
+        var pc = c._baPic, has = pc && pc.blob, seen = !!c._baSeen, r = 9;
+        if (seen && c._baChanged) r = 0;                                  // you just changed what it shows
+        else if (seen && !has) r = 1;                                     // on screen, no picture yet
+        else if (!has) r = 2;                                             // the rest, once
+        else if (seen && c._baDirty && now - pc.t > 45000) r = 3;         // its game has moved on
+        if (r < rank) { rank = r; pick = c; }
+      });
+      if (!pick) return;
+      pick._baChanged = false;
+      (window.requestIdleCallback || function (f) { setTimeout(f, 30); })(function () { prerender(pick, true); }, { timeout: 1500 });
+    }, 700);
   }
   function phoneWatch(card) {
     phoneCards.push(card);
     if (window.IntersectionObserver) new IntersectionObserver(function (es) { es.forEach(function (en) {
       card._baSeen = en.isIntersecting ? (card._baSeen || Date.now()) : 0;
-    }); }, { threshold: 0.5 }).observe(card);
-    if (window.MutationObserver) new MutationObserver(function () { if (!card._baRendering) card._baDirty = true; })
-      .observe(card, { subtree: true, childList: true, characterData: true });
+    }); }, { threshold: 0.4 }).observe(card);
+    // a pick in its own menus (player, team, stat...) changes what it shows: a new picture soon
+    card.addEventListener("click", function (e) { if (!(e.target.closest && e.target.closest(".ls-save"))) card._baChanged = true; });
+    card.addEventListener("change", function () { card._baChanged = true; });
   }
   function fileName(name) { return ("Bradley Analytics - " + name).replace(/[\\/:*?"<>|]+/g, " ").replace(/\s+/g, " ").trim() + ".png"; }
   function download(blob, file) {
@@ -1189,32 +1202,52 @@
   // Computer: the .png downloads, nothing else. Phone: the share sheet opens on the tap (Save Image = camera roll).
   function saveCard(card, name, b) {
     var file = fileName(name), c = card._baPic;
-    if (PHONE && c && c.blob && Date.now() - (c.t || 0) < 120000) { share(c.blob, file, name); return; }
-    if (!PHONE && c && !c.pending && c.blob && Date.now() - c.t < FRESH) { download(c.blob, file); return; }
+    if (PHONE) {
+      // the picture made ahead of time: the share sheet opens right from this tap (Save Image = camera roll). Only if
+      // you changed what the window shows a moment ago is it made again first.
+      if (c && c.blob && !card._baChanged) { share(c.blob, file, name); return; }
+      if (b.classList.contains("busy")) return;
+      b.classList.add("busy");
+      var sheet = savePrompt(null, null, name);                  // (the picture appears in it, with Save to Photos)
+      prerender(card, true).then(function (blob) {
+        card._baChanged = false;
+        if (!blob) throw new Error("no picture");
+        sheet.fill(blob);
+      }).catch(function () { sheet.shut(); b.classList.add("err"); setTimeout(function () { b.classList.remove("err"); }, 1500); })
+        .then(function () { b.classList.remove("busy"); });
+      return;
+    }
+    if (c && !c.pending && c.blob && Date.now() - c.t < FRESH) { download(c.blob, file); return; }
     if (b.classList.contains("busy")) return;
     b.classList.add("busy");
-    prerender(card).then(function (blob) {
-      if (!blob) throw new Error("no picture");
-      if (PHONE) share(blob, file, name); else download(blob, file);
-    }).catch(function () { b.classList.add("err"); setTimeout(function () { b.classList.remove("err"); }, 1500); })
+    prerender(card).then(function (blob) { if (!blob) throw new Error("no picture"); download(blob, file); })
+      .catch(function () { b.classList.add("err"); setTimeout(function () { b.classList.remove("err"); }, 1500); })
       .then(function () { b.classList.remove("busy"); });
   }
-  // only if a phone refuses the share sheet without a fresh tap: the picture with one "Save to Photos" button
+  // a phone that hasn't got the picture yet (or refuses the share sheet without a fresh tap): the picture, and one
+  // "Save to Photos" button that opens the share sheet
   function savePrompt(f, blob, name) {
-    var url = URL.createObjectURL(blob), box = el("div", "ls-savebox");
-    box.innerHTML = '<div class="ls-savein"><button type="button" class="ls-savex" aria-label="Close">&times;</button></div>';
+    var box = el("div", "ls-savebox"), url = null;
+    box.innerHTML = '<div class="ls-savein"><button type="button" class="ls-savex" aria-label="Close">&times;</button><div class="ls-savepic"><i class="ls-savespin"></i></div></div>';
     document.body.appendChild(box);
-    var inn = box.querySelector(".ls-savein");
-    var shut = function () { box.remove(); setTimeout(function () { URL.revokeObjectURL(url); }, 2000); };
+    var inn = box.querySelector(".ls-savein"), pic = box.querySelector(".ls-savepic");
+    var shut = function () { box.remove(); if (url) setTimeout(function () { URL.revokeObjectURL(url); }, 2000); };
     box.addEventListener("click", function (e) { if (e.target === box) shut(); });
     box.querySelector(".ls-savex").addEventListener("click", shut);
-    var im = document.createElement("img"); im.alt = name; im.src = url; inn.insertBefore(im, inn.firstChild);
-    var ex = document.createElement(f ? "button" : "p");
-    if (f) { ex.type = "button"; ex.className = "ls-savego"; ex.textContent = "Save to Photos"; ex.addEventListener("click", function () { navigator.share({ files: [f], title: name }).then(shut).catch(function () {}); }); }
-    else ex.textContent = "Press and hold the picture, then tap Save to Photos.";
-    inn.insertBefore(ex, im.nextSibling);
-    return { shut: shut };
+    function fill(bl) {
+      url = URL.createObjectURL(bl);
+      var file = typeof File === "function" ? new File([bl], fileName(name), { type: "image/png" }) : null;
+      var can = file && navigator.canShare && navigator.canShare({ files: [file] });
+      pic.innerHTML = ""; var im = document.createElement("img"); im.alt = name; im.src = url; pic.appendChild(im);
+      var ex = document.createElement(can ? "button" : "p");
+      if (can) { ex.type = "button"; ex.className = "ls-savego"; ex.textContent = "Save to Photos"; ex.addEventListener("click", function () { navigator.share({ files: [file], title: name }).then(shut).catch(function () {}); }); }
+      else ex.textContent = "Press and hold the picture, then tap Save to Photos.";
+      inn.appendChild(ex);
+    }
+    if (blob) fill(blob);
+    return { fill: fill, shut: shut };
   }
+
 
   // ------------------------------------------------------------ a card with its own dropdowns
   function makeCard(opts) {
@@ -1287,6 +1320,7 @@
     card._liveUpdate = function (g, clockOnly) {
       if (!g || g.id !== state.gameId || opts.live === false) return;
       if (card._baRendering) { if (!card._baHeld || !clockOnly) card._baHeld = [g, clockOnly]; return; }   // (its picture is being made)
+      if (!clockOnly) card._baDirty = true;
       if (clockOnly && !opts.clock) return;
       if (state.pre) { if (!g.pre) draw(); return; }  // it just tipped off: the whole window
       Promise.resolve(opts.prepare && !clockOnly ? opts.prepare(g) : null).then(function () {
