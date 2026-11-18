@@ -1,0 +1,58 @@
+---
+layout: null
+---
+<!doctype html>
+<!-- One game's live windows, for the app's home feed (app/): the same live strip as the home page (assets/live-strip.js),
+     held on the game given in the address (app-game.html?id=ESPN game id), without its own ticker and headings. It tells
+     the app how tall it is, so the app can size the frame to fit. -->
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark">
+<title>Game - Bradley Analytics</title>
+<link rel="stylesheet" href="site.css?v=10">
+<link rel="stylesheet" href="assets/live-strip.css?v=27">
+<style>
+  html { color-scheme: dark; }
+  html, body { background: transparent !important; margin: 0; padding: 0; overflow: hidden; }
+  body::before, body::after { display: none !important; }
+  #live-strip { margin: 0 !important; padding: 0 0 4px !important; background: transparent !important; border: 0 !important; }
+  #live-strip .ls-head, #live-strip .ls-ticker { display: none !important; }
+  #live-strip .ls-viewport { margin-top: 0 !important; }
+</style>
+</head>
+<body class="ba-app-embed">
+  <section class="ls" id="live-strip" data-src="data/live/" data-dashboard="https://bradleyanalytics.streamlit.app/" aria-label="Game windows" hidden>
+    <div class="ls-head">
+      <span class="ls-head-l"><span class="ls-badge"><i></i><span>Latest games</span></span><span class="ls-daypick"></span><span class="ls-sub"></span></span>
+      <button class="ls-full-btn" type="button" aria-label="Full screen">Full screen</button>
+      <span class="ls-hint"><span class="dk"></span><span class="tc"></span></span>
+      <button class="ls-full-exit" type="button"><span aria-hidden="true">&times;</span> Exit full screen</button>
+    </div>
+    <div class="ls-ticker"><div class="ls-ticker-track"></div></div>
+    <div class="ls-hl" hidden></div>
+    <div class="ls-viewport"><div class="ls-track"></div></div>
+  </section>
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search), id = q.get("id"), day = q.get("day");
+      // hold the windows on this game once the strip has loaded
+      var tries = 0;
+      (function hold() {
+        if (window.BALive && id) { try { window.BALive.show(id, day); } catch (e) {} }
+        else if (tries++ < 50) setTimeout(hold, 100);
+      })();
+      // tell the app this page's height whenever it changes
+      var last = 0;
+      function tell() {
+        var h = Math.ceil(document.getElementById("live-strip").getBoundingClientRect().height);
+        if (h && Math.abs(h - last) > 2) { last = h; parent.postMessage({ baGameHeight: h, id: id }, "*"); }
+      }
+      setInterval(tell, 700);
+      addEventListener("load", tell);
+    })();
+  </script>
+  <script src="assets/mini-player.js?v=8" defer></script>
+  <script src="assets/live-strip.js?v=29"></script>
+</body></html>

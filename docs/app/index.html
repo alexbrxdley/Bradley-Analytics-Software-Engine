@@ -1,0 +1,134 @@
+---
+layout: null
+---
+<!doctype html>
+<!-- Bradley Analytics, the app (first draft). The same file runs three ways:
+       * in a phone's browser at bradley-analytics.com/app/ (and "Add to Home Screen" makes it an app icon),
+       * inside the store apps (app-native/: Capacitor wraps this page for Google Play and the App Store),
+       * on a computer, for checking it.
+     Everything it shows comes live from the website and ESPN's public feed, so updating the website updates the app.
+     Layout (after Instagram): the name between two round buttons at the top, game highlights as stories, the game ticker,
+     the rows of game windows, and a floating tab bar at the bottom. -->
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Bradley Analytics</title>
+<meta name="theme-color" content="#120c08">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Bradley Analytics">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=2">
+<link rel="icon" type="image/png" href="../favicon-32x32.png?v=2">
+<link rel="preconnect" href="https://site.api.espn.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/live-strip.css?v=27">
+<link rel="stylesheet" href="app.css?v=2">
+</head>
+<body>
+  <!-- the floor: a parquet court that tilts with the phone -->
+  <div class="bg" aria-hidden="true"><div class="bg-floor"></div><div class="bg-shade"></div></div>
+
+  <!-- the top, as on Instagram: a round button each side and the name in the middle (it opens a menu) -->
+  <header class="top">
+    <button class="round" type="button" id="new-post" aria-label="New post"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+    <button class="brand-btn" type="button" id="brand" aria-haspopup="menu" aria-expanded="false"><span class="brand">Bradley Analytics</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button>
+    <button class="round" type="button" id="bell" aria-label="Notifications and articles"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 17h12l-1.4-2V10a4.6 4.6 0 0 0-9.2 0v5L6 17Z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg><i class="dot" hidden></i></button>
+    <div class="menu" id="brand-menu" role="menu" hidden>
+      <button type="button" role="menuitemradio" data-feed="all" aria-checked="true">All games</button>
+      <button type="button" role="menuitemradio" data-feed="mine" aria-checked="false">Your teams</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="view on" id="v-home" aria-label="Home">
+      <!-- game highlights as stories, then the game ticker, then a row of live windows per game -->
+      <div class="stories" id="stories" aria-label="Game highlights"></div>
+      <div class="tick" aria-label="Today's games"><div class="tick-track"></div></div>
+      <div id="games"><p class="empty">Loading today&rsquo;s games&hellip;</p></div>
+      <div class="dash">
+        <div class="dash-h"><h2 class="h">The dashboard</h2><button class="chip" type="button" data-open="https://bradleyanalytics.streamlit.app/?embed=true">Full screen</button></div>
+        <div class="dash-f" id="dash"><div class="ph">The dashboard opens here&hellip;</div></div>
+      </div>
+      <div class="more">
+        <h2 class="h">More from Bradley Analytics</h2>
+        <div class="tiles">
+          <button class="tile" data-open="../portfolio.html"><b>Portfolio</b><span>Reports, the book, projects</span></button>
+          <button class="tile" data-open="../consulting.html"><b>Consulting</b><span>Work with Bradley Analytics</span></button>
+          <button class="tile" data-open="../author.html"><b>Author</b><span>The Bradley Analytics book</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="v-mine" aria-label="Your dashboard">
+      <div class="mine-head"><h2 class="h">Your dashboard</h2><button class="chip" id="edit-mine" type="button">Edit</button></div>
+      <div id="mine"></div>
+    </section>
+
+    <section class="view" id="v-games" aria-label="Games">
+      <h2 class="h">Games</h2>
+      <div class="tiles big">
+        <button class="tile" data-open="../fantasy-draft.html"><b>82-0 Fantasy Draft</b><span>Spin a team and season, draft eight, play 82</span></button>
+        <button class="tile" data-open="../gm-challenge.html"><b>GM Challenge</b><span>Build a roster under the cap</span></button>
+        <button class="tile" data-open="../guess-the-analytics.html"><b>Guess the Analytics</b><span>Name the player from his numbers</span></button>
+        <button class="tile" data-open="../todays-play.html"><b>Today&rsquo;s Play</b><span>One play a day, call it</span></button>
+      </div>
+    </section>
+
+    <section class="view" id="v-community" aria-label="Community">
+      <h2 class="h">Community</h2>
+      <div class="card compose">
+        <textarea id="post-text" rows="3" maxlength="500" placeholder="Share a take, a chart, a prediction&hellip;"></textarea>
+        <div class="row"><span class="note">Draft: posts stay on this phone until the community server is built.</span><button class="btn" id="post-go" type="button">Post</button></div>
+      </div>
+      <div id="posts"></div>
+    </section>
+
+    <section class="view" id="v-profile" aria-label="Profile">
+      <div class="card me"><div class="me-av" id="me-av">BA</div><div><input id="me-name" maxlength="30" placeholder="Your name"><span class="note" id="me-teams"></span></div></div>
+      <h2 class="h">Settings</h2>
+      <div class="card set">
+        <div class="set-row"><span>Background</span><div class="seg" id="set-bg"></div></div>
+        <div class="set-row"><span>Accent colour</span><div class="swatches" id="set-acc"></div></div>
+        <div class="set-row"><span>Moving floor (tilt your phone)</span><button class="toggle" id="set-tilt" type="button" aria-pressed="true"><i></i></button></div>
+        <div class="set-row"><span>Favourite teams</span><button class="chip" type="button" data-go="mine">Choose</button></div>
+      </div>
+      <h2 class="h">Bradley Analytics</h2>
+      <div class="tiles">
+        <button class="tile" data-ext="https://bradleyanalytics.streamlit.app/"><b>Full dashboard</b><span>Every chart and tool</span></button>
+        <button class="tile" data-open="../index.html"><b>Website</b><span>bradley-analytics.com</span></button>
+        <button class="tile" data-ext="https://www.instagram.com/bradleyanalytics/"><b>Instagram</b><span>@bradleyanalytics</span></button>
+      </div>
+      <p class="note center">App draft 1 &middot; data from ESPN&rsquo;s public feed</p>
+    </section>
+  </main>
+
+  <!-- the floating tab bar, as on Instagram -->
+  <nav class="tabs" aria-label="Pages"><div class="tabs-in">
+    <button type="button" data-go="home" class="on" aria-label="Home"><svg viewBox="0 0 24 24"><path class="fillon" d="M4 10.4 12 4l8 6.4V19a1.5 1.5 0 0 1-1.5 1.5H15v-5.2a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5.2H5.5A1.5 1.5 0 0 1 4 19z"/></svg></button>
+    <button type="button" data-go="mine" aria-label="Your dashboard"><svg viewBox="0 0 24 24"><rect class="fillon" x="4" y="4" width="7" height="7" rx="1.8"/><rect class="fillon" x="13" y="4" width="7" height="4.5" rx="1.8"/><rect class="fillon" x="13" y="10.5" width="7" height="9.5" rx="1.8"/><rect class="fillon" x="4" y="13" width="7" height="7" rx="1.8"/></svg></button>
+    <button type="button" data-go="games" aria-label="Games"><svg viewBox="0 0 24 24"><path class="fillon" d="M7.5 8h9a4.5 4.5 0 0 1 4.3 5.8l-1 3.3a2.3 2.3 0 0 1-3.9.9L14 16h-4l-1.9 2a2.3 2.3 0 0 1-3.9-.9l-1-3.3A4.5 4.5 0 0 1 7.5 8Z"/><path class="cut" d="M8 10.5v3M6.5 12h3"/><circle class="cut" cx="15.5" cy="11.3" r=".6"/><circle class="cut" cx="17" cy="12.8" r=".6"/></svg></button>
+    <button type="button" data-go="community" aria-label="Community"><svg viewBox="0 0 24 24"><path class="fillon" d="M20.5 4 3.5 10.6l6.6 2.6 2.6 6.8z"/><path d="m10.1 13.2 4-4"/></svg><i class="dot"></i></button>
+    <button type="button" data-go="profile" aria-label="Profile" class="me-tab"><span class="tab-av" id="tab-av">BA</span><i class="dot"></i></button>
+  </div></nav>
+
+  <!-- a website page opened inside the app (portfolio, games...), and the bell's sheet -->
+  <div class="sheet" id="viewer" hidden><div class="sheet-bar"><button class="chip" type="button" data-close>&larr; Back</button><b class="sheet-t"></b><span></span></div><iframe title="Page"></iframe></div>
+  <div class="sheet" id="news" hidden><div class="sheet-bar"><button class="chip" type="button" data-close>&larr; Back</button><b>Notifications &amp; articles</b><span></span></div><div class="sheet-body"></div></div>
+  <div class="toast" id="toast" hidden></div>
+
+  <div class="story" id="story" hidden>
+    <div class="story-bars"></div>
+    <div class="story-top"><div class="story-who"></div><button class="story-x" type="button" aria-label="Close">&times;</button></div>
+    <button class="story-prev" type="button" aria-label="Previous game"></button>
+    <button class="story-next" type="button" aria-label="Next game"></button>
+    <div class="story-stage"><div class="story-v"></div></div>
+    <div class="story-foot"></div>
+  </div>
+
+  <script src="../assets/games.js?v=3"></script>
+  <script src="../assets/mini-player.js?v=8"></script>
+  <script src="app.js?v=2"></script>
+</body></html>
