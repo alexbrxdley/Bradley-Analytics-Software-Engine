@@ -484,6 +484,32 @@ def _picture_b64(pil_img, max_px=240):
     return f"data:{mime};base64," + base64.b64encode(buf.getvalue()).decode("ascii")
 
 
+def _line_color(ax, points):
+    """The colour of the line drawn between these two points on this chart (the most solid one, if several are drawn
+    there: a faint glow under a line comes second), as #rrggbb; None if there isn't one."""
+    try:
+        from matplotlib.colors import to_hex
+        import numpy as _np
+        (x0, y0), (x1, y1) = points[0], points[-1]
+        span = max(abs(x1 - x0), abs(y1 - y0), 1e-9)
+        tol = span * 0.02 + 1e-6
+        best, best_a = None, -1.0
+        for ln in ax.get_lines():
+            xy = _np.asarray(ln.get_xydata(), dtype=float)
+            if len(xy) < 2:
+                continue
+            a, b = xy[0], xy[-1]
+            if ((abs(a[0] - x0) < tol and abs(a[1] - y0) < tol and abs(b[0] - x1) < tol and abs(b[1] - y1) < tol) or
+                    (abs(a[0] - x1) < tol and abs(a[1] - y1) < tol and abs(b[0] - x0) < tol and abs(b[1] - y0) < tol)):
+                al = ln.get_alpha()
+                al = 1.0 if al is None else float(al)
+                if al > best_a:
+                    best, best_a = to_hex(ln.get_color()), al
+        return best
+    except Exception:  # noqa: BLE001
+        return None
+
+
 def _node_pictures(hotspots, renderer, crop_x0, crop_y1):
     """{hotspot index: {x, y, w, h, href}} -- for each big round hotspot (a player node) the picture drawn at it in the
     chart (an AnnotationBbox), as its black silhouette and its box in overlay pixels."""
@@ -818,6 +844,7 @@ _JS = r"""
     lightMemo = n ? tot / n > 170 : false;
     return lightMemo;
   }
+  function hexRGB(h) { h = String(h).replace('#', ''); return [parseInt(h.substr(0, 2), 16), parseInt(h.substr(2, 2), 16), parseInt(h.substr(4, 2), 16)]; }
   function deeper(c, k) {
     if (!c) return '#B8901F';
     return 'rgb(' + c.map(function (v) { return Math.round(v * (1 - k)); }).join(',') + ')';
@@ -877,10 +904,10 @@ _JS = r"""
       // the line's own colour: sampled on the line itself, around its middle (never the pictures at its ends)
       var mx = (a[0] + z[0]) / 2, my = (a[1] + z[1]) / 2;
       if (g.pts.length > 2) { mx = mid[0]; my = mid[1]; }
-      var cl = sampleColor(mx - 3, my - 3, mx + 3, my + 3);
+      var cl = g.color ? hexRGB(g.color) : sampleColor(mx - 3, my - 3, mx + 3, my + 3);
       // on a white chart a lightened colour would vanish (pale yellow lines especially), so there the line keeps its
       // own colour, a little deeper; on a dark chart it's lightened. Either way it is drawn clearly thicker.
-      var lightBg = chartIsLight(), lc = lightBg ? deeper(cl, 0.12) : brighter(cl, 0.35);
+      var lightBg = chartIsLight(), lc = lightBg ? deeper(cl, 0.12) : brighter(cl, g.color ? 0.15 : 0.35);   // (its own colour, just a touch brighter)
       el = mk('polyline', { points: g.pts.map(function (p) { return p[0] + ',' + p[1]; }).join(' '), fill: 'none', stroke: lc,
         'stroke-width': Math.max(6, (g.sw || 14) * 0.5), 'stroke-linecap': 'round', 'stroke-linejoin': 'round', filter: 'url(#baHlGlow)' });
       if (document.getElementById('ba-players-out')) {        // the glowing line goes behind the players' pictures, never over them
@@ -1481,7 +1508,11 @@ def build_hotspot_svg(hotspots, fig_h_px, crop_x0=0.0, crop_y1=None, renderer=No
         elif shape == "path":
             pts = [_to_px(ax, x, y, fig_h_px, crop_x0, crop_y1) for x, y in hs["points"]]
             sw = hs.get("stroke_px", 14)
-            geom_list.append({"key": key, "shape": "path", "pts": [[round(x, 2), round(y, 2)] for x, y in pts], "sw": max(sw, 16)})
+            _g = {"key": key, "shape": "path", "pts": [[round(x, 2), round(y, 2)] for x, y in pts], "sw": max(sw, 16)}
+            _lc = hs.get("color") or _line_color(ax, hs["points"])
+            if _lc:
+                _g["color"] = _lc                     # (its own colour: the glow is that colour, never a label's)
+            geom_list.append(_g)
             if group:
                 d = "M " + " L ".join(f"{x:.2f} {y:.2f}" for x, y in pts)
                 geom = f'<path class="dim-overlay" data-key="{key}" d="{d}" fill="none" stroke="#000" stroke-width="{sw}" stroke-opacity="{rest_map[key]}"{mask_attr}/>'

@@ -1,0 +1,12 @@
+{
+  "appId": "com.bradleyanalytics.app",
+  "appName": "Bradley Analytics",
+  "webDir": "www",
+  "backgroundColor": "#070707",
+  "server": {
+    "url": "https://www.bradley-analytics.com/app/",
+    "allowNavigation": ["www.bradley-analytics.com", "bradley-analytics.com", "bradleyanalytics.streamlit.app", "*.espn.com", "*.espncdn.com", "*.nba.com", "www.youtube-nocookie.com", "www.youtube.com"]
+  },
+  "ios": { "contentInset": "never", "allowsLinkPreview": false, "scrollEnabled": true },
+  "android": { "allowMixedContent": false }
+}

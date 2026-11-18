@@ -1,0 +1,33 @@
+# Builds a test copy of the Android app that you can install on an Android phone. To use it, copy this file into
+# .github/workflows/ in the repo (like the other robots), then Actions > Android app > Run workflow. When it finishes,
+# the app file (BradleyAnalytics.apk) is under "Artifacts" on that run's page.
+name: Android app
+
+on:
+  workflow_dispatch:
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: app-native
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - run: npm install
+      - run: npx cap add android
+      - run: npx cap sync android
+      - run: cd android && ./gradlew assembleDebug
+      - run: cp android/app/build/outputs/apk/debug/app-debug.apk BradleyAnalytics.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BradleyAnalytics-android
+          path: app-native/BradleyAnalytics.apk
