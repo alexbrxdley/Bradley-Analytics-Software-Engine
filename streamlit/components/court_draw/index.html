@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Court area picker</title>
+<style>
+  :root { --gold:#D4AF37; --gold2:#F5D370; --ink:#f0f0f0; --muted:#9a9488; --line:#2e2b25; }
+  html, body { margin:0; padding:0; background:transparent; font-family:Arial, Helvetica, sans-serif; color:var(--ink); }
+  .wrap { display:grid; gap:8px; padding:2px 2px 6px; }
+  .bar { display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+  .bar .lbl { font-size:12px; color:var(--muted); margin-right:2px; }
+  button { font:inherit; font-size:12.5px; color:#e6e6e6; background:#161513; border:1px solid #3a372f; border-radius:999px;
+           padding:5px 11px; cursor:pointer; }
+  button:hover { border-color:var(--gold); color:#fff; }
+  button.on { border-color:var(--gold); background:rgba(212,175,55,.16); color:#fff; }
+  button.clear { border-radius:8px; }
+  .court { background:#0e0d0b; border:1px solid var(--line); border-radius:12px; overflow:hidden; width:100%;
+           max-width:700px; }
+  svg { display:block; width:100%; height:auto; touch-action:none; cursor:crosshair; user-select:none; }
+  /* circled areas and the line being drawn: the dashboard's gradient gold */
+  .area { fill:url(#goldFill); stroke:url(#goldEdge); stroke-width:2.6; stroke-dasharray:7 5; }
+  .draft { fill:url(#goldFillWide); stroke:url(#goldEdgeWide); stroke-width:2.8; stroke-linecap:round;
+           stroke-linejoin:round; }
+  .status { font-size:12.5px; color:var(--muted); min-height:18px; }
+  .status b { color:var(--gold2); font-weight:600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="bar" id="presets"><span class="lbl">Quick areas:</span></div>
+  <div class="court">
+    <svg id="court" viewBox="-252 -2 504 381.5" aria-label="Half court: drag to circle an area"></svg>
+  </div>
+  <div class="bar">
+    <button class="clear" id="undo" type="button">Undo last area</button>
+    <button class="clear" id="clear" type="button">Clear all</button>
+    <span class="status" id="status"></span>
+  </div>
+</div>
+<script>
+(function () {
+  "use strict";
+  // Court coordinates: the NBA shot-chart grid (1/10 ft, hoop at 0,0, x -250..250). SVG y = TOP - court y.
+  var TOP = 330, BASE = TOP + 47.5, Y89 = TOP - 89.5;
+  var svg = document.getElementById("court");
+  var areas = [];            // [{name, poly: [[x, y], ...]}]  in court coordinates
+  var drawing = null;
+  var counter = 0;
+
+  function send(type, extra) {
+    var msg = Object.assign({ isStreamlitMessage: true, type: type }, extra || {});
+    window.parent.postMessage(msg, "*");
+  }
+  var lastHeight = 0;
+  function setHeight() {
+    // the content's own height (never the frame's, which would grow a little on every resize)
+    var h = Math.ceil(document.querySelector(".wrap").getBoundingClientRect().height) + 6;
+    if (Math.abs(h - lastHeight) < 2) return;
+    lastHeight = h;
+    send("streamlit:setFrameHeight", { height: h });
+  }
+  function publish() {
+    counter += 1;
+    send("streamlit:setComponentValue", {
+      dataType: "json",
+      value: { areas: areas.map(function (a) { return a.poly; }), names: areas.map(function (a) { return a.name; }), v: counter }
+    });
+  }
+
+  function arc(r, a0, a1, step) {
+    var out = [], dir = a1 >= a0 ? 1 : -1, a;
+    step = step || 3;
+    for (a = a0; dir > 0 ? a <= a1 + 1e-9 : a >= a1 - 1e-9; a += step * dir) {
+      var rad = a * Math.PI / 180;
+      out.push([Math.max(-250, Math.min(250, r * Math.sin(rad))), Math.min(TOP, r * Math.cos(rad))]);
+    }
+    return out;
+  }
+  function mirror(p) { return p.map(function (q) { return [-q[0], q[1]]; }); }
+  var lc3 = [[-250, -47.5], [-250, 89.5], [-220, 89.5], [-220, -47.5]];
+  var lw3 = arc(237.5, -68, -22.5).concat(arc(330, -22.5, -68));
+  var PRESETS = [
+    ["Left corner 3", lc3],
+    ["Left wing 3", lw3],
+    ["Top of the key 3", arc(237.5, -22.5, 22.5).concat(arc(330, 22.5, -22.5))],
+    ["Right wing 3", mirror(lw3)],
+    ["Right corner 3", mirror(lc3)],
+    ["Restricted area", [[-40, -47.5]].concat(arc(40, -90, 90, 10)).concat([[40, -47.5]])],
+    ["Paint", [[-80, -47.5], [-80, 142.5], [80, 142.5], [80, -47.5]]],
+    ["Left elbow", [[-120, 110], [-120, 180], [-45, 180], [-45, 110]]],
+    ["Right elbow", [[45, 110], [45, 180], [120, 180], [120, 110]]],
+    ["Free-throw line mid-range", [[-80, 142.5], [-80, 215], [80, 215], [80, 142.5]]]
+  ];
+
+  function d(poly) {
+    return "M " + poly.map(function (p) { return p[0].toFixed(1) + " " + (TOP - p[1]).toFixed(1); }).join(" L ") + " Z";
+  }
+  function courtLines() {
+    return '<g fill="none" stroke="#5a564c" stroke-width="1.8" stroke-linecap="round">' +
+      '<line x1="-250" y1="' + BASE + '" x2="250" y2="' + BASE + '"/>' +
+      '<rect x="-80" y="' + (TOP - 142.5) + '" width="160" height="190"/>' +
+      '<circle cx="0" cy="' + (TOP - 142.5) + '" r="60"/>' +
+      '<path d="M -40 ' + TOP + ' A 40 40 0 0 1 40 ' + TOP + '"/>' +
+      '<line x1="-30" y1="' + (TOP + 7.5) + '" x2="30" y2="' + (TOP + 7.5) + '"/>' +
+      '<circle cx="0" cy="' + TOP + '" r="7.5"/>' +
+      '<path d="M -220 ' + BASE + ' L -220 ' + Y89 + ' A 237.5 237.5 0 0 1 220 ' + Y89 + ' L 220 ' + BASE + '"/>' +
+      '</g>';
+  }
+  // Gradient gold (the same stops as the dashboard's gold shimmer). Circled areas get it across their own shape; the
+  // line being drawn uses one spread over the whole court, so it shows even while it is still a straight stroke.
+  var GOLD_STOPS = [[0, "#8a6410"], [0.18, "#D4AF37"], [0.34, "#FFF0B8"], [0.5, "#F5D370"], [0.66, "#D4AF37"],
+                    [0.82, "#B8860B"], [1, "#8a6410"]];
+  function grad(id, attrs, opacity) {
+    return '<linearGradient id="' + id + '" ' + attrs + '>' + GOLD_STOPS.map(function (s) {
+      return '<stop offset="' + s[0] + '" stop-color="' + s[1] + '"' + (opacity ? ' stop-opacity="' + opacity + '"' : '') + '/>';
+    }).join("") + '</linearGradient>';
+  }
+  var GOLD_DEFS = '<defs>' +
+    grad("goldEdge", 'x1="0" y1="0" x2="1" y2="1"') + grad("goldFill", 'x1="0" y1="0" x2="1" y2="1"', 0.26) +
+    grad("goldEdgeWide", 'gradientUnits="userSpaceOnUse" spreadMethod="reflect" x1="-70" y1="0" x2="70" y2="70"') +
+    grad("goldFillWide", 'gradientUnits="userSpaceOnUse" spreadMethod="reflect" x1="-70" y1="0" x2="70" y2="70"', 0.16) +
+    '</defs>';
+  function draw() {
+    var html = GOLD_DEFS + '<rect x="-252" y="-2" width="504" height="381.5" fill="#0e0d0b"/>' + courtLines();
+    areas.forEach(function (a) { html += '<path class="area" d="' + d(a.poly) + '"/>'; });
+    html += '<path id="draft" class="draft" d=""/>';
+    svg.innerHTML = html;
+    var st = document.getElementById("status");
+    st.innerHTML = areas.length
+      ? "Searching inside: <b>" + areas.map(function (a) { return a.name; }).join(" + ") + "</b>"
+      : "Drag on the court to circle an area, or pick a quick area above.";
+    Array.prototype.forEach.call(document.querySelectorAll("#presets button"), function (b) {
+      b.classList.toggle("on", areas.some(function (a) { return a.name === b.textContent; }));
+    });
+    setHeight();
+  }
+  function toCourt(e) {
+    var m = svg.getScreenCTM();
+    if (!m) return null;
+    var pt = svg.createSVGPoint();
+    pt.x = e.clientX; pt.y = e.clientY;
+    var p = pt.matrixTransform(m.inverse());
+    return [Math.max(-250, Math.min(250, p.x)), TOP - Math.max(0, Math.min(BASE, p.y))];
+  }
+
+  var presetBar = document.getElementById("presets");
+  PRESETS.forEach(function (pr) {
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = pr[0];
+    b.addEventListener("click", function () {
+      var i = areas.findIndex(function (a) { return a.name === pr[0]; });
+      if (i >= 0) areas.splice(i, 1); else areas.push({ name: pr[0], poly: pr[1] });
+      draw(); publish();
+    });
+    presetBar.appendChild(b);
+  });
+
+  svg.addEventListener("pointerdown", function (e) {
+    var p = toCourt(e); if (!p) return;
+    drawing = [p];
+    try { svg.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+    e.preventDefault();
+  });
+  svg.addEventListener("pointermove", function (e) {
+    if (!drawing) return;
+    var p = toCourt(e); if (!p) return;
+    var l = drawing[drawing.length - 1];
+    if (Math.hypot(p[0] - l[0], p[1] - l[1]) < 4) return;
+    drawing.push(p);
+    var dr = document.getElementById("draft");
+    if (dr) dr.setAttribute("d", d(drawing));
+  });
+  function finish() {
+    if (!drawing) return;
+    var poly = drawing; drawing = null;
+    if (poly.length >= 6) {
+      var n = areas.filter(function (a) { return a.name.indexOf("Drawn area") === 0; }).length + 1;
+      areas.push({ name: "Drawn area " + n, poly: poly.map(function (p) { return [Math.round(p[0] * 10) / 10, Math.round(p[1] * 10) / 10]; }) });
+      draw(); publish();
+    } else {
+      draw();
+    }
+  }
+  svg.addEventListener("pointerup", finish);
+  svg.addEventListener("pointercancel", finish);
+  document.getElementById("undo").addEventListener("click", function () { areas.pop(); draw(); publish(); });
+  document.getElementById("clear").addEventListener("click", function () { areas = []; draw(); publish(); });
+
+  var restored = false;
+  window.addEventListener("message", function (event) {
+    var data = event.data || {};
+    if (data.type !== "streamlit:render") return;
+    var args = data.args || {};
+    // on first render, bring back the areas already chosen (e.g. after the page reruns)
+    if (!restored) {
+      restored = true;
+      var initial = args.initial || {};
+      var polys = initial.areas || [], names = initial.names || [];
+      if (polys.length) {
+        areas = polys.map(function (p, i) { return { name: names[i] || ("Drawn area " + (i + 1)), poly: p }; });
+        counter = initial.v || 0;
+      }
+      draw();
+    }
+    setHeight();
+  });
+  window.addEventListener("resize", setHeight);
+  draw();
+  send("streamlit:componentReady", { apiVersion: 1 });
+})();
+</script>
+</body>
+</html>
