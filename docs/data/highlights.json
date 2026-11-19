@@ -8035,7 +8035,571 @@
     "LAC"
    ],
    "title": "JAZZ at CLIPPERS | FULL GAME HIGHLIGHTS | November 17, 2026"
+  },
+  "401910007": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "blocked": [],
+   "day": "20261118",
+   "id": "D1heFUFyjug",
+   "published": "2026-11-19T03:04:34+00:00",
+   "teams": [
+    "MEM",
+    "CLE"
+   ],
+   "title": "GRIZZLIES at CAVALIERS | FULL GAME HIGHLIGHTS | November 18, 2026"
+  },
+  "401910008": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "blocked": [],
+   "day": "20261118",
+   "id": "xmYokXvSaHI",
+   "published": "2026-11-19T02:41:37+00:00",
+   "teams": [
+    "HOU",
+    "IND"
+   ],
+   "title": "ROCKETS at PACERS | FULL GAME HIGHLIGHTS | November 18, 2026"
+  },
+  "401910009": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "blocked": [],
+   "day": "20261118",
+   "id": "43Up7wY4og4",
+   "published": "2026-11-19T03:18:46+00:00",
+   "teams": [
+    "MIL",
+    "MIA"
+   ],
+   "title": "BUCKS at HEAT | FULL GAME HIGHLIGHTS | November 18, 2026"
+  },
+  "401910010": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "blocked": [],
+   "day": "20261118",
+   "id": "KGej9CyFqGQ",
+   "published": "2026-11-19T02:56:46+00:00",
+   "teams": [
+    "PHI",
+    "ORL"
+   ],
+   "title": "76ERS at MAGIC | FULL GAME HIGHLIGHTS | November 18, 2026"
+  },
+  "401910011": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "blocked": [],
+   "day": "20261118",
+   "id": "4wdFn77Fqts",
+   "published": "2026-11-19T03:11:00+00:00",
+   "teams": [
+    "CHI",
+    "BKN"
+   ],
+   "title": "BULLS at NETS | FULL GAME HIGHLIGHTS | November 18, 2026"
+  },
+  "401910012": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "blocked": [],
+   "day": "20261118",
+   "id": "UjM4Za3cAmU",
+   "published": "2026-11-19T03:36:50+00:00",
+   "teams": [
+    "WSH",
+    "TOR"
+   ],
+   "title": "WIZARDS at RAPTORS | FULL GAME HIGHLIGHTS | November 18, 2026"
+  },
+  "401910013": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "\u4f0a\u85e4\u548c\u4e5f",
+     "id": "QTThS96f8Ac",
+     "title": "New Orleans Pelicans vs Detroit Pistons | FULL GAME Highlights | Nov 18, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "G4DW35dcmBI",
+     "title": "Detroit Pistons vs New Orleans Pelicans Full Game Highlights - November 18, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "\u4f0a\u85e4\u548c\u4e5f",
+     "id": "O8a6VjUYlOw",
+     "title": "New Orleans Pelicans vs Detroit Pistons | 4TH Highlights | Nov 18, 2026 | NBA Highlights"
+    }
+   ],
+   "blocked": [],
+   "day": "20261118",
+   "id": "OLh7nl8JlPw",
+   "published": "2026-11-19T04:19:48+00:00",
+   "teams": [
+    "DET",
+    "NO"
+   ],
+   "title": "PISTONS at PELICANS | FULL GAME HIGHLIGHTS | November 18, 2026"
+  },
+  "401910014": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "exclusivas18",
+     "id": "s4jln3ak8u0",
+     "title": "Oklahoma City Thunder vs Atlanta Hawks Full Game Highlights | Nov 18, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "tEgkP1knY9A",
+     "title": "Oklahoma City Thunder vs Atlanta Hawks Full Game Highlights - November 18, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "exclusivas18",
+     "id": "PgiVGRWNjgU",
+     "title": "Oklahoma City Thunder vs Atlanta Hawks Game 1st+2nd Highlights | Nov 18, 2026 | NBA Highlights"
+    }
+   ],
+   "blocked": [],
+   "day": "20261118",
+   "id": "MYYhHXNgSnM",
+   "published": "2026-11-19T03:48:51+00:00",
+   "teams": [
+    "ATL",
+    "OKC"
+   ],
+   "title": "HAWKS at THUNDER | FULL GAME HIGHLIGHTS | November 18, 2026"
+  },
+  "401910015": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "vVeF1WdYank",
+     "title": "Boston Celtics vs Denver Nuggets Full Game Highlights - November 18, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Cheffy",
+     "id": "eFoRAKXdsPw",
+     "title": "Boston Celtics Vs Denver Nuggets LIVE Play-By-Play Commentary | Highlight, Scoreboard, Stats"
+    },
+    {
+     "blocked": [],
+     "channel": "Boston Celtics",
+     "id": "ZEAZbTpeEzs",
+     "title": "Celtics come up short against Nuggets 101-105 | Extended Highlights"
+    }
+   ],
+   "blocked": [],
+   "day": "20261118",
+   "id": "HX-mNTYf4x8",
+   "published": "2026-11-19T05:41:24+00:00",
+   "teams": [
+    "BOS",
+    "DEN"
+   ],
+   "title": "CELTICS at NUGGETS | FULL GAME HIGHLIGHTS | November 18, 2026"
+  },
+  "401910016": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "vW3RfBra7GE",
+     "title": "Golden State Warriors vs Dallas Mavericks Full Game Highlights - November 18, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "NBC Sports Bay Area & California",
+     "id": "v0xwTN2M_CA",
+     "title": "Watch Yaxel Lendeborg highlights in Warriors&#39; loss to Mavericks | NBC Sports Bay Area"
+    },
+    {
+     "blocked": [],
+     "channel": "NBC Sports Bay Area & California",
+     "id": "7N3SewaMqAs",
+     "title": "Watch top plays, highlights in Warriors&#39; loss to Mavericks | NBC Sports Bay Area"
+    }
+   ],
+   "blocked": [],
+   "day": "20261118",
+   "id": "p9cFxcaPRWQ",
+   "published": "2026-11-19T04:16:38+00:00",
+   "teams": [
+    "GS",
+    "DAL"
+   ],
+   "title": "WARRIORS at MAVERICKS | FULL GAME HIGHLIGHTS | November 18, 2026"
+  },
+  "401910017": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "3MUDsu4N5Gk",
+     "title": "Los Angeles Lakers vs Utah Jazz Full Game Highlights - November 18, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "FreeDawkins",
+     "id": "PM7QPPTSi-A",
+     "title": "Los Angeles Lakers vs Utah Jazz Full Game Highlights | Nov 18, 2026 | FreeDawkins"
+    },
+    {
+     "blocked": [],
+     "channel": "Toon Recaps",
+     "id": "PEqa8mLF_eM",
+     "title": "Who blinks first? | Utah Jazz vs Los Angeles Lakers | NBA Highlights \ud83c\udfc0"
+    }
+   ],
+   "blocked": [],
+   "day": "20261118",
+   "id": "VydiM2VuElM",
+   "published": "2026-11-19T05:44:28+00:00",
+   "teams": [
+    "UTAH",
+    "LAL"
+   ],
+   "title": "JAZZ at LAKERS | FULL GAME HIGHLIGHTS | November 18, 2026"
+  },
+  "401910018": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "nWOiavlse1I",
+     "title": "Phoenix Suns vs Sacramento Kings Full Game Highlights - November 18, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "NBC Sports Bay Area & California",
+     "id": "GPQn_8g3tdI",
+     "title": "Watch Darius Acuff Jr. highlights in Kings&#39; loss to Suns | NBC Sports California"
+    },
+    {
+     "blocked": [],
+     "channel": "NBC Sports Bay Area & California",
+     "id": "-YfqCjUmIqs",
+     "title": "Watch top plays, highlights in Kings&#39; loss to Suns | NBC Sports California"
+    }
+   ],
+   "blocked": [],
+   "day": "20261118",
+   "id": "vI7mK5Xx9D8",
+   "published": "2026-11-19T05:32:03+00:00",
+   "teams": [
+    "PHX",
+    "SAC"
+   ],
+   "title": "SUNS at KINGS | FULL GAME HIGHLIGHTS | November 18, 2026"
   }
  },
- "updated": "2026-11-19T02:39:26+00:00"
+ "updated": "2026-11-19T10:44:44+00:00"
 }
