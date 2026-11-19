@@ -49,7 +49,8 @@
   "20261114",
   "20261115",
   "20261116",
-  "20261117"
+  "20261117",
+  "20261118"
  ],
  "games": {
   "401909088": {
@@ -8063,6 +8064,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "exclusivas18",
+     "id": "tylet-VjWa0",
+     "title": "Cleveland Cavaliers vs Memphis Grizzlies Full Game Highlights | Nov 18, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "P8XS2HamoyQ",
+     "title": "Cleveland Cavaliers vs Memphis Grizzlies Full Game Highlights - November 18, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Hoaianh99NBA",
+     "id": "afBnKduJbUQ",
+     "title": "Cleveland Cavaliers vs Memphis Grizzlies Game 2nd Highlights - November 19, 2026 | NBA"
+    }
+   ],
    "blocked": [],
    "day": "20261118",
    "id": "D1heFUFyjug",
@@ -8099,6 +8120,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "AV6Hk_NXYBY",
+     "title": "Houston Rockets vs Indiana Pacers Full Game Highlights - November 18, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "\u4f0a\u85e4\u548c\u4e5f",
+     "id": "GLsJuJOXxps",
+     "title": "Indiana Pacers vs Houston Rockets | FULL GAME Highlights | Nov 18, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "Indiana Pacers",
+     "id": "ELp6zJOu3Mk",
+     "title": "Indiana Pacers vs. Houston Rockets (November 18, 2026) | FULL GAME HIGHLIGHTS"
+    }
    ],
    "blocked": [],
    "day": "20261118",
@@ -8137,6 +8178,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "YyVXugFNLs4",
+     "title": "Miami Heat vs Milwaukee Bucks Full Game Highlights - November 18, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Milwaukee Bucks",
+     "id": "khMnTPI7PzQ",
+     "title": "Highlights: Bucks 130 - Heat 137 | 11.18.26"
+    },
+    {
+     "blocked": [],
+     "channel": "Heat Report By Chat Sports",
+     "id": "r6H0Yk_cvwY",
+     "title": "Heat vs. Bucks Live Streaming Scoreboard, Play-By-Play, Highlights | NBA On ESPN Stream"
+    }
+   ],
    "blocked": [],
    "day": "20261118",
    "id": "43Up7wY4og4",
@@ -8173,6 +8234,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "_KsEzt8_7LM",
+     "title": "Philadelphia 76ers vs Orlando Magic Full Game Highlights - November 18, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Orlando Magic",
+     "id": "bhNby95PiMI",
+     "title": "FULL GAME HIGHLIGHTS: PHILADELPHIA 76ERS VS. ORLANDO MAGIC 11.18.26"
+    },
+    {
+     "blocked": [],
+     "channel": "76ers Now by Chat Sports",
+     "id": "8teJcS7cPgU",
+     "title": "76ers vs. Magic Live Streaming Scoreboard, Play-By-Play, Highlights &amp; Stats | NBA League Pass Stream"
+    }
    ],
    "blocked": [],
    "day": "20261118",
@@ -8211,6 +8292,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "9YSKipvPePI",
+     "title": "Chicago Bulls vs Brooklyn Nets Full Game Highlights - November 18, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Hoaianh99NBA",
+     "id": "rnPbalA-XA8",
+     "title": "Brooklyn Nets vs Chicago Bulls Game 1st Highlights - November 19, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "Best Most Last",
+     "id": "86FDAIKTg20",
+     "title": "Barclays Center is buzzing | Brooklyn Nets 107-137 Chicago Bulls | NBA Highlights"
+    }
+   ],
    "blocked": [],
    "day": "20261118",
    "id": "4wdFn77Fqts",
@@ -8247,6 +8348,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "IIO4wqnqbUo",
+     "title": "Washington Wizards vs Toronto Raptors Full Game Highlights - November 18, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Toronto Raptors",
+     "id": "qKjNqFMT5Sw",
+     "title": "Raptors vs Wizards Game Highlights | November 18, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "TSN",
+     "id": "c8AUj26QwIg",
+     "title": "Washington Wizards vs. Toronto Raptors | NBA Highlights"
+    }
    ],
    "blocked": [],
    "day": "20261118",
@@ -8601,5 +8722,5 @@
    "title": "SUNS at KINGS | FULL GAME HIGHLIGHTS | November 18, 2026"
   }
  },
- "updated": "2026-11-19T10:44:44+00:00"
+ "updated": "2026-11-19T19:10:52+00:00"
 }
