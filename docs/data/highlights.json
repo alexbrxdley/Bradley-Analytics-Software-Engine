@@ -1228,6 +1228,20 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "-Nm5F-V46iA",
+     "title": "Chicago Bulls vs Atlanta Hawks Full Game Highlights - November 13, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "The Dixon Way",
+     "id": "4PkFCZq39pQ",
+     "title": "Atlanta Hawks vs Chicago Bulls | Live Play by Play Stream | #nba  #nbahighlights 10-13-26 \ud83c\udfc0\ud83d\udd25"
+    }
+   ],
    "blocked": [],
    "day": "20261113",
    "id": "0AKvkuMffG4",
@@ -1302,6 +1316,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "nOrb9o1HrDQ",
+     "title": "Houston Rockets vs Utah Jazz Full Game Highlights - November 13, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "QiawA6w_3gk",
+     "title": "Utah Jazz vs Houston Rockets - FULL GAME HIGHLIGHTS | November 13, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "TRAV13SO100",
+     "id": "uLabrkcvu_s",
+     "title": "Houston Rockets vs Utah Jazz Full Game Highlights - November 13, 2026 | NBA"
+    }
+   ],
    "blocked": [],
    "day": "20261113",
    "id": "BxIKfpJRZIo",
@@ -1338,6 +1372,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "NotYourAverageFlight",
+     "id": "YFmgNupwSzM",
+     "title": "FlightReacts To WARRIORS AT SPURS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 13, 2026!"
+    },
+    {
+     "blocked": [],
+     "channel": "FreeDawkins",
+     "id": "-JOIfZmSOQc",
+     "title": "Golden State Warriors vs San Antonio Spurs Full Game Highlights | Nov 13, 2026 | FreeDawkins"
+    },
+    {
+     "blocked": [],
+     "channel": "TRAV13SO100",
+     "id": "2jWOA7mi7KQ",
+     "title": "Golden State Warriors vs San Antonio Spurs Full Game Highlights - November 13, 2026 | NBA"
+    }
    ],
    "blocked": [],
    "day": "20261113",
@@ -1376,6 +1430,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "TRAV13SO100",
+     "id": "UNrzV8F8c6U",
+     "title": "Sacramento Kings vs Portland Trail Blazers Full Game Highlights - November 13, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "7xAV_YOSihg",
+     "title": "Portland Trail Blazers vs Sacramento Kings Full Game Highlights - November 13, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "TRAV13SO100",
+     "id": "jakOWZ1wvxQ",
+     "title": "Sacramento Kings vs Portland Trail Blazers Game 1st+2nd Highlights - November 13, 2026 | NBA"
+    }
+   ],
    "blocked": [],
    "day": "20261113",
    "id": "s8XSacjQ1r0",
@@ -1412,6 +1486,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "NotYourAverageFlight",
+     "id": "TlvpqNuD-Is",
+     "title": "FlightReacts To THUNDER AT CLIPPERS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 13, 2026!"
+    },
+    {
+     "blocked": [],
+     "channel": "TRAV13SO100",
+     "id": "gZSsVFCs2B4",
+     "title": "Oklahoma City Thunder vs Los Angeles Clippers Full Game Highlights - November 13, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "QEjUhZyR_ho",
+     "title": "Oklahoma City Thunder vs Los Angeles Clippers Full Game Highlights - November 13, 2026"
+    }
    ],
    "blocked": [],
    "day": "20261113",
@@ -6826,6 +6920,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "TRAV13SO100",
+     "id": "cbeOzNboWvI",
+     "title": "Denver Nuggets vs New Orleans Pelicans Full Game Highlights - November 14, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "8anuaxj5Gsc",
+     "title": "Denver Nuggets vs New Orleans Pelicans Full Game Highlights - November 14, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Denver Nuggets",
+     "id": "ogwgCxjJuyc",
+     "title": "Denver Nuggets vs. New Orleans Pelicans Full Game Highlights \ud83d\udcfa"
+    }
+   ],
    "blocked": [],
    "day": "20261114",
    "id": "i2BFzNvtr6Y",
@@ -9225,5 +9339,5 @@
    "title": "CLIPPERS at SPURS | FULL GAME HIGHLIGHTS | November 19, 2026"
   }
  },
- "updated": "2026-11-20T17:14:30+00:00"
+ "updated": "2026-11-20T23:05:48+00:00"
 }
