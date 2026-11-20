@@ -7084,6 +7084,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "\u4f0a\u85e4\u548c\u4e5f",
+     "id": "SByjCuAFwQ4",
+     "title": "Charlotte Hornets vs Los Angeles Clippers | FULL GAME Highlights | Nov 15, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "fkHTAY496bc",
+     "title": "Los Angeles Clippers vs Charlotte Hornets Full Game Highlights - November 15, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "\u4f0a\u85e4\u548c\u4e5f",
+     "id": "6ZFnSyjeks0",
+     "title": "Charlotte Hornets vs Los Angeles Clippers | 1ST Highlights | Nov 15, 2026 | NBA Highlights"
+    }
+   ],
    "blocked": [],
    "day": "20261115",
    "id": "1fv6iQMCaiM",
@@ -7120,6 +7140,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Hoaianh2661",
+     "id": "cXBb7pHIJ4E",
+     "title": "San Antonio Spurs vs Utah Jazz Full Game Highlights | Nov 15, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "tJmzaps_8Yc",
+     "title": "San Antonio Spurs vs Utah Jazz Full Game Highlights - November 15, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "MsMarvin2010",
+     "id": "QZqZzbNmaUc",
+     "title": "San Antonio Spurs vs Utah Jazz Game 1st Highlights - November 15, 2026 | NBA"
+    }
    ],
    "blocked": [],
    "day": "20261115",
@@ -8834,7 +8874,235 @@
     "SAC"
    ],
    "title": "SUNS at KINGS | FULL GAME HIGHLIGHTS | November 18, 2026"
+  },
+  "401910019": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "xo3ZDxXfd6s",
+     "title": "Golden State Warriors vs Memphis Grizzlies Full Game Highlights - November 19, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "ZwgBIqGt8U4",
+     "title": "Golden State Warriors vs Memphis Grizzlies - FULL GAME HIGHLIGHTS | November 19, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Memphis Grizzlies",
+     "id": "nVjZfS0v0MM",
+     "title": "Memphis Grizzlies Highlights vs. Golden State Warriors"
+    }
+   ],
+   "blocked": [],
+   "day": "20261119",
+   "id": "kldOvV4O2Zg",
+   "published": "2026-11-20T03:50:22+00:00",
+   "teams": [
+    "GS",
+    "MEM"
+   ],
+   "title": "WARRIORS at GRIZZLIES | FULL GAME HIGHLIGHTS | November 19, 2026"
+  },
+  "401910020": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "rxP19PslBUw",
+     "title": "Portland Trail Blazers vs Milwaukee Bucks - FULL GAME HIGHLIGHTS | November 19, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "s8IZpxeArSI",
+     "title": "Milwaukee Bucks vs Portland Trail Blazers Full Game Highlights - November 19, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Portland Trail Blazers",
+     "id": "XZTqJWLGcbY",
+     "title": "Damian Lillard Highlights (33 Points, 6 Rebounds) | Blazers 124, Bucks 114 | Nov. 19, 2026"
+    }
+   ],
+   "blocked": [],
+   "day": "20261119",
+   "id": "e1h0kBJPKz4",
+   "published": "2026-11-20T03:55:23+00:00",
+   "teams": [
+    "POR",
+    "MIL"
+   ],
+   "title": "TRAIL BLAZERS at BUCKS | FULL GAME HIGHLIGHTS | November 19, 2026"
+  },
+  "401910021": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "3s4Y1wvLsqs",
+     "title": "New York Knicks vs Minnesota Timberwolves - FULL GAME HIGHLIGHTS | November 19, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "kiXe42kuZCo",
+     "title": "New York Knicks vs Minnesota Timberwolves Full Game Highlights - November 19, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "exclusivas18",
+     "id": "Cs6_uxO3MrU",
+     "title": "New York Knicks vs Minnesota Timberwolves Game 4th Highlights | Nov 19, 2026 | NBA Highlights"
+    }
+   ],
+   "blocked": [],
+   "day": "20261119",
+   "id": "wSv_WEGBiBE",
+   "published": "2026-11-20T03:57:27+00:00",
+   "teams": [
+    "NY",
+    "MIN"
+   ],
+   "title": "KNICKS at TIMBERWOLVES | FULL GAME HIGHLIGHTS | November 19, 2026"
+  },
+  "401910022": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "Lken71vEc7s",
+     "title": "LA Clippers vs San Antonio Spurs - FULL GAME HIGHLIGHTS | November 19, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "07h55Ynx-FU",
+     "title": "San Antonio Spurs vs Los Angeles Clippers Full Game Highlights - November 19, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "NBA Top Story ",
+     "id": "W-1dH642p-k",
+     "title": "San Antonio Spurs vs Los Angeles Clippers Full Game Highlights | November 19, 2026"
+    }
+   ],
+   "blocked": [],
+   "day": "20261119",
+   "id": "LH2Y8iaa7Nk",
+   "published": "2026-11-20T03:48:59+00:00",
+   "teams": [
+    "LAC",
+    "SA"
+   ],
+   "title": "CLIPPERS at SPURS | FULL GAME HIGHLIGHTS | November 19, 2026"
   }
  },
- "updated": "2026-11-20T01:16:40+00:00"
+ "updated": "2026-11-20T08:37:46+00:00"
 }
