@@ -7158,6 +7158,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "MsMarvin2010",
+     "id": "EjXwWaLbhns",
+     "title": "Boston Celtics vs Dallas Mavericks Full Game Highlights - November 15, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "npX7znDX18E",
+     "title": "Boston Celtics vs Dallas Mavericks Full Game Highlights - November 15, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "MsMarvin2010",
+     "id": "Wvyn9Zhui70",
+     "title": "Boston Celtics vs Dallas Mavericks Game 1st Highlights - November 15, 2026 | NBA"
+    }
+   ],
    "blocked": [],
    "day": "20261115",
    "id": "8IDrPqujvI8",
@@ -7194,6 +7214,20 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "oKay7q05a6E",
+     "title": "New York Knicks vs Toronto Raptors Full Game Highlights - November 15, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "TSN",
+     "id": "u2Jrnhzo48M",
+     "title": "New York Knicks vs. Toronto Raptors | NBA Highlights"
+    }
    ],
    "blocked": [],
    "day": "20261115",
@@ -7232,6 +7266,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "M5Wl_C2R5oY",
+     "title": "Houston Rockets vs Washington Wizards - FULL GAME HIGHLIGHTS | November 15, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Ki\u00ean Ch\u1ed5i Y\u00eau Ph\u1ea1m Th\u01b0 4",
+     "id": "Bnso3DlRG3Y",
+     "title": "Houston Rockets vs Washington Wizards Full Game Highlights - November 15,2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "r_ukOzI9Zuk",
+     "title": "Houston Rockets vs Washington Wizards Full Game Highlights - November 15, 2026 | NBA Season"
+    }
+   ],
    "blocked": [],
    "day": "20261115",
    "id": "AJWvD8hSGz8",
@@ -7268,6 +7322,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Hoaianh2661",
+     "id": "N4fDSWvDDXQ",
+     "title": "Milwaukee Bucks vs Atlanta Hawks Full Game Highlights | Nov 15, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "\u4f0a\u85e4\u548c\u4e5f",
+     "id": "UO-li9TCvpI",
+     "title": "Milwaukee Bucks vs Atlanta Hawks | FULL GAME Highlights | Nov 15, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "4XCr56eTUqI",
+     "title": "Milwaukee Bucks vs Atlanta Hawks Full Game Highlights - November 15, 2026 | NBA Season"
+    }
    ],
    "blocked": [],
    "day": "20261115",
@@ -7306,6 +7380,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Hoaianh2661",
+     "id": "ebLA9f9XLfw",
+     "title": "Oklahoma City Thunder vs Sacramento Kings Full Game Highlights | Nov 15, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "_Fh-Pe9RVEU",
+     "title": "Oklahoma City Thunder vs Sacramento Kings Full Game Highlights - November 15, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "MsMarvin2010",
+     "id": "jI3BzwPp418",
+     "title": "Oklahoma City Thunder vs Sacramento Kings Game 1st+2nd Highlights - November 15, 2026 | NBA"
+    }
+   ],
    "blocked": [],
    "day": "20261115",
    "id": "1RKyPcfiuQY",
@@ -7342,6 +7436,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "bigtex3636",
+     "id": "RElUzd4y0Fk",
+     "title": "2Boston Celtics vs Orlando Magic Full Game Highlights | Nov 16, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "T6EUMgG8dgM",
+     "title": "Boston Celtics vs Orlando Magic Full Game Highlights - November 16, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Orlando Magic",
+     "id": "FVhaYjEULG4",
+     "title": "FULL GAME HIGHLIGHTS: ORLANDO MAGIC VS. BOSTON CELTICS 11.16.26"
+    }
    ],
    "blocked": [],
    "day": "20261116",
@@ -8722,5 +8836,5 @@
    "title": "SUNS at KINGS | FULL GAME HIGHLIGHTS | November 18, 2026"
   }
  },
- "updated": "2026-11-19T19:10:52+00:00"
+ "updated": "2026-11-20T01:16:40+00:00"
 }
