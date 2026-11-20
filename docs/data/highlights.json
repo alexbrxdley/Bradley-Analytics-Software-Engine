@@ -50,7 +50,8 @@
   "20261115",
   "20261116",
   "20261117",
-  "20261118"
+  "20261118",
+  "20261119"
  ],
  "games": {
   "401909088": {
@@ -6862,6 +6863,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "YZPQH7r7EzE",
+     "title": "Dallas Mavericks vs Cleveland Cavaliers - FULL GAME HIGHLIGHTS | November 14, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "TRAV13SO100",
+     "id": "jhvd2oMHqd4",
+     "title": "Cleveland Cavaliers vs Dallas Mavericks Full Game Highlights - November 14, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "Ki\u00ean Ch\u1ed5i Y\u00eau Ph\u1ea1m Th\u01b0 4",
+     "id": "NNQk2cDMJCc",
+     "title": "Cleveland Cavaliers vs Dallas Mavericks Full Game Highlights - November 14,2026 | NBA"
+    }
+   ],
    "blocked": [],
    "day": "20261114",
    "id": "q1grkFp0K8I",
@@ -6898,6 +6919,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "VVwHBJeHioM",
+     "title": "Detroit Pistons vs Miami Heat - FULL GAME HIGHLIGHTS | November 14, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "TRAV13SO100",
+     "id": "kG3juIx4NpE",
+     "title": "Miami Heat vs Detroit Pistons Full Game Highlights - November 14, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "xckyRGzew3w",
+     "title": "Miami Heat vs Detroit Pistons Full Game Highlights - November 14, 2026 | NBA Season"
+    }
    ],
    "blocked": [],
    "day": "20261114",
@@ -6936,6 +6977,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "4moWEa8rla8",
+     "title": "Memphis Grizzlies vs Brooklyn Nets Full Game Highlights - November 14, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Golden Hoops HighLights",
+     "id": "G9vPemjzMcM",
+     "title": "BROOKLYN Nets Vs MEMPHIS Grizzlies Full Game Highlights November 14, 2026 | NBA Regular season"
+    },
+    {
+     "blocked": [],
+     "channel": "OVERTIME HIGHLIGHTS",
+     "id": "i6mc1OWaYTg",
+     "title": "Grizzlies vs Nets \ud83d\udd25 Grind City Meets Brooklyn! | Full Game Highlights | Nov 14, 2026"
+    }
+   ],
    "blocked": [],
    "day": "20261114",
    "id": "Ti118u15fwA",
@@ -6972,6 +7033,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "fst6n_cfnGw",
+     "title": "Chicago Bulls vs Minnesota Timberwolves - FULL GAME HIGHLIGHTS | November 14, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "TRAV13SO100",
+     "id": "0_oy-V1884c",
+     "title": "Chicago Bulls vs Minnesota Timberwolves Full Game Highlights - November 14, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "O4gDaozzm3Y",
+     "title": "Minnesota Timberwolves vs Chicago Bulls Full Game Highlights - November 14, 2026 | NBA Season"
+    }
    ],
    "blocked": [],
    "day": "20261114",
@@ -7010,6 +7091,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "JH8xHGIHH-k",
+     "title": "Indiana Pacers vs Philadelphia 76ers - FULL GAME HIGHLIGHTS | November 15, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Hoaianh2661",
+     "id": "JQilVL6fdZI",
+     "title": "Philadelphia 76ers vs Indiana Pacers Full Game Highlights | Nov 15, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "RiHgRaPWLSA",
+     "title": "Philadelphia 76ers vs Indiana Pacers Full Game Highlights - November 15, 2026 | NBA Season"
+    }
+   ],
    "blocked": [],
    "day": "20261115",
    "id": "DAyN_i0k368",
@@ -7046,6 +7147,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "GwA3B1sPQME",
+     "title": "Los Angeles Lakers vs Phoenix Suns Full Game Highlights - November 15, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Hoaianh2661",
+     "id": "T_Sk6cXChdk",
+     "title": "Los Angeles Lakers vs Phoenix Suns Full Game Highlights | Nov 15, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "Watch5",
+     "id": "v4PlV6dCoTU",
+     "title": "I DONT CARE! Lakers Hater Reacts To Lakers vs Suns Full Game Highlights | 2026"
+    }
    ],
    "blocked": [],
    "day": "20261115",
@@ -9104,5 +9225,5 @@
    "title": "CLIPPERS at SPURS | FULL GAME HIGHLIGHTS | November 19, 2026"
   }
  },
- "updated": "2026-11-20T08:37:46+00:00"
+ "updated": "2026-11-20T17:14:30+00:00"
 }
