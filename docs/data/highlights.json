@@ -1175,6 +1175,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "mBoJPoQLjeI",
+     "title": "Milwaukee Bucks vs Orlando Magic Full Game Highlights - November 13, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "TRAV13SO100",
+     "id": "gXj0dnEt9VE",
+     "title": "Orlando Magic vs Milwaukee Bucks Full Game Highlights - November 13, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "Orlando Magic",
+     "id": "A-SaU7ZFbII",
+     "title": "FULL GAME HIGHLIGHTS: ORLANDO MAGIC VS. MILWUAKEE BUCKS 11.13.26"
+    }
+   ],
    "blocked": [],
    "day": "20261113",
    "id": "O_xEiV3iQJY",
@@ -7309,6 +7329,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "Qzc0o3re1HA",
+     "title": "Oklahoma City Thunder vs Portland Trail Blazers - FULL GAME HIGHLIGHTS | Nov 11, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "yikerzgame",
+     "id": "NnwQNpMyyN4",
+     "title": "Oklahoma City Thunder vs Portland Trail Blazers Full Game Highlights - November 11, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "10K2000",
+     "id": "1NBBctrfsok",
+     "title": "Oklahoma City Thunder vs Portland Trail Blazers Full Game Highlights | Nov 11, 2026 | NBA Highlights"
+    }
+   ],
    "blocked": [],
    "day": "20261111",
    "id": "YH0t29hJUy8",
@@ -7345,6 +7385,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "NvwDf7lKCCs",
+     "title": "Philadelphia 76ers vs Toronto Raptors Full Game Highlights - November 12, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "uaRHac5O9UA",
+     "title": "Toronto Raptors vs Philadelphia 76ers - FULL GAME HIGHLIGHTS | November 12, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "yikerzgame",
+     "id": "W9SVW2kdjyg",
+     "title": "Philadelphia 76ers vs Toronto Raptors Full Game Highlights - November 12, 2026 | NBA"
+    }
    ],
    "blocked": [],
    "day": "20261112",
@@ -7383,6 +7443,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "10K2000",
+     "id": "l98TTZAZXjo",
+     "title": "Detroit Pistons vs Washington Wizards Full Game Highlights | Nov 12, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "NotYourAverageFlight",
+     "id": "6mewbAY98F4",
+     "title": "CADE 52 PTS!! FlightReacts To PISTONS at WIZARDS | FULL GAME HIGHLIGHTS | November 12, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "Yellow",
+     "id": "2iwvOpiMj7U",
+     "title": "Washington Wizards vs Detroit Pistons Game Highlights Overtime - Nov 12 - 2026 NBA Highlights"
+    }
+   ],
    "blocked": [],
    "day": "20261112",
    "id": "vk9wsWTp5Ns",
@@ -7420,6 +7500,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "-FH7O-Iw_AM",
+     "title": "Dallas Mavericks vs Minnesota Timberwolves - FULL GAME HIGHLIGHTS | November 12, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "10K2000",
+     "id": "mzof3WNjImg",
+     "title": "Dallas Mavericks vs Minnesota Timberwolves Full Game Highlights | Nov 12, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "4LutbFaLwUU",
+     "title": "Minnesota Timberwolves vs Dallas Mavericks Full Game Highlights - November 12, 2026 | NBA Season"
+    }
+   ],
    "blocked": [],
    "day": "20261112",
    "id": "a917kl3-0Qo",
@@ -7456,6 +7556,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "10K2000",
+     "id": "eRv5O4NLncI",
+     "title": "Phoenix Suns vs Charlotte Hornets Full Game Highlights | Nov 12, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "SKhtupFGWWs",
+     "title": "Phoenix Suns vs Charlotte Hornets Full Game Highlights - November 12, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "\uac15\uc6b0\uc9c4",
+     "id": "ZcfsxSZuJi4",
+     "title": "Charlotte Hornets vs Phoenix Suns - Full Game Highlights | Nov 12, 2026 NBA Regular Season"
+    }
    ],
    "blocked": [],
    "day": "20261112",
@@ -9913,5 +10033,5 @@
    "title": "CLIPPERS at SPURS | FULL GAME HIGHLIGHTS | November 19, 2026"
   }
  },
- "updated": "2026-11-21T11:53:51+00:00"
+ "updated": "2026-11-21T18:26:50+00:00"
 }
