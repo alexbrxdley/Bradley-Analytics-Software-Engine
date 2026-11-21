@@ -51,7 +51,8 @@
   "20261116",
   "20261117",
   "20261118",
-  "20261119"
+  "20261119",
+  "20261120"
  ],
  "games": {
   "401909088": {
@@ -1117,6 +1118,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "vra5U6cqpis",
+     "title": "New York Knicks vs Indiana Pacers Full Game Highlights - November 13, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "GfzAXPxCWUI",
+     "title": "New York Knicks vs Indiana Pacers - FULL GAME HIGHLIGHTS | November 13, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "TRAV13SO100",
+     "id": "ueEV7NZCVCk",
+     "title": "New York Knicks vs Indiana Pacers Full Game Highlights - November 13, 2026 | NBA"
+    }
+   ],
    "blocked": [],
    "day": "20261113",
    "id": "p1ZbMS1_Aww",
@@ -1784,6 +1805,291 @@
     "DET"
    ],
    "title": "RAPTORS AT PISTONS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 20, 2026"
+  },
+  "401909309": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "w1xtmVCfzek",
+     "title": "Washington Wizards vs Chicago Bulls Full Game Highlights - November 20, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "NBC4 Washington",
+     "id": "8nTs9Ygf9D4",
+     "title": "Watch highlights of the Wizards\u2019 98-94 win over the Bulls in NBA Cup action"
+    },
+    {
+     "blocked": [],
+     "channel": "The Vantics",
+     "id": "AImnZbVzSh8",
+     "title": "Wizards vs Bulls - Highlights (11.21.2026) #Shorts #NBAHighlights #Basketball"
+    }
+   ],
+   "blocked": [],
+   "day": "20261120",
+   "id": "NOu53JEXhJs",
+   "published": "2026-11-21T03:56:03+00:00",
+   "teams": [
+    "WSH",
+    "CHI"
+   ],
+   "title": "WIZARDS AT BULLS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 20, 2026"
+  },
+  "401909310": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "JAxAQ9dUxSY",
+     "title": "New Orleans Pelicans vs Oklahoma City Thunder - FULL GAME HIGHLIGHTS | November 20, 2026 NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Haobao18",
+     "id": "FiXVBCGckmc",
+     "title": "Oklahoma City Thunder vs New Orleans Pelicans Full Game Highlights | Nov 20, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "w76zISV669U",
+     "title": "Oklahoma City Thunder vs New Orleans Pelicans Full Game Highlights - November 20, 2026"
+    }
+   ],
+   "blocked": [],
+   "day": "20261120",
+   "id": "NXnXlEQ-FRo",
+   "published": "2026-11-21T03:57:02+00:00",
+   "teams": [
+    "NO",
+    "OKC"
+   ],
+   "title": "PELICANS AT THUNDER | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 20, 2026"
+  },
+  "401909311": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "YrMGKLJts8c",
+     "title": "Phoenix Suns vs Utah Jazz Full Game Highlights - November 20, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Phoenix Suns",
+     "id": "_m8QfK9Gwno",
+     "title": "Devin Booker with 23 PTS vs Utah Jazz | Phoenix Suns Player Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "Phoenix Suns",
+     "id": "C6ljSzfK7Ng",
+     "title": "Phoenix Suns beat Utah Jazz 111-101 | Game Highlights 11-20-26"
+    }
+   ],
+   "blocked": [],
+   "day": "20261120",
+   "id": "AR4TUrUkkzo",
+   "published": "2026-11-21T05:35:54+00:00",
+   "teams": [
+    "PHX",
+    "UTAH"
+   ],
+   "title": "SUNS AT JAZZ | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 20, 2026"
+  },
+  "401909312": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "9Ox5hAftAKc",
+     "title": "Houston Rockets vs Denver Nuggets - FULL GAME HIGHLIGHTS | November 20, 2026 NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "OQvp1X0pGc4",
+     "title": "Denver Nuggets vs Houston Rockets Full Game Highlights - November 20, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Prime Video Philippines",
+     "id": "S_PNrmdoxmA",
+     "title": "HOUSTON ROCKETS VS. DENVER NUGGETS FULL GAME HIGHLIGHTS - NOVEMBER 21, 2026 | NBA on Prime Video PH"
+    }
+   ],
+   "blocked": [],
+   "day": "20261120",
+   "id": "FMHdRbySu54",
+   "published": "2026-11-21T05:56:51+00:00",
+   "teams": [
+    "HOU",
+    "DEN"
+   ],
+   "title": "ROCKETS AT NUGGETS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 20, 2026"
+  },
+  "401909313": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "0rdBbRHlrtE",
+     "title": "Los Angeles Lakers vs Sacramento Kings Full Game Highlights - November 20, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "mye7ZxXJbT8",
+     "title": "Sacramento Kings vs Los Angeles Lakers - FULL GAME HIGHLIGHTS | November 20, 2026 NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "FreeDawkins",
+     "id": "qMYI0GmOqGI",
+     "title": "Los Angeles Lakers vs Sacramento Kings Full Game Highlights | Nov 20, 2026 | FreeDawkins"
+    }
+   ],
+   "blocked": [],
+   "day": "20261120",
+   "id": "UpC7NWUo0Mg",
+   "published": "2026-11-21T05:46:38+00:00",
+   "teams": [
+    "SAC",
+    "LAL"
+   ],
+   "title": "KINGS AT LAKERS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 20, 2026"
   },
   "401909834": {
    "allowed": [
@@ -9607,5 +9913,5 @@
    "title": "CLIPPERS at SPURS | FULL GAME HIGHLIGHTS | November 19, 2026"
   }
  },
- "updated": "2026-11-21T03:54:45+00:00"
+ "updated": "2026-11-21T11:53:51+00:00"
 }
