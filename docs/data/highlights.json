@@ -1191,6 +1191,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "1vMwYPIXXKk",
+     "title": "Miami Heat vs Cleveland Cavaliers Full Game Highlights - November 13, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "hJeDdJLw91g",
+     "title": "Cleveland Cavaliers vs Miami Heat - FULL GAME HIGHLIGHTS | November 13, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "TRAV13SO100",
+     "id": "2DOZp40pQDM",
+     "title": "Miami Heat vs Cleveland Cavaliers Full Game Highlights - November 13, 2026 | NBA"
+    }
+   ],
    "blocked": [],
    "day": "20261113",
    "id": "UM4WvtmbJGM",
@@ -1278,6 +1298,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "\u4f0a\u85e4\u548c\u4e5f",
+     "id": "5NFcEtbZAF4",
+     "title": "New Orleans Pelicans vs Memphis Grizzlies | FULL GAME Highlights - Nov 13, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "27QxklWF3I8",
+     "title": "Memphis Grizzlies vs New Orleans Pelicans Full Game Highlights - November 13, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "\u4f0a\u85e4\u548c\u4e5f",
+     "id": "x2r6Mk9FeCQ",
+     "title": "New Orleans Pelicans vs Memphis Grizzlies | 2ND Highlights - Nov 13, 2026 | NBA"
+    }
    ],
    "blocked": [],
    "day": "20261113",
@@ -1516,6 +1556,234 @@
     "LAC"
    ],
    "title": "THUNDER AT CLIPPERS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 13, 2026"
+  },
+  "401909305": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "hThnSlmYFxs",
+     "title": "Charlotte Hornets vs Atlanta Hawks Full Game Highlights - November 20, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "\u4f0a\u85e4\u548c\u4e5f",
+     "id": "6osRjOBbleM",
+     "title": "Atlanta Hawks vs Charlotte Hornets | 4TH Highlights | Nov 20, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "Charlotte Hornets",
+     "id": "MIe8lFlW-2I",
+     "title": "Game Highlights | Hornets at Hawks | 11/20/2026"
+    }
+   ],
+   "blocked": [],
+   "day": "20261120",
+   "id": "sOU_ksV3b1w",
+   "published": "2026-11-21T02:46:43+00:00",
+   "teams": [
+    "CHA",
+    "ATL"
+   ],
+   "title": "HORNETS AT HAWKS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 20, 2026"
+  },
+  "401909306": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Haobao18",
+     "id": "ImJK-ucJcns",
+     "title": "Brooklyn Nets vs Orlando Magic Full Game Highlights | Nov 20, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "Orlando Magic",
+     "id": "igCftJbNLDo",
+     "title": "FULL GAME HIGHLIGHTS: ORLANDO MAGIC VS. BROOKLYN NETS 11.20.26"
+    },
+    {
+     "blocked": [],
+     "channel": "Haobao18",
+     "id": "GM9rrGYrLK0",
+     "title": "Brooklyn Nets vs Orlando Magic Game 2nd Highlights | Nov 20, 2026 | NBA Highlights"
+    }
+   ],
+   "blocked": [],
+   "day": "20261120",
+   "id": "eyq5jc-fKa8",
+   "published": "2026-11-21T03:44:44+00:00",
+   "teams": [
+    "ORL",
+    "BKN"
+   ],
+   "title": "MAGIC AT NETS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 20, 2026"
+  },
+  "401909307": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "_Ve-PgQ3S8w",
+     "title": "Indiana Pacers vs Cleveland Cavaliers - FULL GAME HIGHLIGHTS | November 20, 2026 NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "V_wfS7aqoRo",
+     "title": "Cleveland Cavaliers vs Indiana Pacers Full Game Highlights - November 20, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Haobao18",
+     "id": "Duj7zT3cyZo",
+     "title": "Cleveland Cavaliers vs Indiana Pacers Full Game Highlights | Nov 20, 2026 | NBA Highlights"
+    }
+   ],
+   "blocked": [],
+   "day": "20261120",
+   "id": "RenNhH3hB5k",
+   "published": "2026-11-21T03:43:53+00:00",
+   "teams": [
+    "IND",
+    "CLE"
+   ],
+   "title": "PACERS AT CAVALIERS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 20, 2026"
+  },
+  "401909308": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Hiepcoinb",
+     "id": "BfmKjH1qXEs",
+     "title": "Detroit Pistons vs Toronto Raptors Game 4th Highlights - November 20, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "TSN",
+     "id": "RBY1IdgGfdk",
+     "title": "Detroit Pistons vs. Toronto Raptors | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "Detroit Pistons",
+     "id": "wzRdt6ipA0M",
+     "title": "Pistons Fall Short vs. Toronto Raptors | Game Highlights | 11.20.26 #NBA"
+    }
+   ],
+   "blocked": [],
+   "day": "20261120",
+   "id": "x76Ajg6DA_4",
+   "published": "2026-11-21T03:51:10+00:00",
+   "teams": [
+    "TOR",
+    "DET"
+   ],
+   "title": "RAPTORS AT PISTONS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 20, 2026"
   },
   "401909834": {
    "allowed": [
@@ -9339,5 +9607,5 @@
    "title": "CLIPPERS at SPURS | FULL GAME HIGHLIGHTS | November 19, 2026"
   }
  },
- "updated": "2026-11-20T23:05:48+00:00"
+ "updated": "2026-11-21T03:54:45+00:00"
 }
