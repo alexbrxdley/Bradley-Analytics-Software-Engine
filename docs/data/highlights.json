@@ -7144,6 +7144,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "yikerzgame",
+     "id": "Dg4p4COr0Oo",
+     "title": "Denver Nuggets vs Memphis Grizzlies Full Game Highlights - November 11, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "10K2000",
+     "id": "DzYSDd-H0O4",
+     "title": "Denver Nuggets vs Memphis Grizzlies Full Game Highlights | Nov 11, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "zOjyDnfYmOg",
+     "title": "Denver Nuggets vs Memphis Grizzlies Full Game Highlights - November 11, 2026 | NBA Season"
+    }
+   ],
    "blocked": [],
    "day": "20261111",
    "id": "4KqU70V9-SE",
@@ -7180,6 +7200,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "QfLyXbkIqow",
+     "title": "Los Angeles Lakers vs Milwaukee Bucks Full Game Highlights - November 11, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "yikerzgame",
+     "id": "8KVgBWGQhmw",
+     "title": "Los Angeles Lakers vs Milwaukee Bucks Full Game Highlights - November 11, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "yikerzgame",
+     "id": "l4iV4elaHnw",
+     "title": "Los Angeles Lakers vs Milwaukee Bucks Game 1st+2nd Highlights - November 11, 2026 | NBA"
+    }
    ],
    "blocked": [],
    "day": "20261111",
@@ -7218,6 +7258,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "PGTZvhN1tvQ",
+     "title": "Brooklyn Nets vs New Orleans Pelicans Full Game Highlights - November 11, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "The CCB Network",
+     "id": "H-gq0cG4-c8",
+     "title": "Brooklyn Nets vs New Orleans Pelicans Full Game Highlights - November 11, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Highlights TV",
+     "id": "9PJV5dY98gY",
+     "title": "Brooklyn Nets vs New Orleans Pelicans Full Game Highlights - Nov 11, 2026"
+    }
+   ],
    "blocked": [],
    "day": "20261111",
    "id": "Z8U1wx8skdE",
@@ -7255,6 +7315,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "Fmy3yRsaFVA",
+     "title": "Orlando Magic vs Utah Jazz Full Game Highlights - November 11, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Golden Hoops HighLights",
+     "id": "x0fUZZCqStk",
+     "title": "ORLANDO Magic Vs UTAH Jazz Full Game Highlights November 11, 2026 | NBA Regular season"
+    },
+    {
+     "blocked": [],
+     "channel": "Orlando Magic",
+     "id": "ClQhtta2Rwk",
+     "title": "FULL GAME HIGHLIGHTS: ORLANDO MAGIC VS. UTAH JAZZ 11.11.26"
+    }
+   ],
    "blocked": [],
    "day": "20261111",
    "id": "w9Q2PnDigKg",
@@ -7291,6 +7371,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "RLuqUycdIrI",
+     "title": "Golden State Warriors vs Houston Rockets Full Game Highlights - November 11, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "OYumx3Odmbc",
+     "title": "Golden State Warriors vs Houston Rockets - FULL GAME HIGHLIGHTS | November 11, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "yikerzgame",
+     "id": "B9PEFywh79E",
+     "title": "Golden State Warriors vs Houston Rockets Full Game Highlights - November 11, 2026 | NBA"
+    }
    ],
    "blocked": [],
    "day": "20261111",
@@ -10031,7 +10131,64 @@
     "SA"
    ],
    "title": "CLIPPERS at SPURS | FULL GAME HIGHLIGHTS | November 19, 2026"
+  },
+  "401910023": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "0HDJj_2c4WQ",
+     "title": "Milwaukee Bucks vs Philadelphia 76ers - FULL GAME HIGHLIGHTS | November 21, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "SuY_EL9ReMY",
+     "title": "Philadelphia 76ers vs Milwaukee Bucks Full Game Highlights - November 21, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Sky Sport DE",
+     "id": "jKXgsSYoldk",
+     "title": "NBA Highlights | Milwaukee Bucks @ Philadelphia 76ers | Sky Sport"
+    }
+   ],
+   "blocked": [],
+   "day": "20261121",
+   "id": "Kyw8c2ComZ0",
+   "published": "2026-11-21T20:53:11+00:00",
+   "teams": [
+    "MIL",
+    "PHI"
+   ],
+   "title": "BUCKS at 76ERS | FULL GAME HIGHLIGHTS | November 21, 2026"
   }
  },
- "updated": "2026-11-21T18:26:50+00:00"
+ "updated": "2026-11-21T23:30:39+00:00"
 }
