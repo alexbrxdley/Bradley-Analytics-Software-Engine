@@ -6479,6 +6479,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "cHxNz0iZlHc",
+     "title": "Los Angeles Lakers vs Atlanta Hawks Full Game Highlights - November 9, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "714BgbNw0Ow",
+     "title": "Los Angeles Lakers vs Atlanta Hawks - FULL GAME HIGHLIGHTS | November 9, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "QORVIX-MC",
+     "id": "Xl_F5RJKQO0",
+     "title": "Los Angeles Lakers vs Atlanta Hawks Full Game Highlights - November 9, 2026 | NBA"
+    }
+   ],
    "blocked": [],
    "day": "20261109",
    "id": "FkybKoRhdPs",
@@ -6515,6 +6535,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "QORVIX-MC",
+     "id": "4pRnKwF0LZA",
+     "title": "Cleveland Cavaliers vs Charlotte Hornets Full Game Highlights - November 9, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "PXvmYpsD-sY",
+     "title": "Cleveland Cavaliers vs Charlotte Hornets Full Game Highlights - November 9, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "\uac15\uc6b0\uc9c4",
+     "id": "zFZqAqMvN2k",
+     "title": "Cleveland Cavaliers vs Charlotte Hornets - 1st Quarter FULL Highlights | Nov 10, 2026 NBA"
+    }
    ],
    "blocked": [],
    "day": "20261109",
@@ -6553,6 +6593,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "ZARNYX-MC",
+     "id": "gcQwGmXZ3RU",
+     "title": "Detroit Pistons vs Washington Wizards Full Game Highlights | Nov 9, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "F9ezx3aRiSk",
+     "title": "Detroit Pistons vs Washington Wizards Full Game Highlights - November 9, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Yellow",
+     "id": "Qw8_ofr9MEs",
+     "title": "Washington Wizards vs Detroit Pistons Full Game Highlights - Nov 9 - 2026 NBA Highlights"
+    }
+   ],
    "blocked": [],
    "day": "20261109",
    "id": "ZKUHnwGRazM",
@@ -6590,6 +6650,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "QORVIX-MC",
+     "id": "dy4k_BizUKU",
+     "title": "Toronto Raptors vs Memphis Grizzlies Full Game Highlights - November 9, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "nJZy30__h_A",
+     "title": "Memphis Grizzlies vs Toronto Raptors Full Game Highlights - November 9, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "QORVIX-MC",
+     "id": "ELWwqPkza0M",
+     "title": "Toronto Raptors vs Memphis Grizzlies Game 1st Highlights - November 9, 2026 | NBA"
+    }
+   ],
    "blocked": [],
    "day": "20261109",
    "id": "djG6fUgNcdE",
@@ -6626,6 +6706,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "\u4f0a\u85e4\u548c\u4e5f",
+     "id": "2lO8QAMA4jU",
+     "title": "Dallas Mavericks vs Indiana Pacers | FULL GAME Highlights - Nov 9, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "cYABMFh14FY",
+     "title": "Indiana Pacers vs Dallas Mavericks - FULL GAME HIGHLIGHTS | November 9, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "I-mE_YWavnE",
+     "title": "Dallas Mavericks vs Indiana Pacers Full Game Highlights - November 9, 2026 | NBA Season"
+    }
    ],
    "blocked": [],
    "day": "20261109",
@@ -10728,7 +10828,64 @@
     "SAC"
    ],
    "title": "CELTICS at KINGS | FULL GAME HIGHLIGHTS | November 21, 2026"
+  },
+  "401910029": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Amazon Prime Video Sport",
+     "id": "3zrOyfaqfD8",
+     "title": "Detroit Pistons @ Atlanta Hawks | FULL GAME HIGHLIGHTS | 22nd Nov 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "lanchinhchuu",
+     "id": "1yvu-4bDIOg",
+     "title": "Detroit Pistons vs Atlanta Hawks Game 1st+2nd Highlights | Nov 21, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "lanchinhchuu",
+     "id": "nAUQsIRV_u4",
+     "title": "Detroit Pistons vs Atlanta Hawks Game 3rd+4th Highlights | Nov 22, 2026 | NBA Highlights"
+    }
+   ],
+   "blocked": [],
+   "day": "20261122",
+   "id": "wQ8QMIYmWeA",
+   "published": "2026-11-22T23:16:23+00:00",
+   "teams": [
+    "DET",
+    "ATL"
+   ],
+   "title": "PISTONS at HAWKS | FULL GAME HIGHLIGHTS | November 22, 2026"
   }
  },
- "updated": "2026-11-22T18:40:00+00:00"
+ "updated": "2026-11-22T23:49:16+00:00"
 }
