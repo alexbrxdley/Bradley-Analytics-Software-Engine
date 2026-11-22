@@ -52,7 +52,8 @@
   "20261117",
   "20261118",
   "20261119",
-  "20261120"
+  "20261120",
+  "20261121"
  ],
  "games": {
   "401909088": {
@@ -6885,6 +6886,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "iSo75cieMP8",
+     "title": "Miami Heat vs Utah Jazz Full Game Highlights - November 10, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Yellow",
+     "id": "0o9F_wjF37s",
+     "title": "Miami Heat vs Utah Jazz Full Game Highlights - Nov 10 - 2026 NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "B\u01b0 B\u01b0 Channel",
+     "id": "PwCQf3jtmkw",
+     "title": "Miami Heat vs Utah Jazz FULLGAME Qtr Highlights | Nov 10, 2026 | NBA 2026"
+    }
+   ],
    "blocked": [],
    "day": "20261110",
    "id": "5hGbJnpnGQg",
@@ -6921,6 +6942,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "IsnI6DzVk78",
+     "title": "Orlando Magic vs Sacramento Kings Full Game Highlights - November 10, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Orlando Magic",
+     "id": "TajBKIjtuPw",
+     "title": "FULL GAME HIGHLIGHTS: ORLANDO MAGIC VS. SACRAMENTO KINGS 11.10.26"
+    },
+    {
+     "blocked": [],
+     "channel": "Orlando Magic",
+     "id": "PnEEnfwfeT4",
+     "title": "POSTGAME HIGHLIGHTS: ORLANDO MAGIC VS. SACRAMENTO KINGS 11.10.26 PRESENTED BY PLANET FITNESS"
+    }
    ],
    "blocked": [],
    "day": "20261110",
@@ -10345,7 +10386,229 @@
     "NY"
    ],
    "title": "TRAIL BLAZERS at KNICKS | FULL GAME HIGHLIGHTS | November 21, 2026"
+  },
+  "401910025": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "YFYknw8oE84",
+     "title": "Los Angeles Clippers vs Dallas Mavericks Full Game Highlights - November 21, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Dallas Mavericks",
+     "id": "-xTQiZP7Ai4",
+     "title": "Mavericks Highlights vs. Los Angeles Clippers | November 21, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "PandaHank41",
+     "id": "7Jx2K2l7BYs",
+     "title": "Risacher, Clayton &amp; Christie Were Big | Dallas Mavericks Team Highlights vs Clippers (11/21/2026)"
+    }
+   ],
+   "blocked": [],
+   "day": "20261121",
+   "id": "K6rwrBbq2C0",
+   "published": "2026-11-22T03:53:08+00:00",
+   "teams": [
+    "LAC",
+    "DAL"
+   ],
+   "title": "CLIPPERS at MAVERICKS | FULL GAME HIGHLIGHTS | November 21, 2026"
+  },
+  "401910026": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "j6xxDHjE7JA",
+     "title": "Minnesota Timberwolves vs Memphis Grizzlies Full Game Highlights - November 21, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Memphis Grizzlies",
+     "id": "EXtlBxMebQw",
+     "title": "Memphis Grizzlies Highlights vs Minnesota Timberwolves"
+    },
+    {
+     "blocked": [],
+     "channel": "The Vantics",
+     "id": "TL_11cuGLqk",
+     "title": "Grizzlies vs Timberwolves - Highlights (11.22.2026) #Shorts #NBAHighlights #Basketball"
+    }
+   ],
+   "blocked": [],
+   "day": "20261121",
+   "id": "p6sCv2RIrwQ",
+   "published": "2026-11-22T03:53:50+00:00",
+   "teams": [
+    "MEM",
+    "MIN"
+   ],
+   "title": "GRIZZLIES at TIMBERWOLVES | FULL GAME HIGHLIGHTS | November 21, 2026"
+  },
+  "401910027": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "0BQingHKdTI",
+     "title": "San Antonio Spurs vs New Orleans Pelicans Full Game Highlights - November 21, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "NBA Top Story ",
+     "id": "CzLy2yk4O3Q",
+     "title": "Spurs vs Pelicans FULL HIGHLIGHTS | Intense NBA Battle | Nov 21, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "San Antonio Spurs",
+     "id": "rPT-JxFzbBA",
+     "title": "HIGHLIGHTS: WEMBY DROPS 50 POINTS IN SPURS WIN OVER PELICANS"
+    }
+   ],
+   "blocked": [],
+   "day": "20261121",
+   "id": "Yj-3KgHgPWM",
+   "published": "2026-11-22T05:29:42+00:00",
+   "teams": [
+    "NO",
+    "SA"
+   ],
+   "title": "PELICANS at SPURS | FULL GAME HIGHLIGHTS | November 21, 2026"
+  },
+  "401910028": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "CxeArVF2Nd8",
+     "title": "Boston Celtics vs Sacramento Kings Full Game Highlights - November 21, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "The Vantics",
+     "id": "2VZQtb1ReW0",
+     "title": "Celtics vs Kings - Highlights (11.22.2026) #Shorts #NBAHighlights #Basketball"
+    }
+   ],
+   "blocked": [],
+   "day": "20261121",
+   "id": "m04w-QZ48rQ",
+   "published": "2026-11-22T05:47:55+00:00",
+   "teams": [
+    "BOS",
+    "SAC"
+   ],
+   "title": "CELTICS at KINGS | FULL GAME HIGHLIGHTS | November 21, 2026"
   }
  },
- "updated": "2026-11-22T03:27:04+00:00"
+ "updated": "2026-11-22T11:46:52+00:00"
 }
