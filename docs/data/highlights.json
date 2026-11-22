@@ -6959,6 +6959,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "whfCTj-HPDs",
+     "title": "Oklahoma City Thunder vs Portland Trail Blazers - FULL GAME HIGHLIGHTS | Nov 10, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "Qzc0o3re1HA",
+     "title": "Oklahoma City Thunder vs Portland Trail Blazers - FULL GAME HIGHLIGHTS | Nov 11, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "FYJCSRcxeNU",
+     "title": "Oklahoma City Thunder vs Portland Trail Blazers Full Game Highlights - November 10, 2026"
+    }
+   ],
    "blocked": [],
    "day": "20261110",
    "id": "WtmaQ-mk6Ls",
@@ -6995,6 +7015,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "b2pr6-GM_5U",
+     "title": "Indiana Pacers vs Washington Wizards Full Game Highlights - November 11, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Yellow",
+     "id": "9vWWVdl47N4",
+     "title": "Washington Wizards vs Indiana Pacers Full Game Highlights - Nov 11 - 2026 NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "10K2000",
+     "id": "tU2yx8j9FLE",
+     "title": "Indiana Pacers vs Washington Wizards Game 1st Highlights | Nov 11, 2026 | NBA Highlights"
+    }
    ],
    "blocked": [],
    "day": "20261111",
@@ -7033,6 +7073,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "bbFkeFP2-lw",
+     "title": "Cleveland Cavaliers vs New York Knicks - FULL GAME HIGHLIGHTS | November 11, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "yikerzgame",
+     "id": "fN0LXDSnDtY",
+     "title": "New York Knicks vs Cleveland Cavaliers Full Game Highlights - November 11, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "51KEL8sxRdo",
+     "title": "New York Knicks vs Cleveland Cavaliers Full Game Highlights - November 11, 2026 | NBA Season"
+    }
+   ],
    "blocked": [],
    "day": "20261111",
    "id": "NLRiKoJ9Al0",
@@ -7070,6 +7130,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "yikerzgame",
+     "id": "O6pwP-0c7Z0",
+     "title": "Boston Celtics vs Toronto Raptors Full Game Highlights - November 11, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "z_ecujTEFXk",
+     "title": "Boston Celtics vs Toronto Raptors Full Game Highlights - November 11, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "yikerzgame",
+     "id": "iw00wwJTeVQ",
+     "title": "Boston Celtics vs Toronto Raptors Game 4th Highlights - November 11, 2026 | NBA"
+    }
+   ],
    "blocked": [],
    "day": "20261111",
    "id": "KRV2oVjRP0A",
@@ -7106,6 +7186,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "bp3uDo9q9T0",
+     "title": "San Antonio Spurs vs Chicago Bulls - FULL GAME HIGHLIGHTS | November 11, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "WQcVhwPShfo",
+     "title": "San Antonio Spurs vs Chicago Bulls Full Game Highlights - November 11, 2026 | NBA Season4"
+    },
+    {
+     "blocked": [],
+     "channel": "NotYourAverageFlight",
+     "id": "ssuJX0RIGOA",
+     "title": "FlightReacts To SPURS at BULLS | FULL GAME HIGHLIGHTS | November 11, 2026!"
+    }
    ],
    "blocked": [],
    "day": "20261111",
@@ -10188,7 +10288,64 @@
     "PHI"
    ],
    "title": "BUCKS at 76ERS | FULL GAME HIGHLIGHTS | November 21, 2026"
+  },
+  "401910024": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "lanchinhchuu",
+     "id": "jmV9hL0xUu4",
+     "title": "New York Knicks vs Portland Trail Blazers Full Game Highlights | Nov 21, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "Hiepcoinb",
+     "id": "KAC76k23eSU",
+     "title": "New York Knicks vs Portland Trail Blazers Game 2nd Highlights - November 21, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "lanchinhchuu",
+     "id": "QOG7m7Pmk50",
+     "title": "New York Knicks vs Portland Trail Blazers Game 1st+2nd Highlights | Nov 21, 2026 | NBA Highlights"
+    }
+   ],
+   "blocked": [],
+   "day": "20261121",
+   "id": "f3lxi8E6P9M",
+   "published": "2026-11-22T03:11:39+00:00",
+   "teams": [
+    "POR",
+    "NY"
+   ],
+   "title": "TRAIL BLAZERS at KNICKS | FULL GAME HIGHLIGHTS | November 21, 2026"
   }
  },
- "updated": "2026-11-21T23:30:39+00:00"
+ "updated": "2026-11-22T03:27:04+00:00"
 }
