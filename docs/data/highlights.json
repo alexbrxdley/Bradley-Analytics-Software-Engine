@@ -6442,6 +6442,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "YungGutta4Life",
+     "id": "oSVh6epvAvY",
+     "title": "Miami Heat vs Sacramento Kings Full Game Highlights | Nov 8, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "hZ9w4LPyZKw",
+     "title": "Miami Heat vs Sacramento Kings Full Game Highlights - November 8, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "The CCB Network",
+     "id": "sRikND2rcsQ",
+     "title": "Miami Heat vs Sacramento Kings Full Game Highlights - November 8, 2026 | NBA Season"
+    }
+   ],
    "blocked": [],
    "day": "20261108",
    "id": "dY-RkRu3MpA",
@@ -10885,7 +10905,292 @@
     "ATL"
    ],
    "title": "PISTONS at HAWKS | FULL GAME HIGHLIGHTS | November 22, 2026"
+  },
+  "401910030": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "FsfF6iHMsZo",
+     "title": "Oklahoma City Thunder vs Miami Heat - FULL GAME HIGHLIGHTS | November 22, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "lanchinhchuu",
+     "id": "ooZEtsmRt60",
+     "title": "Miami Heat vs Oklahoma City Thunder Full Game Highlights | Nov 22, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "kfyVwAateDA",
+     "title": "Oklahoma City Thunder vs Miami Heat Full Game Highlights - November 22, 2026 | NBA Season"
+    }
+   ],
+   "blocked": [],
+   "day": "20261122",
+   "id": "F8cvs98ZEJ4",
+   "published": "2026-11-23T01:34:39+00:00",
+   "teams": [
+    "OKC",
+    "MIA"
+   ],
+   "title": "THUNDER at HEAT | FULL GAME HIGHLIGHTS | November 22, 2026"
+  },
+  "401910031": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Shelly Reyes",
+     "id": "TY8p6v_MQcM",
+     "title": "Orlando Magic vs Washington Wizards Full Game Highlights - November 22, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "kNkrhjdmZrw",
+     "title": "Washington Wizards vs Orlando Magic Full Game Highlights - November 22, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Orlando Magic",
+     "id": "1_Whs7_gdUg",
+     "title": "FULL GAME HIGHLIGHTS: ORLANDO MAGIC VS. WASHINGTON WIZARDS 11.22.26"
+    }
+   ],
+   "blocked": [],
+   "day": "20261122",
+   "id": "6LGBQv5bPz8",
+   "published": "2026-11-23T02:43:57+00:00",
+   "teams": [
+    "ORL",
+    "WSH"
+   ],
+   "title": "MAGIC at WIZARDS | FULL GAME HIGHLIGHTS | November 22, 2026"
+  },
+  "401910032": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Shelly Reyes",
+     "id": "UvsHmCZZHPo",
+     "title": "Denver Nuggets vs Chicago Bulls Full Game Highlights - November 22, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "gwv7Q_DMLPs",
+     "title": "Denver Nuggets vs Chicago Bulls Full Game Highlights - November 22, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Shelly Reyes",
+     "id": "UPHL7pBBH20",
+     "title": "Denver Nuggets vs Chicago Bulls Game 2nd Highlights - November 22, 2026 | NBA"
+    }
+   ],
+   "blocked": [],
+   "day": "20261122",
+   "id": "fku0QvOiRm8",
+   "published": "2026-11-23T03:09:24+00:00",
+   "teams": [
+    "DEN",
+    "CHI"
+   ],
+   "title": "NUGGETS at BULLS | FULL GAME HIGHLIGHTS | November 22, 2026"
+  },
+  "401910033": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "EM5NBRco8W4",
+     "title": "Dallas Mavericks vs Utah Jazz - FULL GAME HIGHLIGHTS | November 22, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "NTWQ0u8vTVM",
+     "title": "Dallas Mavericks vs Utah Jazz Full Game Highlights - November 22, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Dallas Mavericks",
+     "id": "CWA0nOxfFOI",
+     "title": "Mavericks Highlights vs. Utah Jazz | November 22, 2026"
+    }
+   ],
+   "blocked": [],
+   "day": "20261122",
+   "id": "HiWq0b23dbk",
+   "published": "2026-11-23T03:07:20+00:00",
+   "teams": [
+    "DAL",
+    "UTAH"
+   ],
+   "title": "MAVERICKS at JAZZ | FULL GAME HIGHLIGHTS | November 22, 2026"
+  },
+  "401910034": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Shelly Reyes",
+     "id": "Qhg0YcRlQow",
+     "title": "New York Knicks vs Indiana Pacers Full Game Highlights - November 22, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "Shelly Reyes",
+     "id": "zjU2kx1p9xE",
+     "title": "New York Knicks vs Indiana Pacers Game 2nd Highlights - November 22, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "Shelly Reyes",
+     "id": "3Mc6T-2SUuI",
+     "title": "New York Knicks vs Indiana Pacers Game 1st+2nd Highlights - November 22, 2026 | NBA"
+    }
+   ],
+   "blocked": [],
+   "day": "20261122",
+   "id": "sUFCZ146zk8",
+   "published": "2026-11-23T03:55:01+00:00",
+   "teams": [
+    "IND",
+    "NY"
+   ],
+   "title": "PACERS at KNICKS | FULL GAME HIGHLIGHTS | November 22, 2026"
   }
  },
- "updated": "2026-11-22T23:49:16+00:00"
+ "updated": "2026-11-23T04:04:25+00:00"
 }
