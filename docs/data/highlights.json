@@ -53,7 +53,8 @@
   "20261118",
   "20261119",
   "20261120",
-  "20261121"
+  "20261121",
+  "20261122"
  ],
  "games": {
   "401909088": {
@@ -6257,6 +6258,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "nAB-mGboGeE",
+     "title": "Los Angeles Lakers vs Detroit Pistons Full Game Highlights - November 8, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "AuiAQwZg_us",
+     "title": "Los Angeles Lakers vs Detroit Pistons - FULL GAME HIGHLIGHTS | November 8, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "YungGutta4Life",
+     "id": "CYQeMd5bJio",
+     "title": "Los Angeles Lakers vs Detroit Pistons Full Game Highlights | Nov 8, 2026 | NBA Highlights"
+    }
+   ],
    "blocked": [],
    "day": "20261108",
    "id": "shKl4TLb28Y",
@@ -6293,6 +6314,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "VXycx56RFBw",
+     "title": "Utah Jazz vs Minnesota Timberwolves - FULL GAME HIGHLIGHTS | November 8, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "YungGutta4Life",
+     "id": "RA4TySB6DFM",
+     "title": "Minnesota Timberwolves vs Utah Jazz Full Game Highlights | Nov 8, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "m5y27wC9kdI",
+     "title": "Minnesota Timberwolves vs Utah Jazz Full Game Highlights - November 8, 2026 | NBA Season"
+    }
    ],
    "blocked": [],
    "day": "20261108",
@@ -6331,6 +6372,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "r5DBGgqQL0w",
+     "title": "Brooklyn Nets vs Dallas Mavericks - FULL GAME HIGHLIGHTS | November 8, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "\u4f0a\u85e4\u548c\u4e5f",
+     "id": "INuLdhxJFj0",
+     "title": "Brooklyn Nets vs Dallas Mavericks | FULL GAME Highlights | Nov 8, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "Z2IsNIL_snk",
+     "title": "Dallas Mavericks vs Brooklyn Nets Full Game Highlights - November 8, 2026 | NBA Season"
+    }
+   ],
    "blocked": [],
    "day": "20261108",
    "id": "x4SzsIG5nwo",
@@ -6368,6 +6429,20 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "YungGutta4Life",
+     "id": "xxHFVYEzpXU",
+     "title": "Boston Celtics vs Milwaukee Bucks Full Game Highlights | Nov 8, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "LJSD4gd7Ds4",
+     "title": "Boston Celtics vs Milwaukee Bucks Full Game Highlights - November 8, 2026 | NBA Season"
+    }
+   ],
    "blocked": [],
    "day": "20261108",
    "id": "Axe6ICibvU4",
@@ -6404,6 +6479,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "YungGutta4Life",
+     "id": "RwMlUR-GOA8",
+     "title": "Los Angeles Clippers vs New Orleans Pelicans Full Game Highlights | Nov 8, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "TmXGFMuF394",
+     "title": "Los Angeles Clippers vs New Orleans Pelicans Full Game Highlights - November 8, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "YungGutta4Life",
+     "id": "JUoXt2mkfAg",
+     "title": "Los Angeles Clippers vs New Orleans Pelicans Game 2nd Highlights | Nov 8, 2026 | NBA Highlights"
+    }
    ],
    "blocked": [],
    "day": "20261108",
@@ -11190,7 +11285,64 @@
     "NY"
    ],
    "title": "PACERS at KNICKS | FULL GAME HIGHLIGHTS | November 22, 2026"
+  },
+  "401910035": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "Eh42QYzLjrU",
+     "title": "Golden State Warriors vs Boston Celtics Full Game Highlights - November 22, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "FreeDawkins",
+     "id": "b_NANwUFS8s",
+     "title": "Golden State Warriors vs Boston Celtics Full Game Highlights | Nov 22, 2026 | FreeDawkins"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "4U2ighM2W8o",
+     "title": "Boston Celtics vs Golden State Warriors - FULL GAME HIGHLIGHTS | November 22, 2026 NBA Season"
+    }
+   ],
+   "blocked": [],
+   "day": "20261122",
+   "id": "CheW6PwsdoU",
+   "published": "2026-11-23T04:14:21+00:00",
+   "teams": [
+    "BOS",
+    "GS"
+   ],
+   "title": "CELTICS at WARRIORS | FULL GAME HIGHLIGHTS | November 22, 2026"
   }
  },
- "updated": "2026-11-23T04:04:25+00:00"
+ "updated": "2026-11-23T14:27:09+00:00"
 }
