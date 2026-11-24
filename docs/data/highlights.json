@@ -1046,6 +1046,29 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [
+      "CN",
+      "TW"
+     ],
+     "channel": "NBA",
+     "id": "YEe4-NOi--4",
+     "title": "EXTENDED: TRAIL BLAZERS at LAKERS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 6, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "FreeDawkins",
+     "id": "zkqXaaT6wA8",
+     "title": "Los Angeles Lakers vs Portland Trail Blazers Full Game Highlights | Nov 6, 2026 | FreeDawkins"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "4cXUpUfkQEQ",
+     "title": "Portland Trail Blazers vs Los Angeles Lakers - FULL GAME HIGHLIGHTS | November 6, 2026 NBA Season"
+    }
+   ],
    "blocked": [],
    "day": "20261106",
    "id": "Tl63S0C6XhI",
@@ -5962,6 +5985,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "freemanrico",
+     "id": "G-UF7R1-Ky4",
+     "title": "Denver Nuggets vs Indiana Pacers Full Game Highlights | Nov 7, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "vdekggyLZ5w",
+     "title": "Denver Nuggets vs Indiana Pacers Full Game Highlights - November 7, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Denver Nuggets",
+     "id": "LU4VFEqxuCo",
+     "title": "Denver Nuggets vs. Indiana Pacers | Mexico City \ud83c\uddf2\ud83c\uddfd Full Game Highlights \ud83d\udcfa"
+    }
+   ],
    "blocked": [],
    "day": "20261107",
    "id": "1-yDggSIG34",
@@ -5998,6 +6041,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "freemanrico",
+     "id": "NQx3W89lwJo",
+     "title": "Brooklyn Nets vs Atlanta Hawks Full Game Highlights | Nov 7, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "2azptUysFjc",
+     "title": "Atlanta Hawks vs Brooklyn Nets Full Game Highlights - November 7, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "freemanrico",
+     "id": "cNMGAQQiEQY",
+     "title": "Brooklyn Nets vs Atlanta Hawks Game 1st+2nd Highlights | Nov 7, 2026 | NBA Highlights"
+    }
    ],
    "blocked": [],
    "day": "20261107",
@@ -11490,6 +11553,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "QKAIrcdrmsc",
+     "title": "Charlotte Hornets vs Memphis Grizzlies Full Game Highlights - November 23, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "mattburke911",
+     "id": "NyucqUi8tMo",
+     "title": "Charlotte Hornets vs Memphis Grizzlies Game 2nd Highlights - November 23, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "mattburke911",
+     "id": "LpQXADFCfzc",
+     "title": "Charlotte Hornets vs Memphis Grizzlies Game 1st+2nd Highlights - November 23, 2026 | NBA"
+    }
+   ],
    "blocked": [],
    "day": "20261123",
    "id": "gVFIS7Qn7Ig",
@@ -11526,6 +11609,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "tIiLQ5u4yiI",
+     "title": "Philadelphia 76ers vs Portland Trail Blazers Full Game Highlights - November 23, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "mattburke911",
+     "id": "o3TxfUqBaqE",
+     "title": "Philadelphia 76ers vs Portland Trail Blazers Full Game Highlights - November 23, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "mattburke911",
+     "id": "gL72p-khYOQ",
+     "title": "Philadelphia 76ers vs Portland Trail Blazers Game 1st+2nd Highlights - November 23, 2026 | NBA"
+    }
    ],
    "blocked": [],
    "day": "20261123",
@@ -11677,6 +11780,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "BMkuI1DYGnE",
+     "title": "Minnesota Timberwolves vs Brooklyn Nets Full Game Highlights - November 23, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "mattburke911",
+     "id": "HTXBQ6NDx-Y",
+     "title": "Minnesota Timberwolves vs Brooklyn Nets Full Game Highlights - November 23, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "mattburke911",
+     "id": "TIp0FfDmy_k",
+     "title": "Minnesota Timberwolves vs Brooklyn Nets Game 1st+2nd Highlights - November 23, 2026 | NBA"
+    }
    ],
    "blocked": [],
    "day": "20261123",
@@ -11917,5 +12040,5 @@
    "title": "SPURS at KINGS | FULL GAME HIGHLIGHTS | November 23, 2026"
   }
  },
- "updated": "2026-11-24T11:39:27+00:00"
+ "updated": "2026-11-24T21:30:18+00:00"
 }
