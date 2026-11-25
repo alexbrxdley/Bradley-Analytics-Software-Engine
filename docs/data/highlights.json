@@ -54,7 +54,8 @@
   "20261119",
   "20261120",
   "20261121",
-  "20261122"
+  "20261122",
+  "20261124"
  ],
  "games": {
   "401909088": {
@@ -787,6 +788,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "1Agy47oC8vM",
+     "title": "Washington Wizards vs Atlanta Hawks Full Game Highlights - November 6, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "The CCB Network",
+     "id": "VHEwsB4lAJU",
+     "title": "Washington Wizards vs Atlanta Hawks Full Game Highlights - November 6, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Highlights TV",
+     "id": "VqSbrVwpQuI",
+     "title": "Washington Wizards vs Atlanta Hawks Full Game Highlights - Nov 6, 2026"
+    }
+   ],
    "blocked": [],
    "day": "20261106",
    "id": "1qP76MUsSrc",
@@ -823,6 +844,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "5K4vt-kL2Zo",
+     "title": "Boston Celtics vs Charlotte Hornets Full Game Highlights - November 6, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "RYVQEX-MC",
+     "id": "-XVI0clyuPY",
+     "title": "Boston Celtics vs Charlotte Hornets Full Game Highlights | Nov 6, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "\uac15\uc6b0\uc9c4",
+     "id": "4UozaJRKGw8",
+     "title": "Boston Celtics vs Charlotte Hornets (1st FULL Highlights) 06 Nov, 2026 | NBA Regular Season"
+    }
    ],
    "blocked": [],
    "day": "20261106",
@@ -861,6 +902,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "G3YoRl7dzJU",
+     "title": "Philadelphia 76ers vs Cleveland Cavaliers Full Game Highlights - November 6, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "aQ0F2DsoW1U",
+     "title": "Philadelphia 76ers vs Cleveland Cavaliers - FULL GAME HIGHLIGHTS | November 6, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "B\u00e1c C\u00fac Y\u00eau Th\u01b0\u01a1ng",
+     "id": "oenSOGVXEBo",
+     "title": "Philadelphia 76ers vs Cleveland Cavaliers Full Game Highlights - November 6,2026 | NBA"
+    }
+   ],
    "blocked": [],
    "day": "20261106",
    "id": "t1c8FrDibW0",
@@ -897,6 +958,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "kwcf6Ou8YAY",
+     "title": "Dallas Mavericks vs Utah Jazz Full Game Highlights - November 6, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "v7biftHla2w",
+     "title": "Utah Jazz vs Dallas Mavericks - FULL GAME HIGHLIGHTS | November 6, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "RYVQEX-MC",
+     "id": "vVpUPElqtIk",
+     "title": "Dallas Mavericks vs Utah Jazz Full Game Highlights | Nov 6, 2026 | NBA Highlights"
+    }
    ],
    "blocked": [],
    "day": "20261106",
@@ -2329,6 +2410,63 @@
     "WSH"
    ],
    "title": "CELTICS at WIZARDS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 24, 2026"
+  },
+  "401909316": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "8lm1EBsy6Cc",
+     "title": "Dallas Mavericks vs Denver Nuggets - FULL GAME HIGHLIGHTS | November 24, 2026 NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "QjD0SzfHZhQ",
+     "title": "Denver Nuggets vs Dallas Mavericks Full Game Highlights - November 24, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "FreeDawkins",
+     "id": "AW6VsePerxA",
+     "title": "Dallas Mavericks vs Denver Nuggets Full Game Highlights | Nov 24, 2026 | FreeDawkins"
+    }
+   ],
+   "blocked": [],
+   "day": "20261124",
+   "id": "ZV_1v8zzUbw",
+   "published": "2026-11-25T06:02:25+00:00",
+   "teams": [
+    "DAL",
+    "DEN"
+   ],
+   "title": "MAVERICKS at NUGGETS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 24, 2026"
   },
   "401909834": {
    "allowed": [
@@ -6141,6 +6279,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "FreeDawkins",
+     "id": "DZM2zjnPDaE",
+     "title": "Golden State Warriors vs Miami Heat Full Game Highlights | Nov 5, 2026 | FreeDawkins"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "3fUbRwlu2yE",
+     "title": "Golden State Warriors vs Miami Heat Full Game Highlights - November 5, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "OE0vCLFMA4Q",
+     "title": "Miami Heat vs Golden State Warriors - FULL GAME HIGHLIGHTS | November 5, 2026 NBA Season"
+    }
    ],
    "blocked": [],
    "day": "20261105",
@@ -12234,5 +12392,5 @@
    "title": "SPURS at KINGS | FULL GAME HIGHLIGHTS | November 23, 2026"
   }
  },
- "updated": "2026-11-25T04:30:42+00:00"
+ "updated": "2026-11-25T14:52:55+00:00"
 }
