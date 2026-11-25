@@ -935,6 +935,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "RYVQEX-MC",
+     "id": "lcdT_nfNAXM",
+     "title": "Oklahoma City Thunder vs Memphis Grizzlies Full Game Highlights | Nov 6, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "bGV7-p3JbY4",
+     "title": "Oklahoma City Thunder vs Memphis Grizzlies Full Game Highlights - November 6, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "RYVQEX-MC",
+     "id": "aIEgHiqcwh8",
+     "title": "Oklahoma City Thunder vs Memphis Grizzlies Game 2nd Highlights | Nov 6, 2026 | NBA Highlights"
+    }
+   ],
    "blocked": [],
    "day": "20261106",
    "id": "urZbyAoCBNU",
@@ -972,6 +992,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "\u4f0a\u85e4\u548c\u4e5f",
+     "id": "wP9dDxjRwPE",
+     "title": "Milwaukee Bucks vs Toronto Raptors | FULL GAME Highlights - Nov 6, 2026 Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "h0F-V_A1MMw",
+     "title": "Milwaukee Bucks vs Toronto Raptors Full Game Highlights - November 6, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Highlights TV",
+     "id": "draWRoW2E7M",
+     "title": "Milwaukee Bucks vs Toronto Raptors Full Game Highlights - Nov 6, 2026"
+    }
+   ],
    "blocked": [],
    "day": "20261106",
    "id": "A_4SYcSbEbQ",
@@ -1008,6 +1048,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "RYVQEX-MC",
+     "id": "1jq5YEUTOOI",
+     "title": "Minnesota Timberwolves vs New Orleans Pelicans Full Game Highlights | Nov 6, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "Khg2mAcZbRs",
+     "title": "Minnesota Timberwolves vs New Orleans Pelicans - FULL GAME HIGHLIGHTS | November 6, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "fp4CuZEsbpI",
+     "title": "Minnesota Timberwolves vs New Orleans Pelicans Full Game Highlights - November 6, 2026"
+    }
    ],
    "blocked": [],
    "day": "20261106",
@@ -1105,6 +1165,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "JKG8Z9jceGc",
+     "title": "San Antonio Spurs vs Sacramento Kings Full Game Highlights - November 6, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "d-1z-DeOQyc",
+     "title": "San Antonio Spurs vs Sacramento Kings - FULL GAME HIGHLIGHTS | November 6, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "B\u00e1c C\u00fac Y\u00eau Th\u01b0\u01a1ng",
+     "id": "iiuPu2a5ci0",
+     "title": "San Antonio Spurs vs Sacramento Kings Full Game Highlights - November 6,2026 | NBA"
+    }
    ],
    "blocked": [],
    "day": "20261106",
@@ -2135,6 +2215,120 @@
     "LAL"
    ],
    "title": "KINGS AT LAKERS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 20, 2026"
+  },
+  "401909314": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "2bKXngn2SdM",
+     "title": "Detroit Pistons vs Orlando Magic Full Game Highlights - November 24, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Orlando Magic",
+     "id": "0mqQGKwkqxg",
+     "title": "FULL GAME HIGHLIGHTS: DETROIT PISTONS VS. ORLANDO MAGIC 11.24.26"
+    },
+    {
+     "blocked": [],
+     "channel": "Detroit Pistons",
+     "id": "p2uF8ca1RKQ",
+     "title": "Big Win in the Cup | Detroit Pistons vs. Orlando Magic Highlights | 11.24.26 #NBA"
+    }
+   ],
+   "blocked": [],
+   "day": "20261124",
+   "id": "K4gN0RJ1Ghs",
+   "published": "2026-11-25T02:51:59+00:00",
+   "teams": [
+    "DET",
+    "ORL"
+   ],
+   "title": "PISTONS at MAGIC | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 24, 2026"
+  },
+  "401909315": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "jUv6wn0mBc4",
+     "title": "Boston Celtics vs Washington Wizards - FULL GAME HIGHLIGHTS | November 24, 2026 NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "jPqhWPPBhAg",
+     "title": "Boston Celtics vs Washington Wizards Full Game Highlights - November 24, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Sky Sport DE",
+     "id": "driT92xPRbQ",
+     "title": "Washington Wizards vs. Boston Celtics - Game Highlights"
+    }
+   ],
+   "blocked": [],
+   "day": "20261124",
+   "id": "KTqVQ0JHdwk",
+   "published": "2026-11-25T03:56:53+00:00",
+   "teams": [
+    "BOS",
+    "WSH"
+   ],
+   "title": "CELTICS at WIZARDS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 24, 2026"
   },
   "401909834": {
    "allowed": [
@@ -12040,5 +12234,5 @@
    "title": "SPURS at KINGS | FULL GAME HIGHLIGHTS | November 23, 2026"
   }
  },
- "updated": "2026-11-24T21:30:18+00:00"
+ "updated": "2026-11-25T04:30:42+00:00"
 }
