@@ -55,7 +55,8 @@
   "20261120",
   "20261121",
   "20261122",
-  "20261124"
+  "20261124",
+  "20261125"
  ],
  "games": {
   "401909088": {
@@ -2495,6 +2496,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "21RqMDsDUI0",
+     "title": "Philadelphia 76ers vs Miami Heat Full Game Highlights - November 25, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "GhOW2ulJn2I",
+     "title": "Miami Heat vs Philadelphia 76ers - FULL GAME HIGHLIGHTS | November 25, 2026 NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "FreeDawkins",
+     "id": "hZq5TGIgS9o",
+     "title": "Philadelphia 76ers vs Miami Heat Full Game Highlights | Nov 25, 2026 | FreeDawkins"
+    }
+   ],
    "blocked": [],
    "day": "20261125",
    "id": "ZrlEGz6KlW0",
@@ -2846,6 +2867,123 @@
     "HOU"
    ],
    "title": "SUNS at ROCKETS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 25, 2026"
+  },
+  "401909324": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "-lz8l4VMx2A",
+     "title": "Sacramento Kings vs Golden State Warriors - FULL GAME HIGHLIGHTS | November 25, 2026 NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "lanhangngay",
+     "id": "m9BiVXarxPQ",
+     "title": "Golden State Warriors vs Sacramento Kings Full Game Highlights - November 25, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "Haisen766",
+     "id": "XG_DcLEcOJA",
+     "title": "Golden State Warriors vs Sacramento Kings Full Game Highlights | Nov 25, 2026 | NBA Highlights"
+    }
+   ],
+   "blocked": [],
+   "day": "20261125",
+   "id": "0vg4rEM49HY",
+   "published": "2026-11-26T06:02:47+00:00",
+   "teams": [
+    "SAC",
+    "GS"
+   ],
+   "title": "KINGS at WARRIORS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 25, 2026"
+  },
+  "401909325": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [
+      "CN",
+      "TW"
+     ],
+     "channel": "NBA",
+     "id": "5EaY-W4T8O8",
+     "title": "EXTENDED: SPURS at TRAIL BLAZERS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 25, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "Haisen766",
+     "id": "CeTkiwThE-g",
+     "title": "San Antonio Spurs vs Portland Trail Blazers Full Game Highlights | Nov 25, 2026 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "oGy0AnFV9fQ",
+     "title": "San Antonio Spurs vs Portland Trail Blazers Full Game Highlights - November 25, 2026"
+    }
+   ],
+   "blocked": [],
+   "day": "20261125",
+   "id": "pGbbg2LRLlE",
+   "published": "2026-11-26T06:04:08+00:00",
+   "teams": [
+    "SA",
+    "POR"
+   ],
+   "title": "SPURS at TRAIL BLAZERS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 25, 2026"
   },
   "401909834": {
    "allowed": [
@@ -6215,6 +6353,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "YOOISPZaBzw",
+     "title": "Brooklyn Nets vs Charlotte Hornets Full Game Highlights - November 4, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Highlights TV",
+     "id": "gN_g9g88bJ8",
+     "title": "Brooklyn Nets vs Charlotte Hornets Full Game Highlights - Nov 4, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "Toon Recaps",
+     "id": "FieCIg1Ur_I",
+     "title": "The lead kept flipping! | Charlotte Hornets vs Brooklyn Nets | NBA Highlights \ud83c\udfc0"
+    }
+   ],
    "blocked": [],
    "day": "20261104",
    "id": "oi8rrI8Yuj4",
@@ -6326,6 +6484,14 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "tFQGrqMOppU",
+     "title": "Utah Jazz vs New Orleans Pelicans Full Game Highlights - November 4, 2026 | NBA Season"
+    }
+   ],
    "blocked": [],
    "day": "20261104",
    "id": "6B2jlUvJ2rQ",
@@ -6399,6 +6565,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "y1r0JqJNAZI",
+     "title": "Minnesota Timberwolves vs Houston Rockets - FULL GAME HIGHLIGHTS | November 4, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "TOu1qn06ALM",
+     "title": "Minnesota Timberwolves vs Houston Rockets Full Game Highlights - November 4, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "QYROV-MINE",
+     "id": "XD566x6q3AY",
+     "title": "Houston Rockets vs Minnesota Timberwolves Full Game Highlights - November 4, 2026 | NBA"
+    }
    ],
    "blocked": [],
    "day": "20261104",
@@ -12891,5 +13077,5 @@
    "title": "SPURS at KINGS | FULL GAME HIGHLIGHTS | November 23, 2026"
   }
  },
- "updated": "2026-11-26T05:15:37+00:00"
+ "updated": "2026-11-26T15:20:39+00:00"
 }
