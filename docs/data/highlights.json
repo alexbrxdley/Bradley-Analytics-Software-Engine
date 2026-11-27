@@ -5566,6 +5566,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "ql28dnf55pU",
+     "title": "Boston Celtics vs Orlando Magic - FULL GAME HIGHLIGHTS | November 1, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "X NBA",
+     "id": "ZrwIDuPtgbo",
+     "title": "Boston Celtics vs Orlando Magic Full Game Highlights - Nov 1,2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "SXBSrmtiX9k",
+     "title": "Boston Celtics vs Orlando Magic Full Game Highlights - November 1, 2026 | NBA Season"
+    }
+   ],
    "blocked": [],
    "day": "20261101",
    "id": "8jItnLHesf0",
@@ -5602,6 +5622,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "tAW-DcMeS8s",
+     "title": "Indiana Pacers vs Brooklyn Nets Full Game Highlights - November 1, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "The CCB Network",
+     "id": "qcuxFQzwMJE",
+     "title": "Indiana Pacers vs Brooklyn Nets Full Game Highlights - November 1, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Highlights TV",
+     "id": "zi5uqo-iWAY",
+     "title": "Indiana Pacers vs Brooklyn Nets Full Game Highlights - Nov 1, 2026"
+    }
    ],
    "blocked": [],
    "day": "20261101",
@@ -5640,6 +5680,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "Wo4C3j9RmOg",
+     "title": "LA Clippers vs Golden State Warriors - FULL GAME HIGHLIGHTS | November 1, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "XwGdluJ1wNY",
+     "title": "Golden State Warriors vs Los Angeles Clippers Full Game Highlights - November 1, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Yellow",
+     "id": "bdIBMPrv7M0",
+     "title": "Golden State Warriors vs LA Clippers Full Game Highlights | Nov. 1 | 2026 NBA Highlights New"
+    }
+   ],
    "blocked": [],
    "day": "20261101",
    "id": "wQr-WKrgoBE",
@@ -5677,6 +5737,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "ALgARi_Ahmk",
+     "title": "Los Angeles Lakers vs Toronto Raptors Full Game Highlights - November 1, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "FreeDawkins",
+     "id": "UUsehoW2mHo",
+     "title": "Los Angeles Lakers vs Toronto Raptors Full Game Highlights | Nov 1, 2026 | FreeDawkins"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "V21la21FRg8",
+     "title": "Toronto Raptors vs Los Angeles Lakers - FULL GAME HIGHLIGHTS | November 1, 2026 NBA Season"
+    }
+   ],
    "blocked": [],
    "day": "20261101",
    "id": "s5OCLiq4gnU",
@@ -5713,6 +5793,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "pRMMM83QobI",
+     "title": "Oklahoma City Thunder vs Cleveland Cavaliers - FULL GAME HIGHLIGHTS | November 2, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "VEXQIR-MC",
+     "id": "VXoEjgrviIo",
+     "title": "Cleveland Cavaliers vs Oklahoma City Thunder Full Game Highlights - November 2, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "liQ6q6FbcB8",
+     "title": "Oklahoma City Thunder vs Cleveland Cavaliers Full Game Highlights - November 2, 2026 | NBA Season"
+    }
    ],
    "blocked": [],
    "day": "20261102",
@@ -5978,6 +6078,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "GdB_UPDUR2Q",
+     "title": "Chicago Bulls vs Philadelphia 76ers - FULL GAME HIGHLIGHTS | November 2, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "OBU6xo7Z1YM",
+     "title": "Philadelphia 76ers vs Chicago Bulls Full Game Highlights - November 2, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "VEXQIR-MC",
+     "id": "IhjiOMm4vfA",
+     "title": "Philadelphia 76ers vs Chicago Bulls Full Game Highlights - November 2, 2026 | NBA"
+    }
    ],
    "blocked": [],
    "day": "20261102",
@@ -13438,5 +13558,5 @@
    "title": "SPURS at KINGS | FULL GAME HIGHLIGHTS | November 23, 2026"
   }
  },
- "updated": "2026-11-27T15:48:26+00:00"
+ "updated": "2026-11-27T23:46:08+00:00"
 }
