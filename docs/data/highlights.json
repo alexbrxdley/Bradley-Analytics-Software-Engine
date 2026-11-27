@@ -56,7 +56,8 @@
   "20261121",
   "20261122",
   "20261124",
-  "20261125"
+  "20261125",
+  "20261126"
  ],
  "games": {
   "401909088": {
@@ -5750,6 +5751,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "8MYtvXUWv2Y",
+     "title": "Detroit Pistons vs Charlotte Hornets Full Game Highlights - November 2, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "The CCB Network",
+     "id": "Yan1S_9JH5E",
+     "title": "Detroit Pistons vs Charlotte Hornets Full Game Highlights - November 2, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Highlights TV",
+     "id": "L3kjv8o_QkE",
+     "title": "Detroit Pistons vs Charlotte Hornets Full Game Highlights - Nov 2, 2026"
+    }
+   ],
    "blocked": [],
    "day": "20261102",
    "id": "bo8mA41AKHY",
@@ -5786,6 +5807,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "s7oY7yWDhbQ",
+     "title": "Indiana Pacers vs Atlanta Hawks Full Game Highlights - November 2, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "RY Central",
+     "id": "SubWQPZW-5Q",
+     "title": "Atlanta Hawks vs Indiana Pacers Full Game Highlights - November 2, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Reborn Basketball",
+     "id": "A_jg78E8D-g",
+     "title": "Hawks vs Pacers | Game Highlights \u2014 Who Made the Difference? | Reborn NOW"
+    }
    ],
    "blocked": [],
    "day": "20261102",
@@ -5824,6 +5865,26 @@
     "VE",
     "VN"
    ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "VEXQIR-MC",
+     "id": "ue-WP0XC23w",
+     "title": "New York Knicks vs Brooklyn Nets Full Game Highlights - November 2, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "0CIaLO23rdM",
+     "title": "New York Knicks vs Brooklyn Nets Full Game Highlights - November 2, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "The CCB Network",
+     "id": "w4_zTAr9NPo",
+     "title": "New York Knicks vs Brooklyn Nets Full Game Highlights - November 2, 2026 | NBA Season"
+    }
+   ],
    "blocked": [],
    "day": "20261102",
    "id": "UkB9kmykk4M",
@@ -5860,6 +5921,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "VEXQIR-MC",
+     "id": "CvUN0QzTp-U",
+     "title": "Washington Wizards vs Orlando Magic Full Game Highlights - November 2, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "usLrFCDjVis",
+     "title": "Washington Wizards vs Orlando Magic Full Game Highlights - November 2, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "The CCB Network",
+     "id": "DpJ1MW9KVpY",
+     "title": "Washington Wizards vs Orlando Magic Full Game Highlights - November 2, 2026 | NBA Season"
+    }
    ],
    "blocked": [],
    "day": "20261102",
@@ -5934,6 +6015,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "4lgN0sLTgwA",
+     "title": "Dallas Mavericks vs Sacramento Kings Full Game Highlights - November 2, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "The CCB Network",
+     "id": "kH129YxCaXc",
+     "title": "Dallas Mavericks vs Sacramento Kings Full Game Highlights - November 2, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "Mavericks Digest",
+     "id": "sjRpx3Baj6Y",
+     "title": "Mavericks vs. Kings Live Streaming Scoreboard, Free Play-By-Play, Highlights on NBA League Pass"
+    }
    ],
    "blocked": [],
    "day": "20261102",
@@ -6028,6 +6129,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "HMog8nxB8Ks",
+     "title": "Milwaukee Bucks vs Minnesota Timberwolves - FULL GAME HIGHLIGHTS | November 2, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "-PQzEc0-zU8",
+     "title": "Minnesota Timberwolves vs Milwaukee Bucks Full Game Highlights - November 2, 2026 | NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "VEXQIR-MC",
+     "id": "Tq_nkjpmZuA",
+     "title": "Minnesota Timberwolves vs Milwaukee Bucks Full Game Highlights - November 2, 2026 | NBA"
+    }
    ],
    "blocked": [],
    "day": "20261102",
@@ -13317,5 +13438,5 @@
    "title": "SPURS at KINGS | FULL GAME HIGHLIGHTS | November 23, 2026"
   }
  },
- "updated": "2026-11-27T05:55:03+00:00"
+ "updated": "2026-11-27T15:48:26+00:00"
 }
