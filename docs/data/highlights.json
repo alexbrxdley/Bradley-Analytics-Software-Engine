@@ -1,5 +1,7 @@
 {
- "checked": {},
+ "checked": {
+  "401910042": 1
+ },
  "days": [
   "20260930",
   "20261001",
@@ -55,6 +57,7 @@
   "20261120",
   "20261121",
   "20261122",
+  "20261123",
   "20261124",
   "20261125",
   "20261126"
@@ -2985,6 +2988,348 @@
     "POR"
    ],
    "title": "SPURS at TRAIL BLAZERS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 25, 2026"
+  },
+  "401909326": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "0p85qgPkQ9M",
+     "title": "Miami Heat vs New York Knicks - FULL GAME HIGHLIGHTS | November 27, 2026 NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "a2FhbV-NeQo",
+     "title": "New York Knicks vs Miami Heat Full Game Highlights - November 27, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "BELJOMC",
+     "id": "cak3sfqQ1Co",
+     "title": "New York Knicks vs Miami Heat Full Game Highlights - November 27, 2026 | NBA"
+    }
+   ],
+   "blocked": [],
+   "day": "20261127",
+   "id": "kon85l31x1M",
+   "published": "2026-11-28T03:04:58+00:00",
+   "teams": [
+    "MIA",
+    "NY"
+   ],
+   "title": "HEAT at KNICKS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 27, 2026"
+  },
+  "401909327": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "lUC4fn93pKM",
+     "title": "Detroit Pistons vs Milwaukee Bucks Full Game Highlights - November 27, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Detroit Pistons",
+     "id": "txB0t_C_0OE",
+     "title": "Pistons Clinch Cup Berth | Detroit Pistons vs. Milwaukee Bucks | Highlights | 11.27.26 #NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "Milwaukee Bucks",
+     "id": "AQXSFztTyDg",
+     "title": "Highlights: Bucks 98 - Pistons 113 | 11.27.26"
+    }
+   ],
+   "blocked": [],
+   "day": "20261127",
+   "id": "ps8mYgSrs6A",
+   "published": "2026-11-28T03:18:48+00:00",
+   "teams": [
+    "MIL",
+    "DET"
+   ],
+   "title": "BUCKS at PISTONS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 27, 2026"
+  },
+  "401909328": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "xOkbkBpE-kI",
+     "title": "Philadelphia 76ers vs Indiana Pacers Full Game Highlights - November 27, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "UaAqou-xn_E",
+     "title": "Philadelphia 76ers vs Indiana Pacers - FULL GAME HIGHLIGHTS | November 27, 2026 NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Ho\u00e0i T\u1ed1t B\u1ee5ng",
+     "id": "FMcDJollLD8",
+     "title": "Philadelphia 76ers vs Indiana Pacers Full Game Highlights - November 27, 2026 | NBA"
+    }
+   ],
+   "blocked": [],
+   "day": "20261127",
+   "id": "oGJfE7fET-A",
+   "published": "2026-11-28T03:15:08+00:00",
+   "teams": [
+    "PHI",
+    "IND"
+   ],
+   "title": "76ERS at PACERS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 27, 2026"
+  },
+  "401909329": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "V1BmNhtuI38",
+     "title": "Toronto Raptors vs Brooklyn Nets Full Game Highlights - November 27, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Raptors Nation",
+     "id": "7oZUBn0g8us",
+     "title": "Toronto Raptors vs Brooklyn Nets - Full Game Highlights | Nov 27, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "Jonny Watts",
+     "id": "JTovFvwTZMo",
+     "title": "Toronto Raptors vs Brooklyn Nets - Full Game Highlights | Nov 27, 2026"
+    }
+   ],
+   "blocked": [],
+   "day": "20261127",
+   "id": "y1Y-9H-tVEk",
+   "published": "2026-11-28T03:18:28+00:00",
+   "teams": [
+    "BKN",
+    "TOR"
+   ],
+   "title": "NETS at RAPTORS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 27, 2026"
+  },
+  "401909330": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "cS7RrtbKMJQ",
+     "title": "Boston Celtics vs Atlanta Hawks Full Game Highlights - November 27, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "BELJOMC",
+     "id": "X5oz3QEEv7E",
+     "title": "Boston Celtics vs Atlanta Hawks Game 1st+2nd Highlights - November 27, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "The Vantics",
+     "id": "d7cy1dP5J30",
+     "title": "Hawks vs Celtics - Highlights (11.28.2026) #Shorts #NBAHighlights #Basketball"
+    }
+   ],
+   "blocked": [],
+   "day": "20261127",
+   "id": "q1wH55FVPRY",
+   "published": "2026-11-28T03:40:27+00:00",
+   "teams": [
+    "ATL",
+    "BOS"
+   ],
+   "title": "HAWKS at CELTICS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 27, 2026"
+  },
+  "401909331": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "QYVEXOR-MC",
+     "id": "TKGLnNcWzrI",
+     "title": "Minnesota Timberwolves vs Memphis Grizzlies Full Game Highlights | Nov 25, 2027 | NBA Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "a4K3vh4y_xU",
+     "title": "Minnesota Timberwolves vs Memphis Grizzlies Full Game Highlights - November 27, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "B\u01b0 B\u01b0 Channel",
+     "id": "ly6M8clRKAY",
+     "title": "Minnesota Timberwolves vs Memphis Grizzlies 2nd Qtr Highlights | Nov 27, 2026 | NBA 2026"
+    }
+   ],
+   "blocked": [],
+   "day": "20261127",
+   "id": "Z5Jc0Cri6AI",
+   "published": "2026-11-28T04:17:29+00:00",
+   "teams": [
+    "MEM",
+    "MIN"
+   ],
+   "title": "GRIZZLIES at TIMBERWOLVES | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 27, 2026"
   },
   "401909834": {
    "allowed": [
@@ -13558,5 +13903,5 @@
    "title": "SPURS at KINGS | FULL GAME HIGHLIGHTS | November 23, 2026"
   }
  },
- "updated": "2026-11-27T23:46:08+00:00"
+ "updated": "2026-11-28T04:59:26+00:00"
 }
