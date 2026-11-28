@@ -60,7 +60,8 @@
   "20261123",
   "20261124",
   "20261125",
-  "20261126"
+  "20261126",
+  "20261127"
  ],
  "games": {
   "401909088": {
@@ -3331,6 +3332,285 @@
    ],
    "title": "GRIZZLIES at TIMBERWOLVES | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 27, 2026"
   },
+  "401909332": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "GqkOUcwNRWY",
+     "title": "Dallas Mavericks vs Phoenix Suns Full Game Highlights - November 27, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Phoenix Suns",
+     "id": "lDlf2UdZEiY",
+     "title": "Devin Booker with 31 PTS, 5 AST, 5 REB vs Dallas Mavericks | Phoenix Suns Player Highlights"
+    },
+    {
+     "blocked": [],
+     "channel": "The Vantics",
+     "id": "X8KinQfmfc4",
+     "title": "Mavericks vs Suns - Highlights (11.28.2026) #Shorts #NBAHighlights #Basketball"
+    }
+   ],
+   "blocked": [],
+   "day": "20261127",
+   "id": "8hq4Hkr-mIk",
+   "published": "2026-11-28T05:04:17+00:00",
+   "teams": [
+    "DAL",
+    "PHX"
+   ],
+   "title": "MAVERICKS at SUNS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 27, 2026"
+  },
+  "401909333": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "6pKeWOvU01o",
+     "title": "Los Angeles Lakers vs San Antonio Spurs Full Game Highlights - November 27, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "18rQhzac1Y4",
+     "title": "Los Angeles Lakers vs San Antonio Spurs - FULL GAME HIGHLIGHTS | November 27, 2026 NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Cheffy",
+     "id": "IJak5rBY7m0",
+     "title": "Los Angeles Lakers Vs San Antonio Spurs LIVE Play-By-Play Commentary | Highlights, Scoreboard, Stats"
+    }
+   ],
+   "blocked": [],
+   "day": "20261127",
+   "id": "L_lhywuFSXs",
+   "published": "2026-11-28T05:37:34+00:00",
+   "teams": [
+    "LAL",
+    "SA"
+   ],
+   "title": "LAKERS at SPURS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 27, 2026"
+  },
+  "401909334": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "QbgOTAjuChM",
+     "title": "Denver Nuggets vs Utah Jazz Full Game Highlights - November 27, 2026 | Emirates NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "The Vantics",
+     "id": "4oXwynum1j8",
+     "title": "Nuggets vs Jazz - Highlights (11.28.2026) #Shorts #NBAHighlights #Basketball"
+    }
+   ],
+   "blocked": [],
+   "day": "20261127",
+   "id": "KVmlKZ_Tfs0",
+   "published": "2026-11-28T05:18:20+00:00",
+   "teams": [
+    "DEN",
+    "UTAH"
+   ],
+   "title": "NUGGETS at JAZZ | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 27, 2026"
+  },
+  "401909335": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "EZAqkLoYMMA",
+     "title": "Los Angeles Clippers vs New Orleans Pelicans Full Game Highlights - November 27, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "The CCB Network",
+     "id": "M3lGghf8E9Q",
+     "title": "Los Angeles Clippers vs New Orleans Pelicans Full Game Highlights - November 27, 2026"
+    },
+    {
+     "blocked": [],
+     "channel": "Toon Recaps",
+     "id": "JntGS4ou8WY",
+     "title": "Down to the wire \ud83d\ude2c | New Orleans Pelicans vs LA Clippers | NBA Highlights \ud83c\udfc0"
+    }
+   ],
+   "blocked": [],
+   "day": "20261127",
+   "id": "4tm1xEoj8wk",
+   "published": "2026-11-28T05:12:42+00:00",
+   "teams": [
+    "NO",
+    "LAC"
+   ],
+   "title": "PELICANS at CLIPPERS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 27, 2026"
+  },
+  "401909336": {
+   "allowed": [
+    "AR",
+    "AU",
+    "BR",
+    "CA",
+    "CL",
+    "CO",
+    "DO",
+    "GU",
+    "ID",
+    "IN",
+    "JM",
+    "JP",
+    "MN",
+    "MX",
+    "MY",
+    "NZ",
+    "PE",
+    "PH",
+    "PR",
+    "SG",
+    "TH",
+    "US",
+    "VE",
+    "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "T404bVUPIHc",
+     "title": "Golden State Warriors vs Portland Trail Blazers - FULL GAME HIGHLIGHTS | November 27, 2026 NBA Cup"
+    },
+    {
+     "blocked": [],
+     "channel": "Ho\u00e0i T\u1ed1t B\u1ee5ng",
+     "id": "WiUYLMNWYLU",
+     "title": "Golden State Warriors vs Portland Trail Blazers Full Game Highlights - November 27, 2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "GAMETIME HIGHLIGHTS",
+     "id": "cF-94H3H_Fw",
+     "title": "Golden State Warriors vs Portland Trail Blazers Full Game Highlights - November 27, 2026"
+    }
+   ],
+   "blocked": [],
+   "day": "20261127",
+   "id": "xstiIpuJ4Ks",
+   "published": "2026-11-28T05:32:23+00:00",
+   "teams": [
+    "GS",
+    "POR"
+   ],
+   "title": "WARRIORS at TRAIL BLAZERS | EMIRATES NBA CUP \ud83c\udfc6 | FULL GAME HIGHLIGHTS | November 27, 2026"
+  },
   "401909834": {
    "allowed": [
     "AR",
@@ -5873,6 +6153,26 @@
     "US",
     "VE",
     "VN"
+   ],
+   "alts": [
+    {
+     "blocked": [],
+     "channel": "Ximo Pierto",
+     "id": "-xNpXUqD5Vc",
+     "title": "Oklahoma City Thunder vs Houston Rockets - FULL GAME HIGHLIGHTS | October 31, 2026 NBA Season"
+    },
+    {
+     "blocked": [],
+     "channel": "X NBA",
+     "id": "HiGAHbARP4Y",
+     "title": "Oklahoma City Thunder vs Houston Rockets Full Game Highlights - Oct 31,2026 | NBA"
+    },
+    {
+     "blocked": [],
+     "channel": "PlayTime Hoops",
+     "id": "m0LXBDBV0Lw",
+     "title": "Oklahoma City Thunder vs Houston Rockets Full Game Highlights - October 31, 2026 | NBA Season"
+    }
    ],
    "blocked": [],
    "day": "20261031",
@@ -13903,5 +14203,5 @@
    "title": "SPURS at KINGS | FULL GAME HIGHLIGHTS | November 23, 2026"
   }
  },
- "updated": "2026-11-28T04:59:26+00:00"
+ "updated": "2026-11-28T13:56:20+00:00"
 }
